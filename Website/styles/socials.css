@@ -1,0 +1,127 @@
+/* Icons */
+
+.icon {
+    filter: opacity(40%);
+    cursor: pointer;
+    height: 6vh;
+    transition: 0.5s;
+    text-decoration: none;
+    position: relative;
+}
+
+.icon:hover, .icon:focus {
+    filter: opacity(80%);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+/* Header */
+
+#header {
+    text-decoration: none;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#header img:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+#header h3 {
+    font-size: 3vh;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.50);
+    filter: opacity(30%);
+}
+
+/* Title */
+
+#title {
+    margin-top: -175px;
+}
+
+#title h1 {
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 5px 5px white, 4px 4px white, 3px 3px white, 2px 2px white, 1px 1px white;
+    margin-top: 5vh;
+    font-size: 350px;
+    text-align: center;
+
+    margin-top: 35vh;
+}
+
+/* Icon container */
+
+#icon-list {
+    text-align: center;
+    background-color: var(--accent-color);
+    border-radius: var(--roundness);
+    margin: 0 auto;
+    max-width: 850px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#icon-list img {
+    height: 8vh;
+    max-height: 12vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    filter: brightness(10%) invert(1);
+
+    transition: var(--return);
+}
+
+#icon-list a {
+    text-decoration: none;
+}
+
+#icon-list img:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+/* Root Colors */
+
+:root {
+    --bg-color: #323437;
+    --main-color: #d82934;
+    --accent-color: #f05757;
+    --sub-color: #5e5e5e;
+    --text-color: #e8e8e8;
+    --error-color: #da3333;
+    --main-invert: #27d6cb;
+    --roundness: 1vh;
+    --transition: 0.25s;
+    --return: 0.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@font-face {
+    font-family: BigNoodleTitling;
+    src: url(big_noodle_titling.tff)
+}
+
+@font-face {
+    font-family: BigNoodleTitlingOblique;
+    src: url(big_noodle_titling_oblique.ttf)
+}
+
+@font-face {
+    font-family: AmericanCaptain;
+    src: url(american_captain.ttf)
+}

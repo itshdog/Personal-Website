@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,.1);
+}
+
+div {
+    display: block;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 30vh;
+    width: 100%;
+    background: rgba(0,0,0,.1);
+    color: var(--text-color);
+    padding: 1.5em 10vw 1.5em 10vw;
+    display: flex;
+}
+
+#footer-left {
+    float: left;
+    text-align: left;
+    width: 33vw;
+}
+
+#footer-left h6 {
+    padding-right: -17vw;
+    margin-right: 17vw;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: var(--accent-color);
+    border-radius: var(--roundness);
+    text-align: center;
+    cursor: pointer;
+}
+
+#footer-center {
+    float: center;
+    text-align: center;
+    width: 33vw;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+#footer-right {
+    float: right;
+    text-align: right;
+    width: 33vw;
+}
+
+#footer-right h6 {
+    padding-left: -17vw;
+    margin-left: 17vw;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: var(--accent-color);
+    border-radius: var(--roundness);
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Header */
+
+#header-left {
+    color: white;
+    cursor: default;
+    padding-bottom: 0px;
+    display: inline-block;
+    font-size: 6vh;
+    max-width: 20vh;
+    text-decoration: none;
+    transition: var(--return);
+}
+
+#header-left:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+#header-right {
+    float: right;
+    padding-right: 1rem;
+    padding-top: 1.5vh;
+    text-decoration: none;
+}
+
+#header-right a {
+    text-decoration: none;
+}
+
+#header-right img:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+/* Front-Page */
+
+#next-page {
+    margin-bottom: 50vh;
+    text-align: center;
+    color: grey;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#title {
+    text-decoration: none;
+    color: white;
+    padding-left: 0.5em;
+    text-shadow: 0.2vh 0.2vh var(--main-color);
+    cursor: pointer;
+}
+
+#body-text {
+    margin: 5px;
+    padding-left: 10px;
+    padding-top: 30vh;
+    font-size: max(4vh, 4rem);
+    color: var(--text-color);
+    text-align: center;
+}
+
+#container {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: var(--roundness);
+    width: 80vw;
+    margin-left: 10vw;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+#about-me {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#my-skills {
+    margin-top: 30vh;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#my-portfolio {
+    margin-top: 30vh;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#read-text {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 30px;
+}
+
+/* Icons */
+
+.icon {
+    filter: brightness(10%) invert(1);
+    cursor: pointer;
+    height: 6vh;
+    transition: 0.5s;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.icon:hover, .icon:focus {
+    color: white;
+    filter: drop-shadow(0.12vw 0.12vw 0 var(--main-invert)) invert(1);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+/* Close buttons */
+
+.closeButton {
+    filter: brightness(10%);
+}
+
+.close {
+    filter: invert(1);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 3vh;
+}
+
+/* Contact */
+
+#contactWrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+#contactWrapper #contact {
+    width: 85vw;
+    height: 75vh;
+    overflow-y: auto;
+    background: var(--bg-color);
+    border-radius: var(--roundness);
+    padding: 2rem;
+    display: grid;
+    gap: 2rem 0;
+}
+
+#contactWrapper #contact #contactTop {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+#contactWrapper #contact .contactTitle {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+#contactWrapper #contact #contactBottom {
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+/* Theme */
+
+#themeWrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+#themeWrapper #theme {
+    width: 85vw;
+    height: 75vh;
+    overflow-y: auto;
+    background: var(--bg-color);
+    border-radius: var(--roundness);
+    padding: 2rem;
+    display: grid;
+    gap: 2rem 0;
+}
+
+#themeWrapper #theme #themeTop {
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
+#themeWrapper #theme .themeTitle {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+#themeWrapper #theme #themeBottom {
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+/* Hidden */
+
+.hidden {
+    display: none!important;
+}
+
+/* Root Colors */
+
+:root {
+    --bg-color: #323437;
+    --main-color: #d82934;
+    --accent-color: #f05757;
+    --sub-color: #5e5e5e;
+    --text-color: #e8e8e8;
+    --error-color: #da3333;
+    --main-invert: #27d6cb;
+    --roundness: 0.25rem;
+    --transition: 0.25s;
+    --return: 0.5s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-color)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: var(--roundness);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sub-color);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@font-face {
+    font-family: HH1;
+    src: url(have_heart_one.otf)
+}
+
+@font-face {
+    font-family: HHS;
+    src: url(have_heart_swash.otf)
+}
+
+@font-face {
+    font-family: BigNoodleTitling;
+    src: url(big_noodle_titling.tff)
+}
+
+@font-face {
+    font-family: BigNoodleTitlingOblique;
+    src: url(big_noodle_titling_oblique.ttf)
+}
+
+@font-face {
+    font-family: AmericanCaptain;
+    src: url(american_captain.ttf)
+}
