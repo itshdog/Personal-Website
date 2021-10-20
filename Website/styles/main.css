@@ -6,61 +6,71 @@ header {
     position: fixed;
     width: 100%;
     background: rgba(0,0,0,.1);
-}
-
-div {
-    display: block;
+    margin-top: -5px;
 }
 
 /* Footer */
 
 footer {
-    margin-top: 30vh;
+    margin-top: clamp(100px, 30vh, 200px);
     width: 100%;
     background: rgba(0,0,0,.1);
     color: var(--text-color);
-    padding: 1.5em 10vw 1.5em 10vw;
+    padding: 1.5em 10vw 5vh 10vw;
     display: flex;
 }
 
 #footer-left {
     float: left;
     text-align: left;
-    width: 33vw;
+    font-size: clamp(10px, 2vh, 30px);
+    width: 33%;
 }
 
-#footer-left h6 {
-    padding-right: -17vw;
-    margin-right: 17vw;
+#footer-left #clickButton {
     padding: 0.5em 0.5em 0.5em 0.5em;
     background-color: var(--accent-color);
     border-radius: var(--roundness);
     text-align: center;
     cursor: pointer;
+    transition: var(--return);
+}
+
+#footer-left #clickButton:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-5px);
+    transition: var(--transition);
 }
 
 #footer-center {
     float: center;
     text-align: center;
-    width: 33vw;
+    font-size: clamp(10px, 2vh, 25px);
     color: var(--text-color);
     font-weight: 700;
+    width: 33%;
 }
 
 #footer-right {
     float: right;
     text-align: right;
-    width: 33vw;
+    font-size: clamp(10px, 2vh, 30px);
+    width: 33%;
 }
 
-#footer-right h6 {
-    padding-left: -17vw;
-    margin-left: 17vw;
+#footer-right #clickButton {
     padding: 0.5em 0.5em 0.5em 0.5em;
     background-color: var(--accent-color);
     border-radius: var(--roundness);
     text-align: center;
     cursor: pointer;
+    transition: var(--return);
+}
+
+#footer-right #clickButton:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-5px);
+    transition: var(--transition);
 }
 
 /* Header */
@@ -103,7 +113,7 @@ footer {
     margin-bottom: 50vh;
     text-align: center;
     color: grey;
-    font-size: 30px;
+    font-size: 3vh;
     font-weight: 700;
 }
 
@@ -132,26 +142,29 @@ footer {
     margin-left: 10vw;
     padding-top: .5rem;
     padding-bottom: .5rem;
+
+    /* Wanted to use drop-shadow, but made container hover ABOVE the header */
+    /* filter: drop-shadow(0.2vh 0.2vh 2px rgba(0,0,0,0.25)) */
 }
 
 #about-me {
-    font-size: 30px;
+    font-size: 4vh;
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
 }
 
 #my-skills {
-    margin-top: 30vh;
-    font-size: 30px;
+    margin-top: clamp(100px, 30vh, 200px);
+    font-size: 4vh;
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
 }
 
 #my-portfolio {
-    margin-top: 30vh;
-    font-size: 30px;
+    margin-top: clamp(100px, 30vh, 200px);
+    font-size: 4vh;
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
@@ -160,9 +173,10 @@ footer {
 #read-text {
     margin-left: 10vw;
     margin-right: 10vw;
-    font-size: 25px;
+    font-size: clamp(25px, 3vh, 35px);
     font-weight: 500;
     text-align: left;
+    text-shadow: .2vh .2vh 2px rgba(0,0,0,0.2);
     padding-top: 30px;
 }
 
@@ -186,15 +200,15 @@ footer {
 
 /* Close buttons */
 
-.closeButton {
-    filter: brightness(10%);
-}
-
-.close {
+#contactTop .close {
     filter: invert(1);
     transition: var(--transition);
     cursor: pointer;
-    height: 3vh;
+    height: 2vh;
+    float: right;
+    vertical-align: top;
+    margin-top: 2vh;
+    margin-right: 2vh;
 }
 
 /* Contact */
@@ -210,36 +224,74 @@ footer {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0;
     color: var(--text-color);
 }
 
 #contactWrapper #contact {
     width: 85vw;
     height: 75vh;
-    overflow-y: auto;
     background: var(--bg-color);
     border-radius: var(--roundness);
-    padding: 2rem;
-    display: grid;
-    gap: 2rem 0;
 }
 
 #contactWrapper #contact #contactTop {
     width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
+    display: inline-block;
 }
 
 #contactWrapper #contact .contactTitle {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 5vh;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0.35em;
 }
 
 #contactWrapper #contact #contactBottom {
-    overflow-y: scroll;
-    overflow-x: auto;
+    margin-top: 2vh;
+    text-align: center;
+    overflow-y: auto;
+
+}
+
+input[type=text], select {
+    width: clamp(100px, 100%, 600px);
+    height: 5vh;
+    background-color: var(--sub-color);
+    border-radius: var(--roundness);
+    border: none;
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+input[type=text]:focus {
+    text-decoration: none;
+    font-size: 2vh;
+}
+
+input[type=submit] {
+    margin-top: 2vh;
+    font-size: 2vh;
+    width: 12vh;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: var(--roundness);
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#contactBottom textarea {
+    width: clamp(100px, 100%, 600px);
+    height: clamp(100px, 50%, 1100px);
+    background-color: var(--sub-color);
+    border-radius: var(--roundness);
+    border: none;
+    resize: none;
+    font-size: 2vh;
+}
+
+label {
+    font-size: 2vh;
 }
 
 /* Theme */
@@ -299,11 +351,12 @@ footer {
     --bg-color: #323437;
     --main-color: #d82934;
     --accent-color: #f05757;
+    --highlight-color: #cb4141;
     --sub-color: #5e5e5e;
     --text-color: #e8e8e8;
     --error-color: #da3333;
     --main-invert: #27d6cb;
-    --roundness: 0.25rem;
+    --roundness: 0.5vh;
     --transition: 0.25s;
     --return: 0.5s;
 }
@@ -315,12 +368,12 @@ footer {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--bg-color)
+  background: rgba(0,0,0,0.1);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.15);
   border-radius: var(--roundness);
 }
 
