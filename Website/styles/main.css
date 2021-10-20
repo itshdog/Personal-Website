@@ -207,8 +207,19 @@ footer {
     height: 2vh;
     float: right;
     vertical-align: top;
-    margin-top: 2vh;
-    margin-right: 2vh;
+    margin-top: 1.5vh;
+    margin-right: 1.5vh;
+}
+
+#themeTop .close {
+    filter: invert(1);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 2vh;
+    float: right;
+    vertical-align: top;
+    margin-top: 1.5vh;
+    margin-right: 1.5vh;
 }
 
 /* Contact */
@@ -307,36 +318,52 @@ label {
     display: grid;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0;
     color: var(--text-color);
 }
 
 #themeWrapper #theme {
     width: 85vw;
     height: 75vh;
-    overflow-y: auto;
     background: var(--bg-color);
     border-radius: var(--roundness);
-    padding: 2rem;
-    display: grid;
-    gap: 2rem 0;
 }
 
 #themeWrapper #theme #themeTop {
     width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
+    display: inline-block;
+    align-items: center;
 }
 
-#themeWrapper #theme .themeTitle {
-    font-size: 3rem;
-    line-height: 3rem;
+#themeWrapper #theme .themeSearch {
+    align-items: center;
+    width: 90%;
+    display: inline-block;
+}
+
+#themeWrapper #theme #themeTop .themeSearch input {
+    display: inline-block;
+    width: 90%;
+    background: var(--bg-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    font-size: 2.75vh;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    vertical-align: baseline;
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: brightness(10%) invert(1);
+    height: 2vh;
+    padding-left: 1em;
+    vertical-align: baseline;
 }
 
 #themeWrapper #theme #themeBottom {
+    margin-top: 2vh;
+    padding-left: 0.35em;
     overflow-y: scroll;
-    overflow-x: auto;
 }
 
 /* Hidden */
