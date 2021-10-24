@@ -5,8 +5,10 @@ body {
 header {
     position: fixed;
     width: 100%;
-    background: rgba(0,0,0,.1);
+    background: var(--bg-color);
     margin-top: -5px;
+    /* Didn't like the look/feel, but may reuse later */
+    /*border-bottom: 3px solid var(--sub-color);*/
 }
 
 /* Footer */
@@ -270,8 +272,10 @@ input[type=text], select {
     background-color: var(--sub-color);
     border-radius: var(--roundness);
     border: none;
+    outline: none;
     text-decoration: none;
     font-size: 2vh;
+    color: var(--text-color);
 }
 
 input[type=text]:focus {
@@ -285,6 +289,7 @@ input[type=submit] {
     width: 12vh;
     background-color: var(--accent-color);
     border: none;
+    outline: none;
     border-radius: var(--roundness);
     text-decoration: none;
     cursor: pointer;
@@ -297,8 +302,10 @@ input[type=submit] {
     background-color: var(--sub-color);
     border-radius: var(--roundness);
     border: none;
+    outline: none;
     resize: none;
     font-size: 2vh;
+    color: var(--text-color);
 }
 
 label {
@@ -325,7 +332,7 @@ label {
     width: 85vw;
     height: 75vh;
     background: var(--bg-color);
-    border-radius: var(--roundness);
+    border-radius: 1.5vh;
 }
 
 #themeWrapper #theme #themeTop {
@@ -342,7 +349,7 @@ label {
 
 #themeWrapper #theme #themeTop .themeSearch input {
     display: inline-block;
-    width: 90%;
+    width: 85%;
     background: var(--bg-color);
     border: none;
     outline: none;
@@ -356,15 +363,39 @@ label {
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: brightness(10%) invert(1);
     height: 2vh;
-    padding-left: 1em;
+    padding-left: 2vh;
     vertical-align: baseline;
 }
 
 #themeWrapper #theme #themeBottom {
     margin-top: 2vh;
-    padding-left: 0.35em;
     overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 67.75vh;
 }
+
+#themeWrapper #theme #themeBottom .entry {
+    width: 110%;
+    padding-left: 2em;
+    cursor: pointer;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 2.5vh;
+    transition: var(--transition);
+    color: var(--sub-color);
+    font-weight: 300;
+}
+
+#themeWrapper #theme #themeBottom .entry:hover {
+    background-color: var(--text-color);
+    transition: var(--transition);
+}
+
+#themeWrapper #theme #themeBottom .entry.activeTheme {
+    background-color: var(--text-color);
+}
+
+
 
 /* Hidden */
 
@@ -372,35 +403,27 @@ label {
     display: none!important;
 }
 
-/* Root Colors */
+/* Root */
 
 :root {
-    --bg-color: #323437;
-    --main-color: #d82934;
-    --accent-color: #f05757;
-    --highlight-color: #cb4141;
-    --sub-color: #5e5e5e;
-    --text-color: #e8e8e8;
-    --error-color: #da3333;
-    --main-invert: #27d6cb;
-    --roundness: 0.5vh;
+    --roundness: 0.75vh;
     --transition: 0.25s;
     --return: 0.5s;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(0,0,0,0.1);
+  background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.15);
+  background: rgb(38, 38, 38);
   border-radius: var(--roundness);
 }
 
