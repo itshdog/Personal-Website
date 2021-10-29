@@ -1,0 +1,28 @@
+:root {
+    --bg-color: #141414;
+    --main-color: #141414;
+    --accent-color: #AFA397;
+    --highlight-color: #958575;
+    --sub-color: #51473E;
+    --text-color: #818181;
+    --searchInput-color: #AFA397;
+    --search-color: #51473E;
+    --contactText-color: #D6D6D6;
+    --contactBg-color: rgba(41, 41, 41, 0.15);
+    --contactSubmit-color: #AFA397;
+    --button-color: #141414;
+    --button-weight: 500;
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: invert(25%) sepia(28%) saturate(309%) hue-rotate(347deg) brightness(95%) contrast(85%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+}

@@ -53,4 +53,11 @@ window.onload = function () {
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
+
+    var obj = document.getElementById("cssTheme")
+    var x = localStorage.getItem("theme")
+    if (localStorage.getItem("theme") == null) {
+        var x = "themes/classic.css";
+    }
+    obj.setAttribute("href", x)
 };

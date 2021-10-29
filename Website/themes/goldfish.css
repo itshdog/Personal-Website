@@ -1,0 +1,14 @@
+:root {
+    --bg-color: #023047;
+    --main-color: #FB8500;
+    --titleBg-color: #FFB703;
+    --accent-color: #FFB703;
+    --highlight-color: #FB8500;
+    --sub-color: #5c98b4;
+    --text-color: #caeeff;
+    --contactText-color: #caeeff;
+    --contactBg-color: rgba(0,0,0,0.15);
+    --contactSubmit-color: #FB8500;
+    --button-color: #023047;
+    --button-weight: 700;
+}
