@@ -168,6 +168,26 @@ footer {
     text-align: center;
 }
 
+#my-skills .skills-alt {
+    height: 150px;
+    padding-left: 0;
+    text-align: center;
+}
+
+#my-skills img {
+    height: 130px;
+    padding-left: 1vw;
+}
+
+.skills {
+    text-align: center;
+    padding-top: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+/* My Portfolio */
+
 #my-portfolio {
     margin-top: clamp(100px, 30vh, 200px);
     font-size: 4vh;
@@ -176,10 +196,77 @@ footer {
     text-align: center;
 }
 
-#read-text {
+#my-portfolio #portfolio-items {
+    width: 80%;
+    margin: 1.5em auto;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj {
+    width: 100%;
+    max-width: clamp(350px, 45vh, 100%);
+    border-radius: 1.5vh;
+    background-color: rgba(0,0,0,0.15);
+    display: inline-grid;
+    margin-bottom: 0.25em;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj img {
+    width: 95%;
+    margin: auto;
+    margin-top: 2.5%;
+    border-radius: var(--roundness);
+}
+
+.portfolio-read-text {
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 0.5em;
+    height: 20vh;
+    overflow-y: scroll;
+    margin: 0 2.5% 0 2.5%;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom {
+    display: inline-block;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj .live-demo {
+    text-align: center;
+    float: left;
+    width: 44.5%;
+    font-size: 3vh;
+    margin: 2.5% 0 2.5% 2.5%;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj .GitHub {
+    text-align: center;
+    float: right;
+    width: 46.5%;
+    font-size: 3vh;
+    margin: 2.5% 2.5% 2.5% 0;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj a {
+    border-radius: var(--roundness);
+    background-color: var(--sub-color);
+    text-decoration: none;
+    color: var(--bg-color);
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#my-portfolio #portfolio-items .portfolio-obj a:hover {
+    color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.read-text {
     margin-left: 10vw;
     margin-right: 10vw;
-    font-size: clamp(25px, 3vh, 35px);
+    font-size: max(2vh, 25px);
     font-weight: 500;
     text-align: left;
     padding-top: 30px;
@@ -190,7 +277,7 @@ footer {
 .icon {
     filter: invert(1);
     cursor: pointer;
-    height: 6vh;
+    height: 5.5vh;
     transition: 0.5s;
     padding-right: 10px;
     text-decoration: none;
@@ -302,6 +389,12 @@ footer {
     cursor: pointer;
     color: var(--bg-color);
     font-weight: 700;
+    transition: var(--return);
+}
+
+#contactWrapper input[type=submit]:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
 }
 
 #contactBottom textarea {
