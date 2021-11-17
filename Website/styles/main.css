@@ -4,9 +4,10 @@ body {
 
 header {
     position: fixed;
+    top: 0;
     width: 100%;
-    background: var(--bg-color);
-    margin-top: -5px;
+    background: var(--accent-color);
+    z-index: 1000;
     /* Didn't like the look/feel, but may reuse later */
     /*border-bottom: 3px solid var(--sub-color);*/
 }
@@ -14,69 +15,65 @@ header {
 /* Footer */
 
 footer {
-    margin-top: clamp(100px, 30vh, 200px);
+    margin-top: min(10vh, 10vw);
+    margin-bottom: min(2vh, 4vw);
     width: 100%;
-    background: rgba(0,0,0,.1);
     color: var(--text-color);
-    padding: 1.5em 10vw 5vh 10vw;
+    padding: 1.5em 5vw min(5vw, 5vh) 5vw;
     display: flex;
 }
 
 #footer-left {
+    opacity: 1;
     float: left;
     text-align: left;
-    font-size: clamp(10px, 2vh, 30px);
-    width: 33%;
+    font-size: min(2vh, 4vw);
+    width: 100%;
 }
 
-#footer-left #clickButton {
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    background-color: var(--accent-color);
+#footer-left .clickButton {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    min-width: 7em;
+    margin-bottom: 0.5em;
     border-radius: var(--roundness);
-    color: var(--button-color);
+    background-color: rgba(0,0,0,0.15);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: var(--highlight-color);
     font-weight: var(--button-weight);
     text-align: center;
+    transition: var(--return);
+    display: inline-block;
     cursor: pointer;
+    opacity: 1;
+}
+
+#footer-left .clickButton img {
+    height: 2vh;
+    width: 2vh;
+    margin-right: 0em;
+    transition: var(--return);
+    opacity: 1;
+}
+
+#footer-left .clickButton:hover img {
     transition: var(--return);
 }
 
-#footer-left #clickButton:hover {
+#footer-left .clickButton:hover {
     background-color: var(--highlight-color);
-    transform: translateY(-5px);
-    transition: var(--transition);
-}
-
-#footer-center {
-    float: center;
-    text-align: center;
-    font-size: clamp(10px, 2vh, 25px);
-    color: var(--text-color);
-    font-weight: 700;
-    width: 33%;
-}
-
-#footer-right {
-    float: right;
-    text-align: right;
-    font-size: clamp(10px, 2vh, 30px);
-    width: 33%;
-}
-
-#footer-right #clickButton {
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    background-color: var(--accent-color);
-    border-radius: var(--roundness);
     color: var(--button-color);
-    font-weight: var(--button-weight);
-    text-align: center;
-    cursor: pointer;
+    transform: translateY(-5px);
     transition: var(--return);
 }
 
-#footer-right #clickButton:hover {
-    background-color: var(--highlight-color);
-    transform: translateY(-5px);
-    transition: var(--transition);
+#footer-left .clickButtonContact {
+    width: 10em;
+}
+
+#footer-left #clickButtonTheme img {
+    height: 2vh;
+    margin-right: 0.15em;
+    padding-bottom: 0.15em;
 }
 
 /* Header */
@@ -86,8 +83,8 @@ footer {
     cursor: default;
     padding-bottom: 0px;
     display: inline-block;
-    font-size: 6vh;
-    max-width: 20vh;
+    font-size: min(5vh, 10vw);
+    max-width: 50%;
     text-decoration: none;
     transition: var(--return);
 }
@@ -100,7 +97,7 @@ footer {
 #header-right {
     float: right;
     padding-right: 1rem;
-    padding-top: 1.5vh;
+    padding-top: min(1.5vh, 3vw);
     text-decoration: none;
 }
 
@@ -116,10 +113,10 @@ footer {
 /* Front-Page */
 
 #next-page {
-    margin-bottom: 50vh;
+    margin-bottom: calc(20em - 10vw);
     text-align: center;
     color: grey;
-    font-size: 3vh;
+    font-size: min(4vh, 5vw);
     font-weight: 700;
 }
 
@@ -134,27 +131,27 @@ footer {
 #body-text {
     margin: 5px;
     padding-left: 10px;
-    padding-top: 30vh;
-    font-size: max(4vh, 4rem);
+    margin-top: calc(19.5em - 100vw);
+    font-size: max(5em, 5vw);
     color: var(--text-color);
     text-align: center;
+    z-index: 10;
 }
 
 #container {
     background-color: var(--accent-color);
     color: var(--bg-color);
     border-radius: var(--roundness);
-    width: 80vw;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    width: 80%;
     margin-left: 10vw;
+    margin-right: 10vw;
     padding-top: .5rem;
     padding-bottom: .5rem;
-
-    /* Wanted to use drop-shadow, but made container hover ABOVE the header */
-    /* filter: drop-shadow(0.2vh 0.2vh 2px rgba(0,0,0,0.25)) */
 }
 
 #about-me {
-    font-size: 4vh;
+    font-size: min(5vw, 5vh);
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
@@ -162,20 +159,20 @@ footer {
 
 #my-skills {
     margin-top: clamp(100px, 30vh, 200px);
-    font-size: 4vh;
+    font-size: min(5vw, 5vh);
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
 }
 
 #my-skills .skills-alt {
-    height: 150px;
+    height: calc(4vw + 2em + 20px);
     padding-left: 0;
     text-align: center;
 }
 
 #my-skills img {
-    height: 130px;
+    height: calc(4vw + 2em);
     padding-left: 1vw;
 }
 
@@ -190,10 +187,13 @@ footer {
 
 #my-portfolio {
     margin-top: clamp(100px, 30vh, 200px);
-    font-size: 4vh;
     font-weight: 700;
     color: var(--text-color);
     text-align: center;
+}
+
+#my-portfolio #container {
+    font-size: min(5vw, 5vh);
 }
 
 #my-portfolio #portfolio-items {
@@ -203,11 +203,13 @@ footer {
 
 #my-portfolio #portfolio-items .portfolio-obj {
     width: 100%;
-    max-width: clamp(350px, 45vh, 100%);
-    border-radius: 1.5vh;
+    max-width: min(85vw, 45vh);
+    font-size: min(5vw, 3.5vh);
+    border-radius: 1rem;
     background-color: rgba(0,0,0,0.15);
     display: inline-grid;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.5em;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 #my-portfolio #portfolio-items .portfolio-obj img {
@@ -218,11 +220,11 @@ footer {
 }
 
 .portfolio-read-text {
-    font-size: 2vh;
+    font-size: min(3vw, 2vh);
     text-align: left;
     font-weight: 500;
     padding-left: 0.5em;
-    height: 20vh;
+    height: 12em;
     overflow-y: scroll;
     margin: 0 2.5% 0 2.5%;
 }
@@ -235,7 +237,7 @@ footer {
     text-align: center;
     float: left;
     width: 44.5%;
-    font-size: 3vh;
+    font-size: min(calc(3vw + 0.5rem), 3vh);
     margin: 2.5% 0 2.5% 2.5%;
 }
 
@@ -243,7 +245,7 @@ footer {
     text-align: center;
     float: right;
     width: 46.5%;
-    font-size: 3vh;
+    font-size: min(calc(3vw + 0.5rem), 3vh);
     margin: 2.5% 2.5% 2.5% 0;
 }
 
@@ -255,18 +257,19 @@ footer {
     width: 100%;
     display: block;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--return);
 }
 
 #my-portfolio #portfolio-items .portfolio-obj a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
     transition: var(--transition);
 }
 
 .read-text {
     margin-left: 10vw;
     margin-right: 10vw;
-    font-size: max(2vh, 25px);
+    font-size: min(3vh, 3.5vw);
     font-weight: 500;
     text-align: left;
     padding-top: 30px;
@@ -277,9 +280,9 @@ footer {
 .icon {
     filter: invert(1);
     cursor: pointer;
-    height: 5.5vh;
+    height: min(4vh, 10vw);
     transition: 0.5s;
-    padding-right: 10px;
+    padding-right: min(2vw, 1vh);
     text-decoration: none;
 }
 
@@ -302,6 +305,17 @@ footer {
 }
 
 #themeTop .close {
+    filter: invert(1);
+    transition: var(--transition);
+    cursor: pointer;
+    height: 2vh;
+    float: right;
+    vertical-align: top;
+    margin-top: 1.5vh;
+    margin-right: 1.5vh;
+}
+
+#versionTop .close {
     filter: invert(1);
     transition: var(--transition);
     cursor: pointer;
@@ -393,7 +407,7 @@ footer {
 }
 
 #contactWrapper input[type=submit]:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     transition: var(--transition);
 }
 
@@ -507,6 +521,61 @@ label {
     color: var(--accent-color);
 }
 
+/* Version Page */
+
+#versionWrapper {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#versionWrapper #versionContainer {
+    width: 85vw;
+    height: 75vh;
+    background: var(--bg-color);
+    border-radius: 1.5vh;
+}
+
+#versionWrapper #versionContainer #versionTop {
+    width: 100%;
+    height: 2em;
+}
+
+#versionBottom {
+    padding: 0 2em 0 2em;
+    height: calc(73vh - 2em);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#versionBottom .versionTitle {
+    font-size: 6vh;
+    font-weight: 700;
+}
+
+#versionBottom .versionNotes {
+    font-weight: 300;
+    font-size: 2vh;
+}
+
+#versionBottom .versionTitle .releaseDate {
+    font-size: 0.4em;
+    font-weight: 300;
+    max-width: 50%;
+    float: right;
+    margin-top: 0.45em;
+    color: var(--sub-color);
+}
+
 /* Hidden */
 
 .hidden {
@@ -517,14 +586,14 @@ label {
 /* Other root variables are found in the themes folder */
 
 :root {
-    --roundness: 0.75vh;
+    --roundness: 0.75rem;
     --transition: 0.25s;
     --return: 0.5s;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 /* Track */

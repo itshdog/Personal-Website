@@ -14,6 +14,18 @@
     --button-weight: 700;
 }
 
+#footer-left .clickButton img {
+  filter: invert(73%) sepia(51%) saturate(4082%) hue-rotate(335deg) brightness(103%) contrast(98%);
+}
+
+#footer-left .clickButton:hover {
+    color: var(--text-color);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(94%) sepia(10%) saturate(918%) hue-rotate(328deg) brightness(102%) contrast(92%);
+}
+
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: invert(92%) sepia(22%) saturate(472%) hue-rotate(324deg) brightness(104%) contrast(92%);
 }

@@ -1,21 +1,25 @@
 :root {
-    --bg-color: #ceb18d;
-    --main-color: #ceb18d;
-    --accent-color: #14120f;
-    --highlight-color: #25221d;
-    --sub-color: #d4d2d1;
-    --text-color: #d4d2d1;
-    --searchInput-color: #14120f;
-    --search-color: #14120f;
-    --contactText-color: #d4d2d1;
+    --bg-color: #282a36;
+    --main-color: #bd93f9;
+    --accent-color: #bd93f9;
+    --highlight-color: #a77edf;
+    --sub-color: #bd93f9;
+    --text-color: #f2f2f2;
+    --searchInput-color: #f2f2f2;
+    --search-color: #bd93f9;
+    --contactText-color: #f2f2f2;
     --contactBg-color: rgba(0,0,0,0.15);
-    --contactSubmit-color: #14120f;
-    --button-color: #d4d2d1;
+    --contactSubmit-color: #f2f2f2;
+    --button-color: #f2f2f2;
     --button-weight: 700;
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(5%) sepia(7%) saturate(1355%) hue-rotate(357deg) brightness(102%) contrast(96%);
+    filter: invert(69%) sepia(23%) saturate(4668%) hue-rotate(213deg) brightness(102%) contrast(95%);
+}
+
+#header-left #title {
+  text-shadow: 0.2vh 0.2vh 1px var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {

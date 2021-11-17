@@ -1,21 +1,25 @@
 :root {
-    --bg-color: #ceb18d;
-    --main-color: #ceb18d;
-    --accent-color: #14120f;
-    --highlight-color: #25221d;
-    --sub-color: #d4d2d1;
-    --text-color: #d4d2d1;
-    --searchInput-color: #14120f;
-    --search-color: #14120f;
-    --contactText-color: #d4d2d1;
+    --bg-color: #058b8c;
+    --main-color: #b63530;
+    --accent-color: #b63530;
+    --highlight-color: #8b1e1a;
+    --sub-color: #255458;
+    --text-color: #f7f2ea;
+    --searchInput-color: #f7f2ea;
+    --search-color: #255458;
+    --contactText-color: #f7f2ea;
     --contactBg-color: rgba(0,0,0,0.15);
-    --contactSubmit-color: #14120f;
-    --button-color: #d4d2d1;
+    --contactSubmit-color: #255458;
+    --button-color: #f7f2ea;
     --button-weight: 700;
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(5%) sepia(7%) saturate(1355%) hue-rotate(357deg) brightness(102%) contrast(96%);
+    filter: invert(14%) sepia(40%) saturate(3551%) hue-rotate(342deg) brightness(114%) contrast(100%);
+}
+
+#container {
+  color: var(--text-color);
 }
 
 ::-webkit-scrollbar-thumb {

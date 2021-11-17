@@ -54,10 +54,16 @@ window.onload = function () {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
 
-    var obj = document.getElementById("cssTheme")
-    var x = localStorage.getItem("theme")
+    var obj = document.getElementById("cssTheme");
+    var x = localStorage.getItem("theme");
+    var name = localStorage.getItem("name");
+    var themeTab = document.getElementById("clickButtonTheme");
     if (localStorage.getItem("theme") == null) {
         var x = "themes/classic.css";
     }
-    obj.setAttribute("href", x)
+    if (localStorage.getItem("name") == null) {
+        var name = "Theme";
+    }
+    themeTab.innerHTML = '<img src="svgs/iconmonstr-paint-bucket-10.svg"/>'+name;
+    obj.setAttribute("href", x);
 };

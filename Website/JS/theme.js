@@ -1,9 +1,12 @@
-function changeTheme(src, obj) {
+function changeTheme(src, name, obj) {
     var x = document.getElementById("selected");
+    var themeTab = document.getElementById("clickButtonTheme");
     x.id = "";
     document.getElementById("cssTheme").setAttribute("href", src);
     obj.id = "selected";
     localStorage.setItem("theme", src);
+    localStorage.setItem("name", name);
+    themeTab.innerHTML = '<img src="svgs/iconmonstr-paint-bucket-10.svg"/>'+name;
 }
 
 /*window.onload = function loadTheme() {
