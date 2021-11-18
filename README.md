@@ -4,18 +4,18 @@ Primarily utilizes HTML & CSS, with a hint of JavaScript
 
 Currently practicing my skills with developing websites that are stunning & beautiful
 
-HTML:
+**HTML**:
 * Using correct formatting
 * Practice when and where to use certain elements
 * Improving naming classes, ids, etc
 
-CSS:
+**CSS**:
 * Learning how to make flexible code that works on multiple platforms
-* Like iPhone, iPad, and 1080p
-* Creating color themes for aethetic
+* Like iPhone, iPad, 1080p, and 4K
+* Creating color themes for a pleasing aethetic
 * Developing my own style of CSS formatting
 
-JavaScript:
+**JavaScript**:
 * Developing code that doesn't sit idle
 * Working with swapping ids & classes
 * Utilizing pageload and local storage
