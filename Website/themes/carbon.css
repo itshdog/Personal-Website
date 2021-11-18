@@ -1,7 +1,7 @@
 :root {
     --bg-color: #313131;
-    --main-color: #f66e0d;
-    --accent-color: #f66e0d;
+    --main-color: #fc8a38;
+    --accent-color: #fc8a38;
     --highlight-color: #fc8a38;
     --sub-color: #616161;
     --text-color: #f5e6c8;
@@ -9,7 +9,7 @@
     --search-color: #f5e6c8;
     --contactText-color: #f5e6c8;
     --contactBg-color: rgba(0,0,0,0.15);
-    --contactSubmit-color: #f66e0d;
+    --contactSubmit-color: #fc8a38;
     --button-color: #313131;
     --button-weight: 700;
 }

@@ -5,11 +5,49 @@ body {
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    right: 0;
+    height: min(7.25vh, 15vw);
     background: var(--accent-color);
+    border-radius: var(--roundness);
+    margin: min(1vh, 5vw) min(5vh, 5vw) 0 min(5vh,5vw);
     z-index: 1000;
     /* Didn't like the look/feel, but may reuse later */
     /*border-bottom: 3px solid var(--sub-color);*/
+}
+
+#header {
+    width: calc(100% - min(10vh, 10vw));
+    transition: var(--transition);
+}
+
+#githubVisible {
+    opacity: 1;
+    display: inline;
+}
+
+.githubHidden {
+    opacity: 0;
+    display: none;
+}
+
+#linkedinVisible {
+    opacity: 1;
+    display: inline;
+}
+
+#linkedinHidden {
+    opacity: 0;
+    display: none;
+}
+
+#resumeVisible {
+    opacity: 1;
+    display: inline;
+}
+
+#resumeHidden {
+    opacity: 0;
+    display: none;
 }
 
 /* Footer */
@@ -19,7 +57,7 @@ footer {
     margin-bottom: min(2vh, 4vw);
     width: 100%;
     color: var(--text-color);
-    padding: 1.5em 5vw min(5vw, 5vh) 5vw;
+    padding: 1.5em 10vw min(5vw, 5vh) 10vw;
     display: flex;
 }
 
@@ -35,6 +73,7 @@ footer {
     padding: 0.2em 0.5em 0.2em 0.5em;
     min-width: 7em;
     margin-bottom: 0.5em;
+    margin-right: 0.25em;
     border-radius: var(--roundness);
     background-color: rgba(0,0,0,0.15);
     box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
@@ -79,33 +118,26 @@ footer {
 /* Header */
 
 #header-left {
-    color: var(--title-color);
-    cursor: default;
     padding-bottom: 0px;
     display: inline-block;
     font-size: min(5vh, 10vw);
     max-width: 50%;
     text-decoration: none;
-    transition: var(--return);
-}
-
-#header-left:hover {
-    transform: translateY(-5px);
-    transition: var(--transition);
 }
 
 #header-right {
     float: right;
-    padding-right: 1rem;
+    padding-right: min(3.5vw, 2vh);
     padding-top: min(1.5vh, 3vw);
     text-decoration: none;
 }
 
 #header-right a {
     text-decoration: none;
+    height: 100%;
 }
 
-#header-right img:hover {
+#header-right .icon:hover {
     transform: translateY(-5px);
     transition: var(--transition);
 }
@@ -122,16 +154,27 @@ footer {
 
 #title {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     margin-left: 0.5em;
-    text-shadow: 0.2vh 0.2vh var(--main-color);
+    cursor: pointer;
+    transition: var(--return);
+}
+
+#title:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+#titleHidden {
+    color: transparent;
+    display: none!important;
     cursor: pointer;
 }
 
 #body-text {
     margin: 5px;
     padding-left: 10px;
-    margin-top: calc(19.5em - 100vw);
+    margin-top: min(100vw, 30vh);
     font-size: max(5em, 5vw);
     color: var(--text-color);
     text-align: center;
@@ -208,7 +251,7 @@ footer {
     border-radius: 1rem;
     background-color: rgba(0,0,0,0.15);
     display: inline-grid;
-    margin-bottom: 0.5em;
+    margin: 0 0.25em 0.5em 0.25em;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
@@ -289,6 +332,21 @@ footer {
 .icon:hover, .icon:focus {
     transition: var(--transition);
     text-decoration: none;
+}
+
+#closeIcon {
+    height: min(4vh, 10vw);
+    filter: invert(1);
+    cursor: pointer;
+    transition: 0.5s;
+    padding: min(1vw, 0.5vh) 0 min(1vw, 0.5vh) 0;
+    text-decoration: none;
+    transform: scaleX(1);
+}
+
+#header-right #hideButtonDiv {
+    margin: min(3vh, 3vw) 0 min(3vh, 3vw) 0;
+    height: 100%;
 }
 
 /* Close buttons */
@@ -452,7 +510,7 @@ label {
     width: 85vw;
     height: 75vh;
     background: var(--bg-color);
-    border-radius: 1.5vh;
+    border-radius: var(--roundness);
 }
 
 #themeWrapper #theme #themeTop {
@@ -541,7 +599,7 @@ label {
     width: 85vw;
     height: 75vh;
     background: var(--bg-color);
-    border-radius: 1.5vh;
+    border-radius: var(--roundness);
 }
 
 #versionWrapper #versionContainer #versionTop {
@@ -576,9 +634,49 @@ label {
     color: var(--sub-color);
 }
 
+/* Hide Button */
+
+#githubVisible {
+    opacity: 1;
+    display: inline;
+    transition: 10s;
+}
+
+#githubHidden {
+    opacity: 0;
+    display: none!important;
+    transition: 10s;
+}
+
+#linkedinVisible {
+    opacity: 1;
+    display: inline;
+    transition: 10s;
+}
+
+#linkedinHidden {
+    opacity: 0;
+    display: none!important;
+    transition: 10s;
+}
+
+#resumeVisible {
+    opacity: 1;
+    display: inline;
+    transition: 10s;
+}
+
+#resumeHidden {
+    opacity: 0;
+    display: none!important;
+    transition: 10s;
+}
+
 /* Hidden */
 
 .hidden {
+    opacity: 0;
+    text-shadow: 2px 2px white!important;
     display: none!important;
 }
 
@@ -586,7 +684,7 @@ label {
 /* Other root variables are found in the themes folder */
 
 :root {
-    --roundness: 0.75rem;
+    --roundness: min(1.5vh, 1.5vw);
     --transition: 0.25s;
     --return: 0.5s;
 }

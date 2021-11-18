@@ -2,7 +2,7 @@
     --bg-color: #faf1e4;
     --main-color: #faf1e4;
     --accent-color: #618c56;
-    --highlight-color: #4d7444;
+    --highlight-color: #618c56;
     --sub-color: #c2b8aa;
     --text-color: #3c403b;
     --searchInput-color: #618c56;
@@ -32,6 +32,20 @@
 
 #contactTop .close {
     filter: invert(32%) sepia(11%) saturate(3158%) hue-rotate(314deg) brightness(111%) contrast(77%);
+}
+
+#versionTop .close {
+    filter: invert(32%) sepia(11%) saturate(3158%) hue-rotate(314deg) brightness(111%) contrast(77%);
+}
+
+#footer-left .clickButton img {
+  filter: invert(53%) sepia(5%) saturate(2506%) hue-rotate(62deg) brightness(92%) contrast(95%);
+  transition: var(--return);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(93%) sepia(11%) saturate(514%) hue-rotate(323deg) brightness(106%) contrast(96%);
+  transition: var(--transition);
 }
 
 #contactWrapper input[type=submit] {

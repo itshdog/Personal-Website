@@ -14,6 +14,10 @@
     --button-weight: 700;
 }
 
+#title {
+  color: white;
+}
+
 #footer-left .clickButton img {
   filter: invert(84%) sepia(49%) saturate(496%) hue-rotate(13deg) brightness(94%) contrast(106%);
 }

@@ -36,12 +36,13 @@
         <script defer src="JS/scroll.js"></script>
         <script defer src="JS/theme.js"></script>
         <script defer src="JS/search.js"></script>
+        <script defer src="JS/hide.js"></script>
 
     </head>
 
     <!-- Body -->
     <body style="background: var(--bg-color); transition: all">
-    <header>
+    <header id="header">
         <!-- Header -->
         <div id="header-left" style="font-family: BigNoodleTitlingOblique">
             <div id="title" onclick="scrollToTop()">itshdog.com</div>
@@ -49,14 +50,18 @@
         </div>
         <div id="header-right">
             <!-- Icons on top right -->
-            <a href="https://www.github.com/itshdog" target="_blank">
+            <a id="githubVisible" href="https://www.github.com/itshdog" target="_blank">
                 <img src="svgs/iconmonstr-github-1.svg" class="icon">
             </a>
-            <a href="https://www.linkedin.com/in/hayden-westphal" target="_blank">
+            <a id="linkedinVisible" href="https://www.linkedin.com/in/hayden-westphal" target="_blank">
                 <img src="svgs/iconmonstr-linkedin-3.svg" class="icon">
             </a>
-            <a href="Resume.pdf" target="_blank">
+            <a id="resumeVisible" href="Resume.pdf" target="_blank">
                 <img src="svgs/iconmonstr-cv-1.svg" class="icon">
+            </a>
+            <a id="hideButtonDiv">
+                <!-- Header hide button // Utilizes hide.js -->
+                <img onclick="hideButton();"src="svgs/iconmonstr-arrow-24.svg" id="closeIcon">
             </a>
         </div>
 
@@ -126,26 +131,20 @@
                     <div class="entry" id="" onclick="changeTheme('themes/alpine.css', 'Alpine', this)">alpine</div>
                     <div class="entry" id="" onclick="changeTheme('themes/arch.css', 'Arch', this)">arch</div>
                     <div class="entry" id="" onclick="changeTheme('themes/bento.css', 'Bento', this)">bento</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/bliss.css', 'Bliss', this)">bliss</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/blueberrydark.css', 'Blueberry Dark', this)">blueberry dark</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/blueberrylight.css', 'Blueberry Light', this)">blueberry light</div>
+                    <div class="entry" id="" onclick="changeTheme('themes/blueberry.css', 'Blueberry', this)">blueberry</div>
                     <div class="entry" id="" onclick="changeTheme('themes/botanical.css', 'Botanical', this)">botanical</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/cafe.css', 'Cafe', this)">cafe</div>
                     <div class="entry" id="" onclick="changeTheme('themes/camping.css', 'Camping', this)">camping</div>
                     <div class="entry" id="" onclick="changeTheme('themes/carbon.css', 'Carbon', this)">carbon</div>
                     <div class="entry" id="" onclick="changeTheme('themes/classic.css', 'Classic', this)">classic</div>
                     <div class="entry" id="" onclick="changeTheme('themes/copper.css', 'Copper', this)">copper</div>
                     <div class="entry" id="" onclick="changeTheme('themes/cyberspace.css', 'Cyberspace', this)">cyberspace</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/dark.css', 'Dark', this)">dark</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/darkmagic.css', 'Dark Magic', this)">dark magic</div>
                     <div class="entry" id="" onclick="changeTheme('themes/deku.css', 'Deku', this)">deku</div>
                     <div class="entry" id="" onclick="changeTheme('themes/dollar.css', 'Dollar', this)">dollar</div>
                     <div class="entry" id="" onclick="changeTheme('themes/dracula.css', 'Dracula', this)">dracula</div>
                     <div class="entry" id="" onclick="changeTheme('themes/futurefunk.css', 'Future Funk', this)">future funk</div>
                     <div class="entry" id="" onclick="changeTheme('themes/goldfish.css', 'Goldfish', this)">goldfish</div>
                     <div class="entry" id="" onclick="changeTheme('themes/grandprix.css', 'Grand Prix', this)">grand prix</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/gruvboxdark.css', 'Gruvbox Dark', this)">gruvbox dark</div>
-                    <div class="entry" id="" onclick="changeTheme('themes/gruvboxlight.css', 'Gruvbox Light', this)">gruvbox light</div>
+                    <div class="entry" id="" onclick="changeTheme('themes/gruvbox.css', 'Gruvbox', this)">gruvbox</div>
                     <div class="entry" id="" onclick="changeTheme('themes/ocean.css', 'Ocean', this)">ocean</div>
                     <div class="entry" id="selected" style="display: none;"></div>
                 </div>
@@ -159,14 +158,45 @@
                     <img onclick="versionBlur()" src="svgs/iconmonstr-x-mark-2.svg" class="close">
                 </div>
                 <div id="versionBottom">
+
+                    <div class="v1..0">
+                        <div class="versionTitle">
+                            v1.0.0
+                            <div class="releaseDate">Released 11/18/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Finally a version that I think feels as a complete package.<br>
+                            Obviously I'm not done updating the site, but this is definitely a good place for v1.0.0.<br><br>
+                            Header<br>
+                            * Added open/close button <br>
+                            * Added animation <br>
+                            * Made a little wider so it feels like a header <br><br>
+                            Themes<br>
+                            * Removed Blueberry light.<br>
+                            * Blueberry dark renamed to Blueberry.<br>
+                            * Removed Gruvbox light.<br>
+                            * Gruvbox dark renamed to Gruvbox.<br>
+                            * More themes removed, but I dont remember lol.<br>
+                            * Theme label colors finally finished
+                            Social Page<br>
+                            * Finally added theme match on window-load.<br>
+                            ** Looking to add theme button<br><br>
+                            Other<br>
+                            * I'm sure there's some I missed.<br>
+                            * Oh well, I'll fix it later.<br>
+                            * Or maybe I won't.<br>
                     
+                        </div>
+                    </div>
+
                     <div class="v0.2.0">
                         <div class="versionTitle">
-                            v0.2.0
+                            v0.2.0-alpha
                             <div class="releaseDate">Released 11/16/2021</div>
                         </div>
                         <div class="versionNotes">
                             Formatting Fixes<br>
+                            ** Fixes pertains to size shifting on mobile devices **<br>
                             * Header sizing doesn't shift on mobile.<br>
                             * Header buttons resized smaller.<br>
                             * Front-page font resizing.<br>
@@ -185,7 +215,7 @@
 
                     <div class="v0.1.0">
                         <div class="versionTitle">
-                            v0.1.0
+                            v0.1.0-alpha
                             <div class="releaseDate">Released 10/30/2021</div>
                         </div>
                         <div class="versionNotes">
@@ -258,13 +288,10 @@
                     <img src="svgs/Website-Screenshot.PNG">
                     <div>Personal Website</div>
                     <div class="portfolio-read-text">
-                        This is practice text for my project that should be listed here.
-                        Now I just need to type a lot of useless information so that hopefully the text 
-                        has to have a scroll bar on the right <br><br>
-                        The skills I used: HTML, CSS, JavaScript <br><br>
-                        This is practice text for my project that should be listed here.
-                        Now I just need to type a lot of useless information so that hopefully the text
-                        has to have a scroll bar on the right
+                        This is my personal portfolio website that you are on right now. 
+                        Just a project that I enjoy doing in my freetime to showcase my skills.<br><br>
+                        Skills utilized: HTML, CSS, JavaScript.
+
                     </div>
                     <div class="portfolio-bottom">
                         <div class="live-demo">
@@ -281,7 +308,7 @@
                     <div>To-do List</div>
                     <div class="portfolio-read-text">
                         A to-do list with animations and JavaScript to store and render multiple lists.
-                        Comes with light functionality, like delete list and clear completed tasks.
+                        Comes with light functionality, like delete list and clear completed tasks.<br> <br>
                         The skills I used: HTML, CSS, JavaScript.
                     </div>
                     <div class="portfolio-bottom">

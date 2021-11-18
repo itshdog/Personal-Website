@@ -2,7 +2,7 @@
     --bg-color: #442f29;
     --main-color: #b46a55;
     --accent-color: #7ebab5;
-    --highlight-color: #99cfcb;
+    --highlight-color: #7ebab5;
     --sub-color: #b46a55;
     --text-color: #e7e0de;
     --searchInput-color: #7ebab5;
@@ -16,6 +16,20 @@
 
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: invert(82%) sepia(6%) saturate(1724%) hue-rotate(126deg) brightness(86%) contrast(83%);
+}
+
+#footer-left .clickButton img {
+  filter: invert(67%) sepia(44%) saturate(226%) hue-rotate(126deg) brightness(93%) contrast(97%);
+  transition: var(--return);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(98%) sepia(19%) saturate(367%) hue-rotate(294deg) brightness(94%) contrast(92%);
+  transition: var(--transition);
+}
+
+#footer-left .clickButton:hover {
+  color: var(--text-color);
 }
 
 ::-webkit-scrollbar-thumb {

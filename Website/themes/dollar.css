@@ -20,6 +20,19 @@
 
 #header-left #title {
   text-shadow: 2px 2px 1px var(--main-color);
+  color: white;
+}
+
+#footer-left .clickButton img {
+  filter: invert(43%) sepia(8%) saturate(1437%) hue-rotate(71deg) brightness(94%) contrast(86%);
+}
+
+#footer-left .clickButton:hover {
+  color: var(--bg-color);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(92%) sepia(20%) saturate(114%) hue-rotate(21deg) brightness(98%) contrast(89%);
 }
 
 .icon {
