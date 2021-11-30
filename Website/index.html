@@ -69,14 +69,14 @@
     
     <div>
         <!-- Front-Page -->
-        <div id="body-text">
-            Hey, I'm Hayden Westphal! <br>
-            I am 
-            <span class="txt-rotate" data-period="2000" data-rotate='[ "a web developer.", "a content creator.", "a designer.", "hilarious." ]'></span>
-            <!-- Self-Typing Text // Utilizes typewriter.js -->
-        </div>
-        <div id="next-page">
-            <div id="container">
+        <div id="front-page">
+            <div id="body-text">
+                Hey, I'm Hayden Westphal! <br>
+                I am 
+                <span class="txt-rotate" data-period="2000" data-rotate='[ "a web developer.", "a content creator.", "a designer.", "hilarious." ]'></span>
+                <!-- Self-Typing Text // Utilizes typewriter.js -->
+            </div>
+            <div class="myContainer">
                 Currently a CS student at the University of Iowa
             </div>
         </div>
@@ -95,12 +95,12 @@
                 <div id="contactBottom">
                     <form name="contactMe" method="POST" data-netlify="true">
                         <label for="name">Name</label><br>
-                        <input type="text" id="name" name="name" placeholder="Type name here..."/><br>
+                        <input type="text" id="name" name="name" placeholder=""/><br>
                         <label for="email">Email</label><br>
-                        <input type="text" id="email" name="email" placeholder="Type email here..."/>
+                        <input type="text" id="email" name="email" placeholder=""/>
                         <div id="messageBox">
                             <label for="message">Message</label><br>
-                            <textarea id="message" name="message" placeholder="Type message here..."></textarea>
+                            <textarea id="message" name="message" placeholder=""></textarea>
                         </div>
                         <input type="submit" value="Submit">
                     </form>
@@ -146,6 +146,7 @@
                     <div class="entry" id="" onclick="changeTheme('themes/grandprix.css', 'Grand Prix', this)">grand prix</div>
                     <div class="entry" id="" onclick="changeTheme('themes/gruvbox.css', 'Gruvbox', this)">gruvbox</div>
                     <div class="entry" id="" onclick="changeTheme('themes/ocean.css', 'Ocean', this)">ocean</div>
+                    <!-- Empty entry to hold initial "selected" id -->
                     <div class="entry" id="selected" style="display: none;"></div>
                 </div>
             </div>
@@ -158,6 +159,33 @@
                     <img onclick="versionBlur()" src="svgs/iconmonstr-x-mark-2.svg" class="close">
                 </div>
                 <div id="versionBottom">
+
+                    <div class="v1..0">
+                        <div class="versionTitle">
+                            v1.0.1
+                            <div class="releaseDate">Released 11/30/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            This update is just to clean up the overall flow of the website.<br>
+                            Resizing text to fit nicely from 4k to mobile.<br><br>
+                            Entire Page<br>
+                            * Text resized, smaller on all<br>
+                            * Accent-color containers don't fully extend on high-res monitors<br>
+                            * Text doesn't fully extend on high-res monitors<br><br>
+                            Theme/Version/Contact<br>
+                            * Window resized, thinner on desktop browsers<br><br>
+                            Contact<br>
+                            * Removed placeholder text.<br>
+                            * (Considering making placeholder text darker instead)<br><br>
+                            Portfolio<br>
+                            * Items resized, smaller on all<br>
+                            * Buttons resized, larger on mobile<br><br>
+                            Skills<br>
+                            * Icons resized, smaller.
+
+                            
+                        </div>
+                    </div>
 
                     <div class="v1..0">
                         <div class="versionTitle">
@@ -191,7 +219,7 @@
 
                     <div class="v0.2.0">
                         <div class="versionTitle">
-                            v0.2.0-alpha
+                            v0.2.0
                             <div class="releaseDate">Released 11/16/2021</div>
                         </div>
                         <div class="versionNotes">
@@ -215,7 +243,7 @@
 
                     <div class="v0.1.0">
                         <div class="versionTitle">
-                            v0.1.0-alpha
+                            v0.1.0
                             <div class="releaseDate">Released 10/30/2021</div>
                         </div>
                         <div class="versionNotes">
@@ -245,7 +273,7 @@
 
         <!-- Front-Page Information -->
         <div id="about-me">
-            <div id="container">
+            <div class="myContainer">
                 About me
             </div>
             <div class="read-text">
@@ -263,7 +291,7 @@
 
         <!-- Front-Page Information -->
         <div id="my-skills">
-            <div id="container">
+            <div class="myContainer">
                 My Skills
             </div>
             <div class="skills">
@@ -276,7 +304,7 @@
 
         <!-- Front-Page Information -->
         <div id="my-portfolio">
-            <div id="container">
+            <div class="myContainer">
                 My Portfolio
             </div>
             <div class="read-text" style="margin-bottom: 1.5em;">
@@ -334,7 +362,7 @@
             </div>
             <div class="clickButton" onclick="versionOpen()">
                 <img src="svgs/iconmonstr-cloud-2.svg"/>
-                v1.0.0
+                v1.0.1
             </div>
         </div>
     </div>

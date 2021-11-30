@@ -144,12 +144,12 @@ footer {
 
 /* Front-Page */
 
-#next-page {
-    margin-bottom: calc(20em - 10vw);
-    text-align: center;
-    color: grey;
-    font-size: min(4vh, 5vw);
-    font-weight: 700;
+#front-page {
+    height: 70vh;
+}
+
+#front-page .myContainer {
+   font-size: min(3vh, 3.5vw);
 }
 
 #title {
@@ -175,22 +175,26 @@ footer {
     margin: 5px;
     padding-left: 10px;
     margin-top: min(100vw, 30vh);
-    font-size: max(5em, 5vw);
+    font-size: max(3.5em, 3.5vw);
     color: var(--text-color);
     text-align: center;
     z-index: 10;
 }
 
-#container {
+.myContainer {
     background-color: var(--accent-color);
     color: var(--bg-color);
+    text-align: center;
+    font-weight: 700;
     border-radius: var(--roundness);
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    width: 80%;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    width: 150rem;
+    max-width: 80%;
+    margin-left: max(10vw, calc(50% - 75rem));
+    margin-right: max(10vw, calc(50% - 75rem));
     padding-top: .5rem;
     padding-bottom: .5rem;
+    font-size: min(calc(5vw + 0.5rem), 3vh);
 }
 
 #about-me {
@@ -209,13 +213,13 @@ footer {
 }
 
 #my-skills .skills-alt {
-    height: calc(4vw + 2em + 20px);
+    height: calc(2vw + 1.5em + 20px);
     padding-left: 0;
     text-align: center;
 }
 
 #my-skills img {
-    height: calc(4vw + 2em);
+    height: calc(2vw + 1.5em);
     padding-left: 1vw;
 }
 
@@ -235,10 +239,6 @@ footer {
     text-align: center;
 }
 
-#my-portfolio #container {
-    font-size: min(5vw, 5vh);
-}
-
 #my-portfolio #portfolio-items {
     width: 80%;
     margin: 1.5em auto;
@@ -246,8 +246,8 @@ footer {
 
 #my-portfolio #portfolio-items .portfolio-obj {
     width: 100%;
-    max-width: min(85vw, 45vh);
-    font-size: min(5vw, 3.5vh);
+    max-width: min(75vw, 40vh);
+    font-size: min(calc(5vw + 0.5rem), 3vh);
     border-radius: 1rem;
     background-color: rgba(0,0,0,0.15);
     display: inline-grid;
@@ -263,7 +263,7 @@ footer {
 }
 
 .portfolio-read-text {
-    font-size: min(3vw, 2vh);
+    font-size: min(2.5vw, 1.5vh);
     text-align: left;
     font-weight: 500;
     padding-left: 0.5em;
@@ -280,7 +280,7 @@ footer {
     text-align: center;
     float: left;
     width: 44.5%;
-    font-size: min(calc(3vw + 0.5rem), 3vh);
+    font-size: min(calc(5vw + 0.5rem), 3vh);
     margin: 2.5% 0 2.5% 2.5%;
 }
 
@@ -288,7 +288,7 @@ footer {
     text-align: center;
     float: right;
     width: 46.5%;
-    font-size: min(calc(3vw + 0.5rem), 3vh);
+    font-size: min(calc(5vw + 0.5rem), 3vh);
     margin: 2.5% 2.5% 2.5% 0;
 }
 
@@ -310,9 +310,11 @@ footer {
 }
 
 .read-text {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    font-size: min(3vh, 3.5vw);
+    width: 150rem;
+    max-width: 80%;
+    margin-left: max(10vw, calc(50% - 75rem));
+    margin-right: max(10vw, calc(50% - 75rem));
+    font-size: min(2.5vh, 3vw);
     font-weight: 500;
     text-align: left;
     padding-top: 30px;
@@ -401,7 +403,7 @@ footer {
 }
 
 #contactWrapper #contact {
-    width: 85vw;
+    width: min(100vh, 85vw);
     height: 75vh;
     background: var(--bg-color);
     border-radius: var(--roundness);
@@ -427,6 +429,7 @@ footer {
 }
 
 #contactWrapper input[type=text], select {
+    margin-top: 0.5em;
     width: 90%;
     max-width: 800px;
     height: 5vh;
@@ -449,8 +452,8 @@ footer {
 }
 
 #contactWrapper input[type=submit] {
-    margin-top: 2vh;
-    font-size: 2vh;
+    margin-top: min(calc(3% + 0.2em), 0.5em);
+    font-size: min(2vh, 4vw);
     width: 12vh;
     height: 4vh;
     background-color: var(--contactSubmit-color);
@@ -470,9 +473,10 @@ footer {
 }
 
 #contactBottom textarea {
+    margin-top: 0.5em;
     width: 90%;
-    max-width: 800px;
-    height: 40.5vh;
+    height: min(37vh, 80vw);
+    max-height: 100%;
     background-color: var(--contactBg-color);
     border-radius: var(--roundness);
     border: none;
@@ -487,7 +491,8 @@ footer {
 }
 
 label {
-    font-size: 2vh;
+    margin-top: 0.5em;
+    font-size: min(2vh, 4vw);
 }
 
 /* Theme */
@@ -507,7 +512,7 @@ label {
 }
 
 #themeWrapper #theme {
-    width: 85vw;
+    width: min(100vh, 85vw);
     height: 75vh;
     background: var(--bg-color);
     border-radius: var(--roundness);
@@ -596,7 +601,7 @@ label {
 }
 
 #versionWrapper #versionContainer {
-    width: 85vw;
+    width: min(100vh, 85vw);
     height: 75vh;
     background: var(--bg-color);
     border-radius: var(--roundness);
