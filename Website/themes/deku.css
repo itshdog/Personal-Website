@@ -46,7 +46,7 @@
   filter: invert(21%) sepia(77%) saturate(1988%) hue-rotate(342deg) brightness(98%) contrast(85%);
 }
 
-#container {
+.myContainer {
   color: var(--text-color);
 }
 

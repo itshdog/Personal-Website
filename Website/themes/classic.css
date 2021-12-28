@@ -18,13 +18,30 @@
   filter: invert(40%) sepia(51%) saturate(1036%) hue-rotate(318deg) brightness(104%) contrast(89%);
 }
 
+#footer-left .clickButton {
+  color: var(--sub-color);
+  background: none;
+  box-shadow: none;
+  padding: 0!important;
+  margin: 0!important;
+  min-width: 5.5em;
+}
+#footer-left .clickButton:hover {
+  color: var(--accent-color);
+  background: none;
+}
+
+#footer-left .clickButtonContact {
+  width: 7em;
+}
+
 #footer-left .clickButton img {
-  filter: invert(40%) sepia(51%) saturate(1036%) hue-rotate(318deg) brightness(104%) contrast(89%);
+  filter: invert(34%) sepia(0%) saturate(643%) hue-rotate(137deg) brightness(99%) contrast(81%);
   transition: var(--return);
 }
 
 #footer-left .clickButton:hover img {
-  filter: invert(99%) sepia(1%) saturate(4261%) hue-rotate(293deg) brightness(117%) contrast(82%);
+  filter: invert(40%) sepia(51%) saturate(1036%) hue-rotate(318deg) brightness(104%) contrast(89%);
   transition: var(--transition);
 }
 

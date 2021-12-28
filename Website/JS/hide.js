@@ -4,11 +4,11 @@ function hideButton() {
     var closeIcon = document.getElementById("closeIcon")
     if (document.getElementById("title") == null) {
         document.getElementById("titleHidden").id = "title";
-        document.getElementById("header").style.width = "calc(100% - min(10vh, 10vw))";
+        document.getElementById("header-container").style.width = "100%";
         closeIcon.style.transform = regular;
     } else {
         document.getElementById("title").id = "titleHidden";
-        document.getElementById("header").style.width = "min(7.25vh, 15vw)";
+        document.getElementById("header-container").style.width = "3em";
         closeIcon.style.transform = flipped;
     }
 

@@ -2,22 +2,34 @@ body {
     margin: 0;
 }
 
+/* Header */
+
 header {
     position: fixed;
     top: 0;
-    right: 0;
-    height: min(7.25vh, 15vw);
-    background: var(--accent-color);
-    border-radius: var(--roundness);
-    margin: min(1vh, 5vw) min(5vh, 5vw) 0 min(5vh,5vw);
+    right: 50%;
+    transform: translate(50%, 0);
+    margin: 1em 0;
     z-index: 1000;
-    /* Didn't like the look/feel, but may reuse later */
-    /*border-bottom: 3px solid var(--sub-color);*/
 }
 
 #header {
-    width: calc(100% - min(10vh, 10vw));
+    width: calc(100% - 2em);
+    max-width: 1920px;
+}
+
+@media(min-width: 1921px) {
+    #header {
+        max-width: 1200px;
+    }
+}
+
+#header-container {
+    width: 100%;
+    background: var(--accent-color);
+    border-radius: var(--roundness);
     transition: var(--transition);
+    float: right;
 }
 
 #githubVisible {
@@ -25,7 +37,7 @@ header {
     display: inline;
 }
 
-.githubHidden {
+#githubHidden {
     opacity: 0;
     display: none;
 }
@@ -50,91 +62,17 @@ header {
     display: none;
 }
 
-/* Footer */
-
-footer {
-    margin-top: min(10vh, 10vw);
-    margin-bottom: min(2vh, 4vw);
-    width: 100%;
-    color: var(--text-color);
-    padding: 1.5em 10vw min(5vw, 5vh) 10vw;
-    display: flex;
-}
-
-#footer-left {
-    opacity: 1;
-    float: left;
-    text-align: left;
-    font-size: min(2vh, 4vw);
-    width: 100%;
-}
-
-#footer-left .clickButton {
-    padding: 0.2em 0.5em 0.2em 0.5em;
-    min-width: 7em;
-    margin-bottom: 0.5em;
-    margin-right: 0.25em;
-    border-radius: var(--roundness);
-    background-color: rgba(0,0,0,0.15);
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    color: var(--highlight-color);
-    font-weight: var(--button-weight);
-    text-align: center;
-    transition: var(--return);
-    display: inline-block;
-    cursor: pointer;
-    opacity: 1;
-}
-
-#footer-left .clickButton img {
-    height: 2vh;
-    width: 2vh;
-    margin-right: 0em;
-    transition: var(--return);
-    opacity: 1;
-}
-
-#footer-left .clickButton:hover img {
-    transition: var(--return);
-}
-
-#footer-left .clickButton:hover {
-    background-color: var(--highlight-color);
-    color: var(--button-color);
-    transform: translateY(-5px);
-    transition: var(--return);
-}
-
-#footer-left .clickButtonContact {
-    width: 10em;
-}
-
-#footer-left #clickButtonTheme img {
-    height: 2vh;
-    margin-right: 0.15em;
-    padding-bottom: 0.15em;
-}
-
-/* Header */
-
 #header-left {
-    padding-bottom: 0px;
-    display: inline-block;
-    font-size: min(5vh, 10vw);
-    max-width: 50%;
+    width: 50%;
     text-decoration: none;
+    display: inline;
+    height: auto;
 }
 
 #header-right {
-    float: right;
-    padding-right: min(3.5vw, 2vh);
-    padding-top: min(1.5vh, 3vw);
+    width: 50%;
     text-decoration: none;
-}
-
-#header-right a {
-    text-decoration: none;
-    height: 100%;
+    display: inline;
 }
 
 #header-right .icon:hover {
@@ -142,27 +80,34 @@ footer {
     transition: var(--transition);
 }
 
+#header-right a {
+    float: right;
+    margin: 0.5em 0;
+}
+
+#header-right a:hover img + .tooltipIcon {
+    opacity: 1;
+    transform: translateY(15px);
+    transition: var(--return)
+}
+
 /* Front-Page */
 
 #front-page {
     height: 70vh;
+    max-height: calc(1080px * 0.7);
 }
 
 #front-page .myContainer {
-   font-size: min(3vh, 3.5vw);
+   font-size: var(--font-med);
 }
 
 #title {
+    display: inline;
     text-decoration: none;
     color: var(--text-color);
-    margin-left: 0.5em;
-    cursor: pointer;
+    margin-left: 1em;
     transition: var(--return);
-}
-
-#title:hover {
-    transform: translateY(-5px);
-    transition: var(--transition);
 }
 
 #titleHidden {
@@ -171,45 +116,61 @@ footer {
     cursor: pointer;
 }
 
+#title-text {
+    display: inline;
+    font-size: var(--font-large);
+    transition: var(--return);
+}
+
+#title-hover:hover {
+    cursor: pointer;
+}
+
+/* Body Information */
+
 #body-text {
-    margin: 5px;
-    padding-left: 10px;
-    margin-top: min(100vw, 30vh);
-    font-size: max(3.5em, 3.5vw);
+    max-width: 90%;
+    margin: 30vh auto 0 auto;
+    font-size: var(--font-large);
     color: var(--text-color);
     text-align: center;
     z-index: 10;
 }
 
-.myContainer {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    text-align: center;
-    font-weight: 700;
-    border-radius: var(--roundness);
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    width: 150rem;
-    max-width: 80%;
-    margin-left: max(10vw, calc(50% - 75rem));
-    margin-right: max(10vw, calc(50% - 75rem));
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    font-size: min(calc(5vw + 0.5rem), 3vh);
+@media(min-width: 769px) {
+    #body-text {
+        max-width: 80%;
+        font-size: 3em;
+    }
+    .myContainer {
+        max-width: 80%;
+    }
 }
 
-#about-me {
-    font-size: min(5vw, 5vh);
-    font-weight: 700;
-    color: var(--text-color);
+.myContainer {
+    background-color: var(--accent-color);
+    color: white;
     text-align: center;
+    font-weight: 700;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    width: 150rem;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    font-size: var(--font-large);
+}
+
+@media(min-width: 1921px) {
+    .myContainer {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 }
 
 #my-skills {
     margin-top: clamp(100px, 30vh, 200px);
-    font-size: min(5vw, 5vh);
-    font-weight: 700;
-    color: var(--text-color);
-    text-align: center;
 }
 
 #my-skills .skills-alt {
@@ -230,6 +191,41 @@ footer {
     margin-right: 10vw;
 }
 
+#frontButtonList {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 1rem 10% 1rem 10%;
+}
+
+.frontButton {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: var(--roundness);
+    font-weight: 700;
+    font-size: var(--font-med);
+    display: inline-block;
+    min-width: 7em;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 0.25em 0 0.25em;
+    transition: var(--return);
+}
+
+.frontButton:hover {
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+.frontButton a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.frontButton a:hover {
+    color: inherit;
+}
+
 /* My Portfolio */
 
 #my-portfolio {
@@ -245,51 +241,97 @@ footer {
 }
 
 #my-portfolio #portfolio-items .portfolio-obj {
-    width: 100%;
-    max-width: min(75vw, 40vh);
-    font-size: min(calc(5vw + 0.5rem), 3vh);
+    width: 90%;
+    max-width: 1000px;
     border-radius: 1rem;
     background-color: rgba(0,0,0,0.15);
-    display: inline-grid;
-    margin: 0 0.25em 0.5em 0.25em;
+    margin: 1em;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    display: inline-block;
 }
 
-#my-portfolio #portfolio-items .portfolio-obj img {
-    width: 95%;
-    margin: auto;
-    margin-top: 2.5%;
+@media(min-width: 769px) {
+    #my-portfolio #portfolio-items .portfolio-obj {
+        width: 75%;
+    }
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    float: left;
     border-radius: var(--roundness);
 }
 
+@media(min-width: 700px) {
+    .portfolio-image {
+        width: 16em;
+        height: auto;
+    }
+}
+
+@media(max-width: 1025px) {
+    .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.portfolio-text-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    float: left;
+    padding: 0 1em 0 1em;
+}
+
+.portfolio-title {
+    font-size: var(--font-large);
+}
+
 .portfolio-read-text {
-    font-size: min(2.5vw, 1.5vh);
-    text-align: left;
-    font-weight: 500;
-    padding-left: 0.5em;
-    height: 12em;
+    font-size: var(--font-extra-small);
     overflow-y: scroll;
-    margin: 0 2.5% 0 2.5%;
+    font-weight: 500;
+    text-align: left;
 }
 
 #my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom {
+    height: 100%;
+    width: 80%;
+    font-size: var(--font-med);
     display: inline-block;
+}
+
+@media(min-width: 1025px) {
+    #my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom {
+        padding: 1rem 0.5rem 0 0.5rem;
+        float: right;
+        height: 150%;
+        width: 12em;
+        display: inline;
+    }  
+    .portfolio-text-container {
+        width: calc(100% - 15em - 16em);
+        overflow-y: scroll;
+    }
 }
 
 #my-portfolio #portfolio-items .portfolio-obj .live-demo {
     text-align: center;
-    float: left;
-    width: 44.5%;
-    font-size: min(calc(5vw + 0.5rem), 3vh);
-    margin: 2.5% 0 2.5% 2.5%;
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+    margin: 0.5em 0 0.5em 0;
 }
 
 #my-portfolio #portfolio-items .portfolio-obj .GitHub {
     text-align: center;
-    float: right;
-    width: 46.5%;
-    font-size: min(calc(5vw + 0.5rem), 3vh);
-    margin: 2.5% 2.5% 2.5% 0;
+    width: 100%;
+    height: 50%;
+    display: inline-block;
+    margin: 0.5em 0 0.5em 0;
 }
 
 #my-portfolio #portfolio-items .portfolio-obj a {
@@ -298,9 +340,12 @@ footer {
     text-decoration: none;
     color: var(--bg-color);
     width: 100%;
-    display: block;
+    height: 100%;
+    vertical-align: center;
+    display: inline-block;
     cursor: pointer;
     transition: var(--return);
+    font-size: 1.2em;
 }
 
 #my-portfolio #portfolio-items .portfolio-obj a:hover {
@@ -310,14 +355,19 @@ footer {
 }
 
 .read-text {
-    width: 150rem;
-    max-width: 80%;
-    margin-left: max(10vw, calc(50% - 75rem));
-    margin-right: max(10vw, calc(50% - 75rem));
-    font-size: min(2.5vh, 3vw);
+    width: 70%;
+    margin: 0 auto;
+    font-size: var(--font-small);
+    color: var(--text-color);
     font-weight: 500;
-    text-align: left;
+    text-align: center;
     padding-top: 30px;
+}
+
+@media(min-width: 1921px) {
+    .read-text {
+        max-width: 900px;
+    }
 }
 
 /* Icons */
@@ -325,9 +375,10 @@ footer {
 .icon {
     filter: invert(1);
     cursor: pointer;
-    height: min(4vh, 10vw);
+    height: 1.5em;
+    padding: 0 0.25em;
+    margin: 0.25em 0;
     transition: 0.5s;
-    padding-right: min(2vw, 1vh);
     text-decoration: none;
 }
 
@@ -337,53 +388,24 @@ footer {
 }
 
 #closeIcon {
-    height: min(4vh, 10vw);
+    height: 1.5em;
+    margin: 0.25em 0.75em 0.25em 0.25em;
     filter: invert(1);
     cursor: pointer;
     transition: 0.5s;
-    padding: min(1vw, 0.5vh) 0 min(1vw, 0.5vh) 0;
     text-decoration: none;
     transform: scaleX(1);
 }
 
-#header-right #hideButtonDiv {
-    margin: min(3vh, 3vw) 0 min(3vh, 3vw) 0;
-    height: 100%;
-}
-
 /* Close buttons */
-
-#contactTop .close {
+.close {
     filter: invert(1);
     transition: var(--transition);
     cursor: pointer;
-    height: 2vh;
+    height: var(--font-small);
     float: right;
     vertical-align: top;
-    margin-top: 1.5vh;
-    margin-right: 1.5vh;
-}
-
-#themeTop .close {
-    filter: invert(1);
-    transition: var(--transition);
-    cursor: pointer;
-    height: 2vh;
-    float: right;
-    vertical-align: top;
-    margin-top: 1.5vh;
-    margin-right: 1.5vh;
-}
-
-#versionTop .close {
-    filter: invert(1);
-    transition: var(--transition);
-    cursor: pointer;
-    height: 2vh;
-    float: right;
-    vertical-align: top;
-    margin-top: 1.5vh;
-    margin-right: 1.5vh;
+    margin: 1em 1em 1em 0;
 }
 
 /* Contact */
@@ -403,10 +425,16 @@ footer {
 }
 
 #contactWrapper #contact {
-    width: min(100vh, 85vw);
-    height: 75vh;
+    min-width: 80vw;
     background: var(--bg-color);
     border-radius: var(--roundness);
+}
+
+@media(min-width: 1025px) {
+    #contactWrapper #contact {
+        min-width: 30vw;
+        width: 500px;
+    }
 }
 
 #contactWrapper #contact #contactTop {
@@ -414,31 +442,20 @@ footer {
     display: inline-block;
 }
 
-#contactWrapper #contact .contactTitle {
-    font-size: 5vh;
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 0.35em;
-}
-
 #contactWrapper #contact #contactBottom {
-    margin-top: 2vh;
     text-align: center;
-    overflow-y: auto;
-
 }
 
 #contactWrapper input[type=text], select {
     margin-top: 0.5em;
     width: 90%;
-    max-width: 800px;
     height: 5vh;
     background-color: var(--contactBg-color);
     border-radius: var(--roundness);
     border: none;
     outline: none;
     text-decoration: none;
-    font-size: 2vh;
+    font-size: var(--font-small);
     color: var(--contactText-color);
 }
 
@@ -448,14 +465,13 @@ footer {
 
 #contactWrapper input[type=text]:focus {
     text-decoration: none;
-    font-size: 2vh;
+    font-size: var(--font-small);
 }
 
 #contactWrapper input[type=submit] {
-    margin-top: min(calc(3% + 0.2em), 0.5em);
-    font-size: min(2vh, 4vw);
-    width: 12vh;
-    height: 4vh;
+    margin: 0.5em 0 1em 0;
+    padding: 0.5em 1em;
+    font-size: var(--font-small);
     background-color: var(--contactSubmit-color);
     border: none;
     outline: none;
@@ -482,7 +498,7 @@ footer {
     border: none;
     outline: none;
     resize: none;
-    font-size: 2vh;
+    font-size: var(--font-small);
     color: var(--contactText-color);
 }
 
@@ -492,7 +508,7 @@ footer {
 
 label {
     margin-top: 0.5em;
-    font-size: min(2vh, 4vw);
+    font-size: var(--font-small);
 }
 
 /* Theme */
@@ -513,9 +529,18 @@ label {
 
 #themeWrapper #theme {
     width: min(100vh, 85vw);
-    height: 75vh;
     background: var(--bg-color);
     border-radius: var(--roundness);
+    position: fixed;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 10%;
+}
+
+@media(min-width: 769px) {
+    #themeWrapper #theme {
+        max-width: 600px;
+    }
 }
 
 #themeWrapper #theme #themeTop {
@@ -525,20 +550,19 @@ label {
 }
 
 #themeWrapper #theme .themeSearch {
-    align-items: center;
-    width: 90%;
+    width: calc(100% - 2em);
     display: inline-block;
     color: var(--searchInput-color);
 }
 
 #themeWrapper #theme #themeTop .themeSearch input {
     display: inline-block;
-    width: 85%;
+    width: calc(100% - 2.2em);
     background: var(--bg-color);
     color: var(--searchInput-color);
     border: none;
     outline: none;
-    font-size: 2.75vh;
+    font-size: var(--font-med);
     padding-top: 0.5em;
     padding-left: 0.5em;
     vertical-align: baseline;
@@ -550,16 +574,17 @@ label {
 
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: brightness(10%) invert(1);
-    height: 2vh;
-    padding-left: 2vh;
+    height: var(--font-med);
+    padding-left: 1em;
     vertical-align: baseline;
+    transform: translateY(10%);
 }
 
 #themeWrapper #theme #themeBottom {
     margin-top: 1vh;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-height: 67.35vh;
+    max-height: 75vh;
 }
 
 #themeWrapper #theme #themeBottom .entry {
@@ -569,7 +594,7 @@ label {
     cursor: pointer;
     overflow-y: scroll;
     overflow-x: hidden;
-    font-size: 2.5vh;
+    font-size: var(--font-med);
     transition: var(--transition);
     color: var(--sub-color);
     font-weight: 300;
@@ -601,8 +626,8 @@ label {
 }
 
 #versionWrapper #versionContainer {
-    width: min(100vh, 85vw);
-    height: 75vh;
+    width: 85vw;
+    max-width: 800px;
     background: var(--bg-color);
     border-radius: var(--roundness);
 }
@@ -613,25 +638,31 @@ label {
 }
 
 #versionBottom {
-    padding: 0 2em 0 2em;
-    height: calc(73vh - 2em);
+    padding: 0 2em;
+    height: 70vh;
     width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
+@media(max-width: 769px) {
+    #versionBottom {
+        padding: 0 1em;
+    }
+}
+
 #versionBottom .versionTitle {
-    font-size: 6vh;
+    font-size: var(--font-large);
     font-weight: 700;
 }
 
 #versionBottom .versionNotes {
     font-weight: 300;
-    font-size: 2vh;
+    font-size: var(--font-small);
 }
 
 #versionBottom .versionTitle .releaseDate {
-    font-size: 0.4em;
+    font-size: 0.45em;
     font-weight: 300;
     max-width: 50%;
     float: right;
@@ -643,7 +674,8 @@ label {
 
 #githubVisible {
     opacity: 1;
-    display: inline;
+    display: inline-block;
+    
     transition: 10s;
 }
 
@@ -655,7 +687,7 @@ label {
 
 #linkedinVisible {
     opacity: 1;
-    display: inline;
+    display: inline-block;
     transition: 10s;
 }
 
@@ -667,7 +699,7 @@ label {
 
 #resumeVisible {
     opacity: 1;
-    display: inline;
+    display: inline-block;
     transition: 10s;
 }
 
@@ -675,6 +707,68 @@ label {
     opacity: 0;
     display: none!important;
     transition: 10s;
+}
+
+/* Footer */
+
+footer {
+    margin: 5em auto 2em auto;
+    padding-left: 1em;
+    width: 100%;
+    max-width: 1800px;
+    color: var(--text-color);
+    display: flex;
+}
+
+#footer-left {
+    opacity: 1;
+    float: left;
+    text-align: left;
+    font-size: 0.85em;
+    width: 100%;
+}
+
+#footer-left .clickButton {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    min-width: 5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.25em;
+    border-radius: var(--roundness);
+    color: var(--highlight-color);
+    font-weight: 500;
+    text-align: center;
+    transition: var(--return);
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#footer-left .clickButton img {
+    height: var(--font-med);
+    margin-right: 0em;
+    transition: var(--return);
+    opacity: 1;
+    margin-top: -4px;
+}
+
+#footer-left .clickButton:hover img {
+    transition: var(--return);
+}
+
+#footer-left .clickButton:hover {
+    color: var(--button-color);
+    transform: translateY(-3px);
+    transition: var(--return);
+}
+
+#footer-left .clickButtonContact {
+    width: 7em;
+}
+
+#footer-left #clickButtonTheme img {
+    height: var(--font-med);
+    margin-right: 0.15em;
+    padding-bottom: 0.15em;
 }
 
 /* Hidden */
@@ -689,9 +783,15 @@ label {
 /* Other root variables are found in the themes folder */
 
 :root {
-    --roundness: min(1.5vh, 1.5vw);
+    --roundness: 1em;
     --transition: 0.25s;
     --return: 0.5s;
+
+    --font-extra-small: 0.75em;
+    --font-small: 1em;
+    --font-med: 1.2em;
+    --font-large: 2em;
+    --font-extra-large: 2.5em;
 }
 
 /* width */

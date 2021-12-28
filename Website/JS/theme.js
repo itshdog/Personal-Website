@@ -7,6 +7,7 @@ function changeTheme(src, name, obj) {
     localStorage.setItem("theme", src);
     localStorage.setItem("name", name);
     themeTab.innerHTML = '<img src="svgs/iconmonstr-paint-bucket-10.svg"/>'+name;
+    setTimeout(themeBlur(), 1000);
 }
 
 /*window.onload = function loadTheme() {

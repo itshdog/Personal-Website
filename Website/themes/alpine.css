@@ -40,6 +40,10 @@
   color: var(--bg-color);
 }
 
+.myContainer {
+  color: var(--sub-color);
+}
+
 ::-webkit-scrollbar-thumb {
   background: var(--accent-color);
   border-radius: var(--roundness);
