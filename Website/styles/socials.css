@@ -3,7 +3,6 @@
 .icon {
     filter: opacity(40%);
     cursor: pointer;
-    height: 6vh;
     transition: 0.5s;
     text-decoration: none;
     position: relative;
@@ -17,40 +16,56 @@
 
 /* Header */
 
-#header {
-    text-decoration: none;
-    position: absolute;
-    top: 1em;
-    right: 1em;
+header {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
-#header img:hover {
-    transform: translateY(-5px);
-    transition: var(--transition);
+.icon {
+    height: 2em;
+    margin: 1em;
+    transform: scaleX(-1);
 }
 
-#header h3 {
-    font-size: 3vh;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.50);
-    filter: opacity(30%);
+@media(max-width: 1025px) {
+    .icon {
+        height: 4em;
+    }
 }
 
 /* Title */
 
-#title {
-    margin-top: -175px;
+#container {
+    margin-top: 7em;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -80%);
 }
 
 #title h1 {
     font-weight: bold;
     color: var(--accent-color);
     text-shadow: 5px 5px white, 4px 4px white, 3px 3px white, 2px 2px white, 1px 1px white;
-    margin-top: 5vh;
-    font-size: 350px;
+    font-size: 22em;
     text-align: center;
+}
 
-    margin-top: 35vh;
+/* Particles.JS */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#particles-js canvas {
+    display: block;
+    opacity: 0.35;
 }
 
 /* Icon container */
@@ -66,13 +81,18 @@
 }
 
 #icon-list img {
-    height: 8vh;
-    max-height: 12vw;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    opacity: 1;
+    height: 6em;
+    margin: 0 1em;
     filter: brightness(10%) invert(1);
 
     transition: var(--return);
+}
+
+@media(min-width: 1025px) {
+    #icon-list img{
+        height: 4em;
+    }
 }
 
 #icon-list a {

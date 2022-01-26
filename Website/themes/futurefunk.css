@@ -2,7 +2,7 @@
     --bg-color: #2e1a47;
     --main-color: #c18fff;
     --accent-color: #c18fff;
-    --highlight-color: #b682f5;
+    --highlight-color: #9660d8;
     --sub-color: #9260ce;
     --text-color: #f7f2ea;
     --searchInput-color: #f7f2ea;
@@ -10,7 +10,7 @@
     --contactText-color: #f7f2ea;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #c18fff;
-    --button-color: #f7f2ea;
+    --button-color: #a87cdf;
     --button-weight: 700;
 }
 
@@ -28,10 +28,6 @@
 
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: invert(61%) sepia(62%) saturate(827%) hue-rotate(211deg) brightness(95%) contrast(113%);
-}
-
-#my-portfolio #portfolio-items .portfolio-obj a:hover {
-  color: var(--text-color);
 }
 
 ::-webkit-scrollbar-thumb {

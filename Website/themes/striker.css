@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #124883;
+    --main-color: #0f2d4e;
+    --accent-color: #0f2d4e;
+    --highlight-color: #d6dbd9;
+    --sub-color: #081e36;
+    --text-color: #d6dbd9;
+    --searchInput-color: #d6dbd9;
+    --search-color: #d6dbd9;
+    --contactText-color: #d6dbd9;
+    --contactBg-color: rgba(0,0,0,0.15);
+    --contactSubmit-color: #d7dcda;
+    --button-color: #0f2d4e;
+    --button-weight: 700;
+}
+
+#my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom a {
+  color: var(--text-color);
+}
+
+#my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom a:hover {
+  background-color: var(--highlight-color);
+  color: var(--sub-color);
+}
+
+.portfolio-obj .portfolio-text-container .portfolio-read-text a {
+  color: #0a81ff
+}
+
+.portfolio-obj .portfolio-text-container .portfolio-read-text a:hover {
+  color: #58a9ff
+}
+
+.frontButton {
+  color: var(--text-color);
+}
+
+.frontButton:hover {
+  color: var(--sub-color);
+}
+
+#themeWrapper #theme #themeBottom #selected {
+    color: var(--text-color);
+}
+
+#footer-left .clickButton {
+    color: var(--sub-color);
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+  filter: invert(93%) sepia(7%) saturate(96%) hue-rotate(104deg) brightness(97%) contrast(85%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+}

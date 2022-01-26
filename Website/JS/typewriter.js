@@ -64,6 +64,6 @@ window.onload = function () {
     if (localStorage.getItem("name") == null) {
         var name = "Theme";
     }
-    themeTab.innerHTML = '<img src="svgs/iconmonstr-paint-bucket-10.svg"/>'+name;
+    themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
     obj.setAttribute("href", x);
 };

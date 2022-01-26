@@ -10,18 +10,8 @@
     --contactText-color: #e9ecf0;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #e23d6e;
-    --button-color: #e9ecf0;
+    --button-color: #f78cac;
     --button-weight: 700;
-}
-
-#footer-left .clickButton img {
-  filter: invert(39%) sepia(39%) saturate(1905%) hue-rotate(305deg) brightness(89%) contrast(100%);
-  transition: var(--return);
-}
-
-#footer-left .clickButton:hover img {
-  filter: invert(95%) sepia(2%) saturate(662%) hue-rotate(189deg) brightness(103%) contrast(88%);
-  transition: var(--transition);
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {

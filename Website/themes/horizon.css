@@ -2,30 +2,20 @@
     --bg-color: #1C1E26;
     --main-color: #db886f;
     --accent-color: #db886f;
-    --highlight-color: #db886f;
-    --sub-color: #c4a88a;
-    --text-color: #bbbbbb;
-    --searchInput-color: #bbbbbb;
-    --search-color: #bbbbbb;
-    --contactText-color: #bbbbbb;
+    --highlight-color: #f3ab95;
+    --sub-color: #8b8b8b;
+    --text-color: #e6e6e6;
+    --searchInput-color: #e6e6e6;
+    --search-color: #e6e6e6;
+    --contactText-color: #e6e6e6;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #db886f;
-    --button-color: #bbbbbb;
+    --button-color: #db886f;
     --button-weight: 700;
 }
 
-#footer-left .clickButton img {
-  filter: invert(62%) sepia(18%) saturate(2261%) hue-rotate(320deg) brightness(114%) contrast(72%);
-  transition: var(--return);
-}
-
-#footer-left .clickButton:hover {
-    color: var(--text-color);
-}
-
-#footer-left .clickButton:hover img {
-  filter: invert(71%) sepia(0%) saturate(1%) hue-rotate(271deg) brightness(108%) contrast(88%);
-  transition: var(--transition);
+#footer-left .clickButton {
+    color: var(--sub-color);
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {

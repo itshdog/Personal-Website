@@ -8,22 +8,12 @@
     --contactText-color: #D6D6D6;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #E95D8C;
-    --button-color: #17183B;
+    --button-color: #f58aae;
     --button-weight: 500;
-}
-
-#footer-left .clickButton img {
-  filter: invert(51%) sepia(19%) saturate(3787%) hue-rotate(307deg) brightness(98%) contrast(86%);
-  transition: var(--return);
 }
 
 #footer-left .clickButton:hover {
     color: var(--text-color);
-}
-
-#footer-left .clickButton:hover img {
-  filter: invert(86%) sepia(33%) saturate(41%) hue-rotate(282deg) brightness(107%) contrast(94%);
-  transition: var(--transition);
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {

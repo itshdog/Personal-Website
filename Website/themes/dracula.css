@@ -2,7 +2,7 @@
     --bg-color: #282a36;
     --main-color: #bd93f9;
     --accent-color: #bd93f9;
-    --highlight-color: #a77edf;
+    --highlight-color: #875ac5;
     --sub-color: #939eae;
     --text-color: #f2f2f2;
     --searchInput-color: #f2f2f2;
@@ -10,8 +10,12 @@
     --contactText-color: #f2f2f2;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #f2f2f2;
-    --button-color: #f2f2f2;
+    --button-color: #a97beb;
     --button-weight: 700;
+}
+
+.frontButton {
+  color: var(--text-color);
 }
 
 #header-left #title {
@@ -20,10 +24,6 @@
 
 #footer-left .clickButton img {
   filter: invert(67%) sepia(21%) saturate(6494%) hue-rotate(218deg) brightness(93%) contrast(87%);
-}
-
-#footer-left .clickButton:hover {
-  color: var(--bg-color);
 }
 
 #footer-left .clickButton:hover img {

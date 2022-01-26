@@ -2,7 +2,7 @@
     --bg-color: #282828;
     --main-color: #d79921;
     --accent-color: #d79921;
-    --highlight-color: #d79921;
+    --highlight-color: #ebb854;
     --sub-color: #665c54;
     --text-color: #ebdbb2;
     --searchInput-color: #d79921;
@@ -10,7 +10,7 @@
     --contactText-color: #ebdbb2;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #d79921;
-    --button-color: #ebdbb2;
+    --button-color: #d79921;
     --button-weight: 700;
 }
 

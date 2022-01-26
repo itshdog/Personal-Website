@@ -2,16 +2,24 @@
     --bg-color: #181c18;
     --main-color: #181c18;
     --accent-color: #9578d3;
-    --highlight-color: #9578d3;
+    --highlight-color: #34a773;
     --sub-color: #9578d3;
-    --text-color: #c2fbe1;
-    --searchInput-color: #00ce7c;
-    --search-color: #c2fbe1;
-    --contactText-color: #9578d3;
+    --text-color: #e9fff5;
+    --searchInput-color: #ffffff;
+    --search-color: #9578d3;
+    --contactText-color: #ffffff;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #00ce7c;
-    --button-color: #181c18;
+    --button-color: #72f1b8;
     --button-weight: 700;
+}
+
+.versionNotes {
+  color: #ffffff;
+}
+
+#versionBottom .versionTitle .releaseDate {
+  color: var(--text-color);
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {
@@ -40,16 +48,6 @@
 
 #contactWrapper input[type=submit] {
     color: #181c18;
-}
-
-#footer-left .clickButton img {
-  filter: invert(58%) sepia(32%) saturate(719%) hue-rotate(217deg) brightness(84%) contrast(96%);
-  transition: var(--return);
-}
-
-#footer-left .clickButton:hover img {
-  filter: invert(96%) sepia(6%) saturate(1248%) hue-rotate(85deg) brightness(99%) contrast(100%);
-  transition: var(--transition);
 }
 
 #footer-left .clickButton:hover {
