@@ -1,5 +1,4 @@
-# itshdog.com
-The code included with my personal webiste, www.itshdog.com
+My personal webiste, www.itshdog.com
 Primarily utilizes HTML & CSS, with a hint of JavaScript
 
 Currently practicing my skills with developing websites that are stunning & beautiful
