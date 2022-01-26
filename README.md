@@ -43,3 +43,7 @@ Here's descriptions on how to properly use every function on my website
 * The version button will open the version wrapper. Only way to access. Hit the close button to close.
 * The themes button will open the themes wrapper. Only way to access. Hit the close button to close.
 * The contact me button will open the contact me wrapper. Can also be accessed through the button at the top of the page. Hit the close button to close.
+
+# Pull Requests
+Currently I am not accepting any pull requests as this is a personal project to showcase and strengthen my skills as a programme
+However, my code is available for anyone to use in their own projects. Not all code is mine; make sure to cite where necessary.
