@@ -3,3 +3,4 @@ Up next on personal website:
 * More themes
 * Add colored svgs on settings.
 * Multiple particles settings to control
+* More user interaction
