@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            document.addEventListener("keydown", function(e){
+                if (e.key == "Escape") openSettings();
+            });
+        </script>
+        <meta charset="UTF-8">
+        <!-- ****** faviconit.com favicons ****** -->
+        <link rel="shortcut icon" href="favicon/favicon.ico">
+        <link rel="icon" sizes="16x16 32x32 64x64" href="favicon/favicon.ico">
+        <link rel="icon" type="image/png" sizes="196x196" href="favicon/favicon-192.png">
+        <link rel="icon" type="image/png" sizes="160x160" href="favicon/favicon-160.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="favicon/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+        <link rel="apple-touch-icon" href="favicon/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/favicon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/favicon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon-180.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="favicon/favicon-144.png">
+        <meta name="msapplication-config" content="/browserconfig.xml">
+        <!-- ****** faviconit.com favicons ****** -->
+        <!-- Page Information -->
+        <title> itshdog.com </title>
+        <link rel="stylesheet" href="styles/main.css" type="text/css">
+        <link rel="stylesheet" id="cssTheme" href="themes/reddragon.css" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Scripts -->
+        <script defer src="JS/main.js"></script>
+        <script defer src="JS/typewriter.js"></script>
+        <script src="https://kit.fontawesome.com/f4732725b7.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- Body -->
+    <body style="background: var(--bg-color); transition: all">
+    <header id="header">
+        <!-- Header -->
+        <div id="header-container">
+            <div id="header-left" style="font-family: BigNoodleTitlingOblique">
+                <div id="title">
+                    <div id="title-text" onclick="scrollToTop()">
+                        <span id="title-hover">itshdog.com</span>
+                    </div>
+                </div>
+                <!-- Scroll to Top // Utilizes scroll.js -->
+            </div>
+            <div id="header-right">
+                <!-- Icons on top right -->
+                <a id="hideButtonDiv">
+                    <!-- Header hide button // Utilizes hide.js -->
+                    <img onclick="hideButton();"src="svgs/iconmonstr-arrow-24.svg" id="closeIcon">
+                </a>
+                <a id="githubVisible" href="https://www.github.com/itshdog" target="_blank">
+                    <img id="githubIcon" src="svgs/iconmonstr-github-1.svg" class="icon">
+                </a>
+                <a id="linkedinVisible" href="https://www.linkedin.com/in/hayden-westphal" target="_blank">
+                    <img id ="linkedinIcon" src="svgs/iconmonstr-linkedin-3.svg" class="icon">
+                </a>
+                <a id="resumeVisible" href="Resume.pdf" target="_blank">
+                    <img id="resumeIcon" src="svgs/iconmonstr-cv-1.svg" class="icon">
+                </a>
+            </div>
+        </div>
+
+    </header>
+    
+    <div>
+        <!-- Front-Page -->
+        <div id="front-page">
+            <div id="particles-js" class=""></div>
+            <div id="body-text">
+                Hey, I'm Hayden Westphal! <br>
+                I am 
+                <span class="txt-rotate" data-period="2000" data-rotate='[ "a web developer.", "a content creator.", "a designer.", "hilarious." ]'></span>
+                <!-- Self-Typing Text // Utilizes typewriter.js -->
+            </div>
+            <div class="myContainer">
+                Currently a CS student at the University of Iowa
+               </div>
+            <div id="frontButtonList">
+                <div onclick="contactOpen()" class="frontButton">
+                    <i class="fas fa-envelope"></i>
+                    Contact Me
+                </div>
+                <!--<div class="frontButton">
+                    <a href="/social">
+                        <i class="fas fa-users"></i>
+                        Social Media
+                    </a>
+                 </div>-->
+            </div>
+            <script type="text/javascript" src="JS/particles.js"></script>
+            <script type="text/javascript" src="JS/app.js"></script>
+        </div>
+
+        <!-- Contact Page // Hidden -->
+        <div id="contactWrapper" class="hidden" style="opacity: 0;">
+            <div id="contact">
+                <div id="contactTop">
+                    <!-- Close button // Utilizes blur.js -->
+                    <i class="fas fa-times close" onclick="contactBlur()"></i>
+                </div>
+                <!-- Contact me form -->
+                <div id="contactBottom">
+                    <form name="contactMe" method="POST" data-netlify="true">
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder=""/><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" id="email" name="email" placeholder=""/>
+                        <div id="messageBox">
+                            <label for="message">Message</label><br>
+                            <textarea id="message" name="message" placeholder=""></textarea>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Theme Page // Hidden -->
+        <div id="themeWrapper" class="hidden" style="opacity: 0;">
+            <div id="theme">
+                <!-- Title -->
+                <div id="themeTop">
+                    <div class="themeSearch">
+                        <i class="fas fa-search"></i>
+                        <!-- Search Bar // Utilizes search.js -->
+                        <input id="theme-searchbar" onkeyup="search_theme()" type="text" placeholder="Type to search">
+                    </div>
+                    <!-- Close button // Utilizes blur.js -->
+                    <i class="fas fa-times close" onclick="themeBlur()"></i>
+                </div>
+                <!-- Theme list -->
+                <div id="themeBottom">
+                    <!-- Color Theme buttons // Utilizes theme.js -->
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/8008.css', '8008', this)">8008</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/80safterdark.css', '80s after dark', this)">80s after dark</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/aether.css', 'Aether', this)">aether</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/arch.css', 'Arch', this)">arch</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/bento.css', 'Bento', this)">bento</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/blueberry.css', 'Blueberry', this)">blueberry</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/carbon.css', 'Carbon', this)">carbon</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/classic.css', 'Classic', this)">classic</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/copper.css', 'Copper', this)">copper</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/cyberspace.css', 'Cyberspace', this)">cyberspace</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/deku.css', 'Deku', this)">deku</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/dracula.css', 'Dracula', this)">dracula</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/futurefunk.css', 'Future Funk', this)">future funk</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/goldfish.css', 'Goldfish', this)">goldfish</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/grandprix.css', 'Grand Prix', this)">grand prix</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/gruvbox.css', 'Gruvbox', this)">gruvbox</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/horizon.css', 'Horizon', this)">horizon</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/ocean.css', 'Ocean', this)">ocean</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/reddragon.css', 'Red Dragon', this)">red dragon</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/retro.css', 'Retro', this)">retro</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/royalty.css', 'Royalty', this)">royalty</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/samurai.css', 'Samurai', this)">samurai</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/sonokai.css', 'Sonokai', this)">sonokai</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/striker.css', 'Striker', this)">striker</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/terminal.css', 'Terminal', this)">terminal</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/terrorbelow.css', 'Terror Below', this)">terror below</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/vscode.css', 'VS Code', this)">vscode</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/watermelon.css', 'Watermelon', this)">watermelon</div>
+                    <!-- Empty entry to hold initial "selected" id -->
+                    <div class="entry-invisible" id="selected" style="display: none"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version Page // Hidden -->
+        <div id="versionWrapper" class="hidden" style="opacity: 0;">
+            <div id="versionContainer">
+                <div id="versionTop">
+                    <i class="fas fa-times close" onclick="versionBlur()"></i>
+                </div>
+                <div id="versionBottom">
+
+                    <div class="v1.2.0">
+                        <div class="versionTitle">
+                            v1.2.0
+                            <div class="releaseDate">Released 1/12/2022</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>The Settings Update</b><br>
+                            This is the beginning of a functioning settings section that I will continue to work on. Also a few other fixes<br><br>
+                            Entire Page<br>
+                            * Added Font Awesome Icons (seriously worth it)
+                            * Footer icons changed
+                            * Front page icons Added
+                            * GitHub icon added to portfolio
+                            * Close icons changed
+                            * Search icons changed.
+                            Settings<br>
+                            * Added & implemented<br>
+                            * Backdrop-Blur can be enabled/disabled for the portfolio projects. This is because it can cause performance issues on some computers.<br>
+                            * ParticlesJS can be enabled/disabled for the background. Helps with performance issues.<br>
+                            * Added Enable/Disable buttons
+                            * Item highlight on hover now is rounded. This is to avoid spilling is hovering on last item.<br>
+                            * Looking to add a bunch of particles.js settings to give the user more to do.<br><br>
+                            Themes<br>
+                            * Item highlight on hover now is rounded. This is to avoid spilling is hovering on last item.<br>
+                            * Portfolio button colors reworked, no longer white on new themes<br>
+                            * Lots of slight changes to themes; Don't remember them all. Sorry :(<br>
+                            * Search bar slightly resized, icons changed<br>
+                            * Nebula removed<br><br>
+                            Skills<br>
+                            * Removed old images<br>
+                            * Replaced with white svgs<br>
+                            * Now float on hover for more interactability<br>
+                            * No click effect, but might add later<br><br>
+                            Footer<br>
+                            * Icons have now been changed to Font Awesome Icons, now changes colors correctly<br>
+                            * Removed old svgs and filters to color them (thank god)<br><br>
+                            Portfolio<br>
+                            * Blur can be enabled/disabled in the settings<br>
+                            * Images zoom by 15% on hover. Images go back to regular scale when mouse isn't hovering<br><br>
+                            Contact Me<br>
+                            * Submit button padding reduced: 0.5em 1em to 0.2em 0.75em<br>
+                            * Search icon changed, search bar resized<br>
+                            * Resized, wider on mobile<br>
+
+                        </div>
+                    </div>
+
+                    <div class="v1.1.2">
+                        <div class="versionTitle">
+                            v1.1.2
+                            <div class="releaseDate">Released 1/7/2022</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>New Project: MatterJS Demo</b><br>
+                            A few hotfixes, plus the addition of a new project on my page. Looking into re-doing the CSS on my list project to match the aesthetic of my other projects.
+                            <a href="https://brm.io/matter-js/" target="_blank" style="text-decoration: none; color: var(--accent-color);">
+                                MatterJS link
+                            </a><br><br>
+                            Portfolio<br>
+                            * Added MatterJS Project<br>
+                            * Added blur effect on each background<br>
+                            * Light border added for contrast<br>
+                            * Removed box-shadow, replaced with the border<br><br>
+                            Skills<br>
+                            * Added blur effect on background<br>
+                            * Light border added for contrast<br>
+                            * Image sizes changed from vh to em, for correct scaling<br><br>
+                            Themes<br>
+                            * Light changes on themes, mostly updated a few svg color filters on the newest themes<br><br>
+                            Resume<br>
+                            * Updated and reuploaded. Contains most information found on this website anyway.
+
+                        </div>
+                    </div>
+
+                    <div class="v1.1.1">
+                        <div class="versionTitle">
+                            v1.1.1
+                            <div class="releaseDate">Released 12/29/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>Particles.JS Update!</b><br>
+                            I have sucessfully implemented Particles.JS into my website! Also updated Themes<br><br>
+                            Themes<br>
+                            * Removed Alpine<br>
+                            * Removed Dollar<br>
+                            * Added Retro<br>
+                            * Added Royalty<br>
+                            * Added Samurai<br>
+                            * Added Sonokai<br>
+                            * Added Striker<br>
+                            * Added Terminal<br>
+                            * Added Terror Below<br>
+                            * Added VSCode<br>
+                            * Added Watermelon<br><br>
+                            Particles.JS<br>
+                            * From VincentGarreau<br>
+                            * Check out his GitHub link here: 
+                            <a href="https://github.com/VincentGarreau/particles.js" target="_blank" style="text-decoration: none; color: var(--accent-color);">
+                                Particles.JS link
+                            </a><br><br>
+                            Social Page<br>
+                            * Added Particles JS<br>
+                            * Removed old back button, replaced with back arrow<br>
+                        </div>
+                    </div>
+
+                    <div class="v1.1.0">
+                        <div class="versionTitle">
+                            v1.1.0
+                            <div class="releaseDate">Released 12/26/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>The Revamp Update</b><br>
+                            All the sizing has been overhauled, and fixed from my defective vh and vw sizing<br>
+                            Portfolio Objects got a redesign, horizontal objects on desktop, boxes on mobile<br>
+                            Header was fixed and now works smoothly<br>
+                            Many more small changes, read details below if interested<br><br>
+                            Portfolio<br>
+                            * Layout changed, horizontal style instead of block style<br>
+                            * Began using @media(min-width: xxx) to have more flexible size changes<br>
+                            * Mobile resizes back to block style, but desktop resizes to horizontal style<br><br>
+                            Style<br>
+                            * Fixed my mistake of using vh and vw to size fonts and objects<br>
+                            * Many fonts, and other divs are now scaled according to em<br>
+                            * Makes scaling so much easier, and will allow me to focus on themes for a bit<br><br>
+                            Close Buttons<br>
+                            * Made smaller, from 2vh to 1em;<br><br>
+                            Header<br>
+                            * Sizing fixed, made smaller and doesn't fully scale on 4k<br>
+                            * Smaller font/icons, fits more comfy on mobile<br>
+                            * Close button works smoothly; Close size changes correctly to 3em<br>
+                            * Tooltips removed to fix sizing issues. Will be re-added at a later point.<br><br>
+                            Themes<br>
+                            * Page resized, smaller on desktop but same size on mobile<br>
+                            * Height is no longer fixed, gets shorter when using search<br>
+                            * Changed to fixed position to keep in place with height automatically changing<br>
+                            * Same goes for Version page, and Contact page<br><br>
+                            Fonts<br>
+                            * Many different fonts resized, most smaller<br>
+                            * Front page title, container, and buttons made smaller<br>
+                            * Section text aligned to center, might change back later<br>
+                            * Versions, Themes, Contact page fonts got resized, smaller<br>
+                            * Theme search font resized, smaller
+                        </div>
+                    </div>
+
+                    <div class="v1.0.4">
+                        <div class="versionTitle">
+                            v1.0.4
+                            <div class="releaseDate">Released 12/20/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Tooltips 2.0, More tooltips added. Plus some resizing.<br><br>
+                            Title<br>
+                            * Tooltips added for: Github, Linkedin, Resume<br>
+                            * Looking into a close tooltip, but not finished yet<br><br>
+                            Portfolio<br>
+                            * Resized portfolio objects<br>
+                            * Smaller in height, and width<br>
+                            * Text resized, smaller<br>
+                            * Buttons resized, smaller<br><br>
+                            Themes<br>
+                            * No updated yet. Just wanted to say that I am expecting to complete a themes update soon. Hoping to add lots of new themes, and maybe revamp some of the older ones.
+                        </div>
+                    </div>
+
+                    <div class="v1.0.3">
+                        <div class="versionTitle">
+                            v1.0.3
+                            <div class="releaseDate">Released 12/8/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Tooltip Update: A tooltip to the title has been added!<br>
+                            I hope to make more tooltips for other buttons as well.<br>
+                            Reworked the footer on Classic, hopefully I can make each theme more unique over time.<br><br>
+
+                            Title<br>
+                            * Tooltip added, "Click to scroll to top"<br><br>
+                            Front-Page<br>
+                            * Front buttons resized, larger on mobile<br>
+                            * Reading text resized, slightly larger on mobile<br><br>
+                            Footer<br>
+                            * Resized, smaller overall<br>
+                            * Classic has a seperate style, with no background now<br>
+                        </div>
+                    </div>
+
+                    <div class="v1.0.2">
+                        <div class="versionTitle">
+                            v1.0.2
+                            <div class="releaseDate">Released 12/2/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Just a quick, little update.<br>
+                            Just some quality of life hotfixes.<br><br>
+                            Front-Page<br>
+                            * Added Contact Me button<br>
+                            * Added Social Media button<br><br>
+                            Themes<br>
+                            * Automatically closes upon clicking a theme<br>
+                            * Removed Camping: Too light, hard to read<br>
+                            * Removed 9009: Similar to camping<br>
+                            * Added Horizon<br>
+                            * Added Nebula
+                        </div>
+                    </div>
+                    
+                    <div class="v1.0.1">
+                        <div class="versionTitle">
+                            v1.0.1
+                            <div class="releaseDate">Released 11/30/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            This update is just to clean up the overall flow of the website.<br>
+                            Resizing text to fit nicely from 4k to mobile.<br><br>
+                            Entire Page<br>
+                            * Text resized, smaller on all<br>
+                            * Accent-color containers don't fully extend on high-res monitors<br>
+                            * Text doesn't fully extend on high-res monitors<br><br>
+                            Theme/Version/Contact<br>
+                            * Window resized, thinner on desktop browsers<br><br>
+                            Contact<br>
+                            * Removed placeholder text.<br>
+                            * (Considering making placeholder text darker instead)<br><br>
+                            Portfolio<br>
+                            * Items resized, smaller on all<br>
+                            * Buttons resized, larger on mobile<br><br>
+                            Skills<br>
+                            * Icons resized, smaller.
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="v1.0.0">
+                        <div class="versionTitle">
+                            v1.0.0
+                            <div class="releaseDate">Released 11/18/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Finally a version that I think feels as a complete package.<br>
+                            Obviously I'm not done updating the site, but this is definitely a good place for v1.0.0.<br><br>
+                            Header<br>
+                            * Added open/close button <br>
+                            * Added animation <br>
+                            * Made a little wider so it feels like a header <br><br>
+                            Themes<br>
+                            * Removed Blueberry light.<br>
+                            * Blueberry dark renamed to Blueberry.<br>
+                            * Removed Gruvbox light.<br>
+                            * Gruvbox dark renamed to Gruvbox.<br>
+                            * More themes removed, but I dont remember lol.<br>
+                            * Theme label colors finally finished
+                            Social Page<br>
+                            * Finally added theme match on window-load.<br>
+                            ** Looking to add theme button<br><br>
+                            Other<br>
+                            * I'm sure there's some I missed.<br>
+                            * Oh well, I'll fix it later.<br>
+                            * Or maybe I won't.<br>
+                    
+                        </div>
+                    </div>
+
+                    <div class="v0.2.0">
+                        <div class="versionTitle">
+                            v0.2.0
+                            <div class="releaseDate">Released 11/16/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            Formatting Fixes<br>
+                            ** Fixes pertains to size shifting on mobile devices **<br>
+                            * Header sizing doesn't shift on mobile.<br>
+                            * Header buttons resized smaller.<br>
+                            * Front-page font resizing.<br>
+                            * Header font resizing.<br>
+                            * Reading text font resizing.<br>
+                            * Skills images resized<br>
+                            * Roundness changed from vh to em.<br>
+                            <br>
+                            Themes<br>
+                            * Header color changed to accent color or background color.<br>
+                            --- * Used for multiple themes.<br>
+                            * Still need to finish a few themes. (whoops) <br>
+                    
+                        </div>
+                    </div>
+
+                    <div class="v0.1.0">
+                        <div class="versionTitle">
+                            v0.1.0
+                            <div class="releaseDate">Released 10/30/2021</div>
+                        </div>
+                        <div class="versionNotes">
+                            My skills section<br>
+                            * Removed text<br>
+                            * Added images<br>
+                            <br>
+                            My Portfolio section<br>
+                            * Removed placeholder text<br>
+                            * Added grid of containers with information about projects<br>
+                            * Currently holds personal-website and 5 placeholder objects<br>
+                            * Includes a live-demo button and a GitHub button<br>
+                            <br>
+                            Header<br>
+                            * Added LinkedIn<br>
+                            * Added Resume<br>
+                            <br>
+                            Themes<br>
+                            * Few fixes here and there with colors<br>
+                            * Alduin removed -- Too similar to Bliss<br><br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- About me section -->
+        <div id="about-me">
+            <div class="myContainer">
+                About me
+            </div>
+            <div class="read-text">
+                I'm a Front-End Developer located in Iowa. I have a serious passion for creating beautiful, sleek, and modern user
+                experiences.
+            </div>
+            <div class="read-text">
+                A flexible, autonomous student looking to learn more about design and for new experiences building responsive and scalable projects.
+                Motivated to learn from senior engineers while sharing innovative ideas in an environment that values personal growth.
+            </div>
+            <div class="read-text">
+                Interested in the entire front-end development, but ambitious to try something new!
+            </div>
+        </div>
+
+        <!-- My skills section -->
+        <div id="my-skills">
+            <div class="myContainer">
+                My Skills
+            </div>
+            <div class="skills-coding">
+                <div id="skills-container">
+                    <img src="svgs/icons/html.svg">
+                    <img src="svgs/icons/css.svg">
+                    <img src="svgs/icons/javascript.svg">
+                    <img src="svgs/icons/java.svg">
+                    <img src="svgs/icons/python.svg">
+                </div>
+            </div>
+        </div>
+
+        <!-- My portfolio section -->
+        <div id="my-portfolio">
+            <div class="myContainer">
+                My Portfolio
+            </div>
+            <div class="read-text" style="margin-bottom: 3em;">
+                All projects are completed solely by me unless stated otherwise. 
+            </div>
+            <div id="portfolio-items">
+                <!-- Personal Website Object -->
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/Website-Screenshot.PNG">
+                    </div>
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">Personal Website</div>
+                        <div class="portfolio-read-text">
+                            My personal portfolio website. 
+                            A project I enjoy doing in my freetime to have fun & showcase my skills.
+                            Based on <a href="https://www.monkeytype.com" target="_blank">Monkeytype.com</a><br><br>
+                            Skills utilized: HTML/CSS/JS
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-bottom">
+                        <div class="live-demo">
+                            <a href="https://www.itshdog.com" target="_blank">Live Demo</a>
+                        </div>
+                        <div class="GitHub">
+                            <a href="https://github.com/itshdog/Personal-Website" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Object 2 -->
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/Todo.PNG">
+                    </div>    
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">To-do List</div>
+                        <div class="portfolio-read-text">
+                            A to-do list with animations and JS to store and render multiple lists.
+                            Comes with light functionality, delete list and clear completed tasks.<br> <br>
+                            Skills utilized: HTML/CSS/JS
+                        </div>
+                    </div>
+
+                    <div class="portfolio-bottom">
+                        <div class="live-demo">
+                            <a href="https://itshdog-todolist.netlify.app/" target="_blank">Live Demo</a>
+                        </div>
+                        <div class="GitHub">
+                            <a href="https://github.com/itshdog/Todo-List" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Object 3 -->
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/matterjs.PNG">
+                    </div>
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">MatterJS Demo</div>
+                        <div class="portfolio-read-text">
+                            A demo of Matter.JS. Potentially want to turn into a game.
+                            Runs better on 1080p or similar; Mobile scales incorrectly.<br><br>
+                            Skills utilized: Matter.JS, HTML/CSS/JS
+                        </div>
+                    </div>
+
+                    <div class="portfolio-bottom">
+                        <div class="live-demo">
+                            <a href="https://itshdog-matterjs.netlify.app/" target="_blank">Live Demo</a>
+                        </div>
+                        <div class="GitHub">
+                            <a href="https://github.com/itshdog" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Page // Hidden -->
+        <div id="settingsWrapper" class="hidden" style="opacity: 0;">
+            <div id="settings">
+                <!-- Title -->
+                <div id="settings-top">
+                    <div class="settings-search">
+                        <i class="fas fa-search"></i>
+                        <!-- Search Bar // Utilizes search.js -->
+                        <input id="settings-searchbar" onkeyup="search_settings()" type="text" placeholder="Type to search">
+                    </div>
+                    <!-- Close button // Utilizes blur.js -->
+                    <i class="fas fa-times close" onclick="closeSettings()"></i>
+                </div>
+                <!-- Settings list -->
+                <div id="settings-bottom">
+                    <!-- Blur mechanic used in portfolio objects // Utilizes blur.js -->
+                    <div class="settings-entry" onclick="portfolioBlur()">
+                        <div class="settings-entry-icon">
+                            <i class="fas fa-circle selected" id="blur-enable"></i>
+                            <i class="far fa-circle hidden" id="blur-disable"></i>
+                        </div>
+                        Object Blur
+                        <span class="settings-note">(Disable if causing performance issues)</span>
+                    </div>
+                    <!-- The background // Utilizes blur.js -->
+                    <div class="settings-entry" onclick="portfolioParticleJS()">
+                        <div class="settings-entry-icon">
+                            <i class="fas fa-circle selected" id="particles-enable"></i>
+                            <i class="far fa-circle hidden" id="particles-disable"></i>
+                        </div>
+                        Particles.JS Background
+                        <span class="settings-note">(Disable if causing performance issues)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div id="footer-left">
+            <!-- Open Contact Page // Utilizes blur.js -->
+            <div class="clickButton" onclick="openSettings()">
+                <i class="fas fa-sliders-h"></i>
+                Settings
+            </div>
+            <div class="clickButton" onclick="versionOpen()">
+                <i class="fas fa-code-branch"></i>
+                v1.2.0
+            </div>
+            <div class="clickButton" id="clickButtonTheme" onclick="themeOpen()">
+                <i class="fas fa-palette"></i>
+                Theme
+            </div>
+            <div class="clickButton" onclick="contactOpen()">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

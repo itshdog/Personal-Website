@@ -1,0 +1,49 @@
+:root {
+    --bg-color: #e4e4d4;
+    --main-color: #6b886b;
+    --accent-color: #6b886b;
+    --highlight-color: #577557;
+    --sub-color: #8a9b69;
+    --text-color: #555a56;
+    --searchInput-color: #555a56;
+    --search-color: #6b886b;
+    --contactText-color: #555a56;
+    --contactBg-color: rgba(0,0,0,0.15);
+    --contactSubmit-color: #6b886b;
+    --button-color: #e4e4d4;
+    --button-weight: 700;
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: invert(50%) sepia(13%) saturate(661%) hue-rotate(71deg) brightness(98%) contrast(86%);
+}
+
+#header-left #title {
+  text-shadow: 2px 2px 1px var(--main-color);
+  color: white;
+}
+
+#footer-left .clickButton img {
+  filter: invert(43%) sepia(8%) saturate(1437%) hue-rotate(71deg) brightness(94%) contrast(86%);
+}
+
+#footer-left .clickButton:hover {
+  color: var(--bg-color);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(92%) sepia(20%) saturate(114%) hue-rotate(21deg) brightness(98%) contrast(89%);
+}
+
+.icon {
+  filter: invert(100%) sepia(0%) saturate(1779%) hue-rotate(357deg) brightness(110%) contrast(105%) drop-shadow(2px 2px 1px var(--main-color));
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+}

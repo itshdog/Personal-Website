@@ -1,0 +1,52 @@
+:root {
+    --bg-color: #313131;
+    --main-color: #fc8a38;
+    --accent-color: #fc8a38;
+    --highlight-color: #ff7a1c;
+    --sub-color: #616161;
+    --text-color: #fffaf1;
+    --searchInput-color: #f5e6c8;
+    --search-color: #f5e6c8;
+    --contactText-color: #f5e6c8;
+    --contactBg-color: rgba(0,0,0,0.15);
+    --contactSubmit-color: #fc8a38;
+    --button-color: #ffa666;
+    --button-weight: 700;
+}
+
+#footer-left .clickButton:hover {
+    color: var(--text-color);
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: invert(92%) sepia(22%) saturate(472%) hue-rotate(324deg) brightness(104%) contrast(92%);
+}
+
+#title {
+    color: white;
+}
+
+#header-right img {
+    filter: invert(92%) sepia(22%) saturate(472%) hue-rotate(324deg) brightness(104%) contrast(92%);
+}
+
+#themeTop .close {
+    filter: invert(52%) sepia(13%) saturate(7483%) hue-rotate(353deg) brightness(96%) contrast(101%);
+}
+
+#contactTop .close {
+    filter: invert(52%) sepia(13%) saturate(7483%) hue-rotate(353deg) brightness(96%) contrast(101%);
+}
+
+#contactWrapper input[type=submit] {
+    color: #faf1e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-color);
+}

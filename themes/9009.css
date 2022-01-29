@@ -1,0 +1,58 @@
+:root {
+    --bg-color: #eeebe2;
+    --main-color: #eeebe2;
+    --accent-color: #080909;
+    --highlight-color: #080909;
+    --sub-color: #99947f;
+    --text-color: #99947f;
+    --searchInput-color: #eeebe2;
+    --search-color: #99947f;
+    --contactText-color: #eeebe2;
+    --contactBg-color: rgba(0,0,0,0.15);
+    --contactSubmit-color: #99947f;
+    --button-color: #eeebe2;
+    --button-weight: 700;
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: invert(62%) sepia(8%) saturate(1722%) hue-rotate(319deg) brightness(87%) contrast(104%);
+}
+
+#footer-left .clickButton img {
+  filter: invert(3%) sepia(8%) saturate(490%) hue-rotate(131deg) brightness(98%) contrast(98%);
+  transition: var(--return);
+}
+
+#footer-left .clickButton:hover img {
+  filter: invert(86%) sepia(1%) saturate(1087%) hue-rotate(2deg) brightness(114%) contrast(87%);
+}
+
+#themeTop .close {
+    filter: invert(62%) sepia(8%) saturate(1722%) hue-rotate(319deg) brightness(87%) contrast(104%);
+}
+
+#contactTop .close {
+    filter: invert(62%) sepia(8%) saturate(1722%) hue-rotate(319deg) brightness(87%) contrast(104%);
+}
+
+#versionTop .close {
+    filter: invert(62%) sepia(8%) saturate(1722%) hue-rotate(319deg) brightness(87%) contrast(104%);
+
+}
+
+#title {
+    color: var(--bg-color);
+}
+
+.icon {
+    filter: invert(86%) sepia(1%) saturate(1087%) hue-rotate(2deg) brightness(114%) contrast(87%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub-color);
+  border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sub-color);
+}

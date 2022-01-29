@@ -1,0 +1,6 @@
+Up next on personal website:
+* More settings, and make more useful
+* More themes
+* Add colored svgs on settings.
+* Multiple particles settings to control
+* More user interaction
