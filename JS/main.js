@@ -1,3 +1,4 @@
+// Contact Wrapper open/close
 function contactBlur() {
     var x = document.getElementById("contactWrapper");
     x.className = "hidden";
@@ -9,7 +10,8 @@ function contactBlur() {
     x.className = "";
     x.style.opacity = "1";
   }
-  
+
+// Theme Wrapper open/close
   function themeBlur() {
     var x = document.getElementById("themeWrapper");
     x.className = "hidden";
@@ -22,6 +24,7 @@ function contactBlur() {
     x.style.opacity = "1";
   }
   
+// Version Wrapper open/close
   function versionBlur() {
     var x = document.getElementById("versionWrapper");
     x.className = "hidden";
@@ -33,7 +36,8 @@ function contactBlur() {
     x.className = "";
     x.style.opacity = "1";
   }
-  
+
+// Settings Wrapper open/close  
   function openSettings() {
     var x = document.getElementById("settingsWrapper");
     if (x.className == "") {
@@ -43,18 +47,21 @@ function contactBlur() {
       x.style.opacity = "1";
     }
   }
-  
+
   function closeSettings() {
     var x = document.getElementById("settingsWrapper");
     x.className = "hidden";
     x.style.opacity = "0";
   }
   
+// Enable/Disable Blur. Utilized by Settings
   function portfolioBlur() {
+    // Variables
     var all = document.getElementsByClassName("portfolio-obj");
     var on = document.getElementById("blur-enable");
     var off = document.getElementById("blur-disable");
   
+    // If no blur has been set yet, set to disabled
     if (all[1].style.backdropFilter == "") {
       for (var i = 0; i < all.length; i++) {
         all[i].style.backdropFilter = "blur(0px)";
@@ -64,6 +71,7 @@ function contactBlur() {
       localStorage.setItem("blurState", "blur(0px)");
       localStorage.setItem("blurOn", "fas fa-circle hidden");
       localStorage.setItem("blurOff", "far fa-circle");
+    // If blur is enabled, set to 0px
     } else if (all[1].style.backdropFilter == "blur(3px)") {
       for (var i = 0; i < all.length; i++) {
         all[i].style.backdropFilter = "blur(0px)";
@@ -73,6 +81,7 @@ function contactBlur() {
       localStorage.setItem("blurState", "blur(0px)");
       localStorage.setItem("blurOn", "fas fa-circle hidden");
       localStorage.setItem("blurOff", "far fa-circle");
+    // If blur is disabled, set to 3px
     } else if (all[1].style.backdropFilter == "blur(0px)") {
       for (var i = 0; i < all.length; i++) {
         all[i].style.backdropFilter = "blur(3px)";
@@ -85,10 +94,13 @@ function contactBlur() {
     }
   }
   
+// Enable/Disable Particles.JS. Utilized by Settings
   function portfolioParticleJS() {
+    // Variables
     var x = document.getElementById("particles-js");
     var on = document.getElementById("particles-enable");
     var off = document.getElementById("particles-disable");
+    // If Particles.JS is enabled, disable
     if (x.className == "null") {
       x.className = "hidden";
       localStorage.setItem("particleState", "hidden")
@@ -96,6 +108,7 @@ function contactBlur() {
       localStorage.setItem("particleOn", "fas fa-circle hidden")
       off.className = "far fa-circle";
       on.className = "fas fa-circle hidden";
+    // If Particles.JS is disabled, enable
     } else if (x.className == "hidden") {
       x.className = "null";
       localStorage.setItem("particleState", "null")
@@ -106,12 +119,14 @@ function contactBlur() {
     }
   }
 
+// Scroll to top. Utilized by "itshdog.com" in the header
   function scrollToTop() {
     var x = document.getElementById("title");
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   }
 
+// Change theme function. Utilized by theme entries in Theme Wrapper
 function changeTheme(src, name, obj) {
   // Variables
   var x = document.getElementById("selected");
@@ -143,7 +158,7 @@ window.onload = function() {
   obj.setAttribute("href", x);
 }
 
-// Selected Theme Load
+// Selected Theme Highlight Load
 window.addEventListener('load', function() {
   var all = document.getElementsByClassName("theme-entry");
   var name = localStorage.getItem("name")
@@ -159,6 +174,7 @@ window.addEventListener('load', function() {
   }
 })
 
+// Search bar for Theme wrapper
 function search_theme() {
   let input = document.getElementById('theme-searchbar').value
   input=input.toLowerCase();
@@ -174,11 +190,14 @@ function search_theme() {
   }
 }
 
+// Search bar for Settings wrapper
 function search_settings() {
+  // Get input
   let input = document.getElementById('settings-searchbar').value
   input = input.toLowerCase();
   let x = document.getElementsByClassName("settings-entry");
 
+  // Display options that match input
   for (i = 0; i < x.length; i++) {
       if (!x[i].innerHTML.toLocaleLowerCase().includes(input)) {
           x[i].style.display = "none";
@@ -189,20 +208,26 @@ function search_settings() {
   }
 }
 
+// Header Open/Close button
 function hideButton() {
+  // Variables
   var flipped = "scaleX(-1)";
   var regular = "scaleX(1)";
   var closeIcon = document.getElementById("closeIcon")
+  // Open Header
   if (document.getElementById("title") == null) {
       document.getElementById("titleHidden").id = "title";
       document.getElementById("header-container").style.width = "100%";
       closeIcon.style.transform = regular;
+  // Close Header
   } else {
       document.getElementById("title").id = "titleHidden";
       document.getElementById("header-container").style.width = "3em";
       closeIcon.style.transform = flipped;
   }
 
+  // Header icon wait time
+  // For when header is opened/closed with hideButton()
   if (document.getElementById("githubVisible") == null) {
       setTimeout(function() { document.getElementById("githubHidden").id = "githubVisible"; }, 230);
   } else {
