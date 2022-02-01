@@ -74,7 +74,7 @@ window.onload = function () {
         var x = "themes/classic.css";
     }
     if (localStorage.getItem("name") == null) {
-        var name = "Theme";
+        var name = "Classic";
     }
 
     // LOAD
