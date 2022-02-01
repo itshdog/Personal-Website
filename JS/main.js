@@ -112,36 +112,46 @@ function contactBlur() {
     document.body.scrollTop = 0;
   }
 
-  function changeTheme(src, name, obj) {
-    var x = document.getElementById("selected");
-    var themeTab = document.getElementById("clickButtonTheme");
-    x.id = "";
-    document.getElementById("cssTheme").setAttribute("href", src);
-    obj.id = "selected";
-    localStorage.setItem("theme", src);
-    localStorage.setItem("name", name);
-    themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
-    setTimeout(themeBlur(), 1000);
+function changeTheme(src, name, obj) {
+  // Variables
+  var x = document.getElementById("selected");
+  var themeTab = document.getElementById("clickButtonTheme");
+  // Reset selected theme
+  x.id = "";
+  document.getElementById("cssTheme").setAttribute("href", src);
+  // Set newly clicked object to selected
+  obj.id = "selected";
+  // Set storage items
+  localStorage.setItem("theme", src);
+  localStorage.setItem("name", name);
+  // Load name, and close theme tab
+  themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
+  setTimeout(themeBlur(), 1000);
 }
 
+// Theme Load
 window.onload = function() {
+  // Variables
   var obj = document.getElementById("cssTheme");
   var x = localStorage.getItem("theme");
-  var name = localStorage.getItem("name").toLowerCase()
-  var selected = localStorage.getItem("selectedTheme");
+  var name = localStorage.getItem("name");
+  // If no theme, set as Classic
   if (localStorage.getItem("theme") == null) {
     var x = "themes/classic.css";
   }
+  // Set theme
   obj.setAttribute("href", x);
 }
 
+// Selected Theme Load
 window.addEventListener('load', function() {
   var all = document.getElementsByClassName("theme-entry");
   var name = localStorage.getItem("name")
-
+  // If no name (new browser) set as Classic
   if (name == null) {
     name = "Classic";
   }
+  // Set matching theme as selected
   for (i = 0; i < all.length; i++) {
     if (all[i].innerHTML.toLowerCase() == name.toLowerCase()) {
       all[i].setAttribute('id', "selected");
