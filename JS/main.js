@@ -127,11 +127,23 @@ function contactBlur() {
 window.onload = function() {
   var obj = document.getElementById("cssTheme");
   var x = localStorage.getItem("theme");
+  var name = localStorage.getItem("name").toLowerCase()
+  var selected = localStorage.getItem("selectedTheme");
   if (localStorage.getItem("theme") == null) {
-      var x = "themes/classic.css";
+    var x = "themes/classic.css";
   }
   obj.setAttribute("href", x);
 }
+
+window.addEventListener('load', function() {
+  var all = document.getElementsByClassName("theme-entry");
+  var name = localStorage.getItem("name")
+  for (i = 0; i < all.length; i++) {
+    if (all[i].innerHTML.toLowerCase() == name.toLowerCase()) {
+      all[i].setAttribute('id', "selected");
+    }
+  }
+})
 
 function search_theme() {
   let input = document.getElementById('theme-searchbar').value
