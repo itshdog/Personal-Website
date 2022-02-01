@@ -80,8 +80,16 @@ window.onload = function () {
     // LOAD
     // Particles.JS Load
     particles.className = particleState
-    particleOn.className = localStorage.getItem("particleOn")
-    particleOff.className = localStorage.getItem("particleOff")
+    if (localStorage.getItem("particleOn") == null) {
+        particleOn.className = "fas fa-circle selected";
+    } else {
+        particleOn.className = localStorage.getItem("particleOn")
+    }
+    if (localStorage.getItem("particleOff") == null) {
+        particleOff.className = "far fa-circle hidden";
+    } else {
+        particleOff.className = localStorage.getItem("particleOff")
+    }
     // Blur Load
     if (localStorage.getItem("blurOn") == null) {
         blurOn.className = "fas fa-circle selected";
