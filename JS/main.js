@@ -138,6 +138,10 @@ window.onload = function() {
 window.addEventListener('load', function() {
   var all = document.getElementsByClassName("theme-entry");
   var name = localStorage.getItem("name")
+
+  if (name == null) {
+    name = "Classic";
+  }
   for (i = 0; i < all.length; i++) {
     if (all[i].innerHTML.toLowerCase() == name.toLowerCase()) {
       all[i].setAttribute('id', "selected");
