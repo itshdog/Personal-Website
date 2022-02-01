@@ -55,6 +55,17 @@ window.onload = function () {
     document.body.appendChild(css);
 
     var obj = document.getElementById("cssTheme");
+    // Particles.JS
+    var particles = document.getElementById("particles-js");
+    var particleState = localStorage.getItem("particleState");
+    var particleOn = document.getElementById("particles-enable");
+    var particleOff = document.getElementById("particles-disable");
+    // Blur
+    var blur = document.getElementsByClassName("portfolio-obj")
+    var blurState = localStorage.getItem("blurState");
+    var blurOn = document.getElementById("blur-enable");
+    var blurOff = document.getElementById("blur-disable");
+    // Theme
     var x = localStorage.getItem("theme");
     var name = localStorage.getItem("name");
     var themeTab = document.getElementById("clickButtonTheme");
@@ -63,6 +74,14 @@ window.onload = function () {
     }
     if (localStorage.getItem("name") == null) {
         var name = "Theme";
+    }
+    particles.className = particleState
+    particleOn.className = localStorage.getItem("particleOn")
+    particleOff.className = localStorage.getItem("particleOff")
+    blurOn.className = localStorage.getItem("blurOn")
+    blurOff.className = localStorage.getItem("blurOff")
+    for (var i = 0; i < blur.length; i++) {
+        blur[i].style.backdropFilter = blurState;
     }
     themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
     obj.setAttribute("href", x);
