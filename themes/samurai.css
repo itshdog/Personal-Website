@@ -31,7 +31,11 @@
 }
 
 #footer-left .clickButton {
-    color: var(--sub-color);
+    color: var(--button-color);
+}
+
+#footer-left .clickButton:hover {
+  color: var(--highlight-color);
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {
