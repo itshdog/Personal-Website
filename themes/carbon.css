@@ -6,7 +6,7 @@
     --sub-color: #616161;
     --text-color: #fffaf1;
     --searchInput-color: #f5e6c8;
-    --search-color: #f5e6c8;
+    --search-color: #616161;
     --contactText-color: #f5e6c8;
     --contactBg-color: rgba(0,0,0,0.15);
     --contactSubmit-color: #fc8a38;
@@ -30,12 +30,12 @@
     filter: invert(92%) sepia(22%) saturate(472%) hue-rotate(324deg) brightness(104%) contrast(92%);
 }
 
-#themeTop .close {
-    filter: invert(52%) sepia(13%) saturate(7483%) hue-rotate(353deg) brightness(96%) contrast(101%);
+.themeSearch {
+    color: var(--main-color)!important;
 }
 
-#contactTop .close {
-    filter: invert(52%) sepia(13%) saturate(7483%) hue-rotate(353deg) brightness(96%) contrast(101%);
+.close {
+    color: var(--main-color);
 }
 
 #contactWrapper input[type=submit] {

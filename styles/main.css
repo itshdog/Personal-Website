@@ -451,6 +451,13 @@ header {
     float: right;
     font-size: 1.4em;
     margin: 0.40em 0.5em 0 0;
+    color: var(--accent-color);
+    transition: var(--return);
+}
+
+.close:hover {
+    color: var(--highlight-color);
+    transition: var(--transition);
 }
 
 /* Contact */
@@ -601,14 +608,18 @@ label {
 #themeWrapper #theme .themeSearch {
     width: calc(100% - 2em);
     display: inline-block;
-    color: var(--searchInput-color);
+    color: var(--sub-color);
+}
+
+.themeSearch i {
+    color: var(--accent-color)!important;
 }
 
 #themeWrapper #theme #themeTop .themeSearch input {
     display: inline-block;
     width: calc(100% - 2.2em);
     background: var(--bg-color);
-    color: var(--searchInput-color);
+    color: var(--text-color);
     border: none;
     outline: none;
     font-size: var(--font-med);
@@ -617,7 +628,7 @@ label {
 }
 
 #themeWrapper #theme #themeTop .themeSearch ::placeholder {
-    color: var(--search-color);
+    color: var(--sub-color);
 }
 
 #themeWrapper #theme #themeTop .themeSearch i {
@@ -808,14 +819,14 @@ label {
 #settingsWrapper #settings .settings-search {
     width: calc(100% - 2em);
     display: inline-block;
-    color: var(--searchInput-color);
+    color: var(--accent-color);
 }
 
 #settingsWrapper #settings #settings-top .settings-search input {
     display: inline-block;
     width: calc(100% - 2.2em);
     background: var(--bg-color);
-    color: var(--searchInput-color);
+    color: var(--text-color);
     border: none;
     outline: none;
     font-size: var(--font-med);
@@ -824,7 +835,7 @@ label {
 }
 
 #settingsWrapper #settings #settings-top .settings-search ::placeholder {
-    color: var(--search-color);
+    color: var(--sub-color);
 }
 
 #settingsWrapper #settings #settings-top .settings-search i {

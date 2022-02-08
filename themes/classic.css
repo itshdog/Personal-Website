@@ -14,14 +14,6 @@
     --button-weight: 700;
 }
 
-#themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(40%) sepia(51%) saturate(1036%) hue-rotate(318deg) brightness(104%) contrast(89%);
-}
-
-.close {
-    filter: invert(40%) sepia(51%) saturate(1036%) hue-rotate(318deg) brightness(104%) contrast(89%);
-}
-
 ::-webkit-scrollbar-thumb {
   background: var(--accent-color);
   border-radius: var(--roundness);

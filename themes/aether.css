@@ -3,7 +3,7 @@
     --main-color: #E95D8C;
     --accent-color: #E95D8C;
     --highlight-color: #E95D8C;
-    --sub-color: #CEA1C0;
+    --sub-color: #1c5169;
     --text-color: #F7F0F5;
     --contactText-color: #D6D6D6;
     --contactBg-color: rgba(0,0,0,0.15);
@@ -12,12 +12,12 @@
     --button-weight: 500;
 }
 
-#footer-left .clickButton:hover {
-    color: var(--text-color);
+.themeSearch input {
+  color: var(--sub-color)!important;
 }
 
-#themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(66%) sepia(7%) saturate(677%) hue-rotate(176deg) brightness(95%) contrast(82%);
+#footer-left .clickButton:hover {
+    color: var(--highlight-color);
 }
 
 ::-webkit-scrollbar-thumb {
