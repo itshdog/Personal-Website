@@ -209,7 +209,6 @@ header {
 
 #skills-container {
     background: rgba(0,0,0,0.15);
-    backdrop-filter: blur(3px);
     border: solid rgba(133, 133, 133, 0.05);
     border-radius: 5em;
     width: auto;
@@ -279,7 +278,6 @@ header {
     max-width: 1000px;
     border-radius: calc(var(--roundness) + 1px);
     background-color: rgba(0,0,0,0.15);
-    backdrop-filter: blur(3px);
     margin: 1em;
     border: solid rgba(133, 133, 133, 0.05);
     display: inline-block;

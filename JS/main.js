@@ -54,45 +54,6 @@ function contactBlur() {
     x.style.opacity = "0";
   }
   
-// Enable/Disable Blur. Utilized by Settings
-  function portfolioBlur() {
-    // Variables
-    var all = document.getElementsByClassName("portfolio-obj");
-    var on = document.getElementById("blur-enable");
-    var off = document.getElementById("blur-disable");
-  
-    // If no blur has been set yet, set to disabled
-    if (all[1].style.backdropFilter == "") {
-      for (var i = 0; i < all.length; i++) {
-        all[i].style.backdropFilter = "blur(0px)";
-      }
-      off.className = "far fa-circle";
-      on.className = "fas fa-circle hidden";
-      localStorage.setItem("blurState", "blur(0px)");
-      localStorage.setItem("blurOn", "fas fa-circle hidden");
-      localStorage.setItem("blurOff", "far fa-circle");
-    // If blur is enabled, set to 0px
-    } else if (all[1].style.backdropFilter == "blur(3px)") {
-      for (var i = 0; i < all.length; i++) {
-        all[i].style.backdropFilter = "blur(0px)";
-      }
-      off.className = "far fa-circle";
-      on.className = "fas fa-circle hidden";
-      localStorage.setItem("blurState", "blur(0px)");
-      localStorage.setItem("blurOn", "fas fa-circle hidden");
-      localStorage.setItem("blurOff", "far fa-circle");
-    // If blur is disabled, set to 3px
-    } else if (all[1].style.backdropFilter == "blur(0px)") {
-      for (var i = 0; i < all.length; i++) {
-        all[i].style.backdropFilter = "blur(3px)";
-      }
-      off.className = "far fa-circle hidden";
-      on.className = "fas fa-circle selected";
-      localStorage.setItem("blurState", "blur(3px)");
-      localStorage.setItem("blurOn", "fas fa-circle selected");
-      localStorage.setItem("blurOff", "far fa-circle hidden");
-    }
-  }
   
 // Enable/Disable Particles.JS. Utilized by Settings
   function portfolioParticleJS() {
