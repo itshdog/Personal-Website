@@ -61,21 +61,19 @@ window.onload = function () {
     var particleState = localStorage.getItem("particleState");
     var particleOn = document.getElementById("particles-enable");
     var particleOff = document.getElementById("particles-disable");
-    // Blur Initialize
-    var blur = document.getElementsByClassName("portfolio-obj")
-    var blurState = localStorage.getItem("blurState");
-    var blurOn = document.getElementById("blur-enable");
-    var blurOff = document.getElementById("blur-disable");
     // Theme Initialize
     var x = localStorage.getItem("theme");
     var name = localStorage.getItem("name");
     var themeTab = document.getElementById("clickButtonTheme");
+    var themeLink = document.getElementById("cssTheme")
     if (localStorage.getItem("theme") == null) {
         var x = "themes/classic.css";
     }
     if (localStorage.getItem("name") == null) {
         var name = "Classic";
     }
+    themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
+    themeLink.href = x
 
     // LOAD
     // Particles.JS Load
@@ -90,21 +88,9 @@ window.onload = function () {
     } else {
         particleOff.className = localStorage.getItem("particleOff")
     }
-    // Blur Load
-    if (localStorage.getItem("blurOn") == null) {
-        blurOn.className = "fas fa-circle selected";
-    } else {
-        blurOn.className = localStorage.getItem("blurOn")
-    }
-    if (localStorage.getItem("blurOff") == null) {
-        blurOff.className = "far fa-circle hidden";
-    } else {
-        blurOff.className = localStorage.getItem("blurOff")
-    }
-    for (var i = 0; i < blur.length; i++) {
-        blur[i].style.backdropFilter = blurState;
-    }
-    // Theme Load
-    themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
-    obj.setAttribute("href", x);
+
+    // Remove loading screen
+    document.getElementById("html").style.overflow = 'auto';
+    document.getElementById("html").style.height = 'auto';
+    document.getElementById("loading-screen").style.display = "none";
 };
