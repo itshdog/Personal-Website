@@ -25,6 +25,7 @@
 #footer-left .clickButton {
   background-color: var(--accent-color);
   color: var(--text-color);
+  border-radius: 1em;
 }
 
 #footer-left .clickButton img {
