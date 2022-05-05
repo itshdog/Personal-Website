@@ -69,7 +69,7 @@
                 <a id="linkedinVisible" href="https://www.linkedin.com/in/hayden-westphal" target="_blank">
                     <img id ="linkedinIcon" src="svgs/iconmonstr-linkedin-3.svg" class="icon">
                 </a>
-                <a id="resumeVisible" href="Resume.pdf" target="_blank">
+                <a id="resumeVisible" href="WestphalHayden-Resume.pdf" target="_blank">
                     <img id="resumeIcon" src="svgs/iconmonstr-cv-1.svg" class="icon">
                 </a>
             </div>
@@ -167,9 +167,12 @@
                     <div class="theme-entry" id="" onclick="changeTheme('themes/grandprix.css', 'Grand Prix', this)">grand prix</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/gruvbox.css', 'Gruvbox', this)">gruvbox</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/horizon.css', 'Horizon', this)">horizon</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/moonlight.css', 'Moonlight', this)">moonlight</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/ocean.css', 'Ocean', this)">ocean</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/onedark.css', 'OneDark', this)">onedark</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/reddragon.css', 'Red Dragon', this)">red dragon</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/retro.css', 'Retro', this)">retro</div>
+                    <div class="theme-entry" id="" onclick="changeTheme('themes/rosepinemoon.css', 'Rose Pine Moon', this)">rose pine moon</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/royalty.css', 'Royalty', this)">royalty</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/samurai.css', 'Samurai', this)">samurai</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/sonokai.css', 'Sonokai', this)">sonokai</div>
@@ -191,6 +194,33 @@
                     <i class="fas fa-times close" onclick="versionBlur()"></i>
                 </div>
                 <div id="versionBottom">
+
+                    <div class="v1.2.4">
+                        <div class="versionTitle">
+                            v1.2.4
+                            <div class="releaseDate">Released 5/4/2022</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>Hotfixes + Fun</b><br>
+                            College has been taking a precedence over my freetime coding. However, I had the time to make some light fixes & changes!<br><br>
+                            Random Theme<br>
+                            * On page load, a new theme will be randomly selected<br>
+                            * I choose this change because users tended to not look at the theme page<br>
+                            * A hotfix is needed for the theme label in the footer not capitalizing properly on page load<br><br>
+                            Resume updated, again<br><br>
+                            Portfolio Projects<br>
+                            * Added research project (Screentime Tracking)<br><br>
+                            Themes<br>
+                            * Striker footer colors updated<br>
+                            * Cyberspace header colors updated<br>
+                            * Added Moonlight<br>
+                            * Added OneDark<br>
+                            * Added Rose Pine Moon<br>
+                            * Removed Nebula<br>
+                            * Looking to add more themes, but I always say I wanna add more<br>
+                    
+                        </div>
+                    </div>
 
                     <div class="v1.2.3">
                         <div class="versionTitle">
@@ -715,6 +745,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/screentime-tracking.png">
+                    </div>
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">Screentime Tracking</div>
+                        <div class="portfolio-read-text">
+                            A student led research project completed over the course of a semester by me and 4 fellow students.
+                            I led the design of the UI/UX, completed the settings page, and helped with core functionality.<br><br>
+                            Skills utilized: HTML/CSS/Bootstrap, ReactJS, ChartJS, MomentJS
+                        </div>
+                    </div>
+                
+                    <div class="portfolio-bottom">
+                        <div class="live-demo">
+                            <a href="https://cs4510-group8.netlify.app/index.html" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -756,7 +806,7 @@
             </div>
             <div class="clickButton" onclick="versionOpen()">
                 <i class="fas fa-code-branch"></i>
-                v1.2.3
+                v1.2.4
             </div>
             <div class="clickButton" id="clickButtonTheme" onclick="themeOpen()">
                 <i class="fas fa-palette"></i>

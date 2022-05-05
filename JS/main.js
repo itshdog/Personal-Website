@@ -87,6 +87,18 @@ function contactBlur() {
     document.body.scrollTop = 0;
   }
 
+// Random Integer Generator
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function randomTheme() {
+  let entries = document.getElementsByClassName("theme-entry");
+  let theme = entries[getRandomInt(entries.length)];
+  theme = theme.replace(/ /g, '').toLowerCase();
+  return "themes/" + theme + ".css"
+}
+
 // Change theme function. Utilized by theme entries in Theme Wrapper
 function changeTheme(src, name, obj) {
   // Variables
@@ -113,10 +125,10 @@ window.onload = function() {
   var name = localStorage.getItem("name");
   // If no theme, set as Classic
   if (localStorage.getItem("theme") == null) {
-    var x = "themes/classic.css";
+    var x = randomTheme();
   }
   // Set theme
-  obj.setAttribute("href", x);
+  obj.setAttribute("href", randomTheme());
 }
 
 // Selected Theme Highlight Load

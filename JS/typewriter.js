@@ -39,6 +39,19 @@ TxtRotate.prototype.tick = function () {
     }, delta);
 };
 
+// Random Integer Generator
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+};
+
+function randomTheme() {
+    let entries = document.getElementsByClassName("theme-entry");
+    const theme = entries[getRandomInt(entries.length)].innerHTML;
+    let title = theme[0].toUpperCase() + theme.substring(1);
+    localStorage.setItem("name", title);
+    return String("themes/" + theme.replace(/\s+/g, '').toLowerCase() + ".css");
+};
+
 window.onload = function () {
     var elements = document.getElementsByClassName('txt-rotate');
     for (var i = 0; i < elements.length; i++) {
@@ -62,18 +75,12 @@ window.onload = function () {
     var particleOn = document.getElementById("particles-enable");
     var particleOff = document.getElementById("particles-disable");
     // Theme Initialize
-    var x = localStorage.getItem("theme");
+    var x = randomTheme();
     var name = localStorage.getItem("name");
     var themeTab = document.getElementById("clickButtonTheme");
     var themeLink = document.getElementById("cssTheme")
-    if (localStorage.getItem("theme") == null) {
-        var x = "themes/classic.css";
-    }
-    if (localStorage.getItem("name") == null) {
-        var name = "Classic";
-    }
     themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
-    themeLink.href = x
+    themeLink.href = x;
 
     // LOAD
     // Particles.JS Load

@@ -3,6 +3,7 @@
     --main-color: #0f2d4e;
     --accent-color: #0f2d4e;
     --highlight-color: #d6dbd9;
+    --textSub-color: #a0a4a2;
     --sub-color: #081e36;
     --text-color: #d6dbd9;
     --searchInput-color: #d6dbd9;
@@ -44,7 +45,15 @@
 }
 
 #footer-left .clickButton {
-    color: var(--sub-color);
+    color: var(--text-color)!important;
+}
+
+#footer-left .clickButton:hover {
+  color: var(--text-color)!important;
+}
+
+#themeTop {
+  color: var(--textSub-color)!important;
 }
 
 #themeWrapper #theme #themeTop .themeSearch img {

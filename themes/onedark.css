@@ -1,0 +1,36 @@
+:root {
+    --bg-color: #2f343f;
+    --main-color: #61afef;
+    --accent-color: #61afef;
+    --highlight-color: #3d8fd2;
+    --sub-color: #98c379;
+    --text-color: #eceff4;
+    --searchInput-color: #eceff4;
+    --search-color: #98c379;
+    --contactText-color: #eceff4;
+    --contactBg-color: rgba(0, 0, 0, 0.15);
+    --contactSubmit-color: #61afef;
+    --button-color: #98c379;
+    --button-weight: 700;
+}
+
+#footer-left .clickButton {
+    color: var(--text-color);
+}
+
+.settings-entry {
+    color: var(--text-color)!important;
+}
+
+#themeWrapper #theme #themeTop .themeSearch img {
+    filter: invert(39%) sepia(9%) saturate(1982%) hue-rotate(177deg) brightness(97%) contrast(87%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: var(--roundness);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--highlight-color);
+}
