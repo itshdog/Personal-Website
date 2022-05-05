@@ -82,7 +82,7 @@ header {
 
 #icon-list img {
     opacity: 1;
-    height: 6em;
+    height: 8em;
     margin: 0 1em;
     filter: brightness(10%) invert(1);
 
@@ -107,13 +107,6 @@ header {
 /* Root Colors */
 
 :root {
-    --bg-color: #323437;
-    --main-color: #d82934;
-    --accent-color: #f05757;
-    --sub-color: #5e5e5e;
-    --text-color: #e8e8e8;
-    --error-color: #da3333;
-    --main-invert: #27d6cb;
     --roundness: 1vh;
     --transition: 0.25s;
     --return: 0.5s;
