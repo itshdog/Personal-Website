@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    font-family: Roboto-Light!important;
+    letter-spacing: 1px;
 }
 
 /* Header */
@@ -197,18 +199,31 @@ header {
 /* Body Information */
 
 #body-text {
-    max-width: 90%;
+    max-width: 100%;
     margin: 30vh auto 0 auto;
-    font-size: var(--font-large);
+    font-size: 6em;
     color: var(--text-color);
     text-align: center;
     z-index: 10;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.301), 1px 1px var(--accent-color);
+}
+
+#front-splash {
+    color: var(--text-color);
+    text-align: center;
+    font-size: var(--font-small);
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+#front-splash span {
+    color: var(--accent-color);
 }
 
 @media(min-width: 769px) {
     #body-text {
         max-width: 80%;
-        font-size: 3em;
+        font-size: 7em;
     }
     .myContainer {
         max-width: 80%;
@@ -216,18 +231,13 @@ header {
 }
 
 .myContainer {
-    background-color: var(--accent-color);
-    color: white;
+    color: var(--text-color);
     text-align: center;
-    font-weight: 700;
-    border-radius: 0.5em;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    width: 150rem;
-    max-width: 90%;
+    font-weight: 500;
     margin: 0 auto;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    font-size: var(--font-large);
+    font-size: 6em;
+    font-family: signature;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.301), 1px 1px var(--accent-color);
 }
 
 @media(min-width: 1921px) {
@@ -254,7 +264,6 @@ header {
 
 .skills-coding {
     text-align: center;
-    padding-top: 2em;
     width: 90%;
     margin: 0 auto;
 }
@@ -272,20 +281,18 @@ header {
     display: flex;
     justify-content: center;
     width: 90%;
-    margin: 1em auto
+    margin: 0.5rem auto;
 }
 
 .frontButton {
-    background: var(--button-color);
-    color: var(--bg-color);
-    border-radius: var(--roundness);
-    font-weight: 700;
+    color: var(--text-color);
+    border-radius: 99999em;
     font-size: var(--font-med);
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    padding: 0 0.5em;
-    margin: 0 0.25em 0 0.25em;
+    padding: 0.2rem 0.5rem;
+    margin: auto 0.2rem;
     transition: var(--return);
 }
 
@@ -293,6 +300,7 @@ header {
     background: var(--highlight-color);
     transform: translateY(-5px);
     transition: var(--transition);
+    color: var(--bg-color);
 }
 
 .frontButton a {
@@ -316,7 +324,7 @@ header {
 #my-portfolio #portfolio-items {
     width: 90%;
     max-width: 1920px;
-    margin: 1.5em auto;
+    margin: 0 auto;
 }
 
 @media(max-width: 769px) {
@@ -376,6 +384,7 @@ header {
 }
 
 .portfolio-title {
+    font-family: Roboto-Bold!important;
     font-size: var(--font-large);
 }
 
@@ -449,7 +458,6 @@ header {
     color: var(--text-color);
     font-weight: 500;
     text-align: center;
-    padding-top: 30px;
 }
 
 .portfolio-read-text a {
@@ -465,6 +473,10 @@ header {
     .read-text {
         max-width: 900px;
     }
+}
+
+#about-me {
+    text-align: left!important;
 }
 
 /* Icons */
@@ -1055,4 +1067,39 @@ footer {
 @font-face {
     font-family: AmericanCaptain;
     src: url(american_captain.ttf)
+}
+
+@font-face {
+    font-family: Signature;
+    src: url(signature.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto-Regular.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url(Roboto-Black.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(Roboto-Bold.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(Roboto-Medium.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Roboto-Light.ttf)
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(Roboto-Thin.ttf)
 }
