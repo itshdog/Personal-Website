@@ -200,7 +200,7 @@ header {
 
 #body-text {
     max-width: 100%;
-    margin: 30vh auto 0 auto;
+    margin: 25vh auto 0 auto;
     font-size: 6em;
     color: var(--text-color);
     text-align: center;
@@ -224,6 +224,7 @@ header {
     #body-text {
         max-width: 80%;
         font-size: 7em;
+        margin: 33vh auto 0 auto;
     }
     .myContainer {
         max-width: 80%;
