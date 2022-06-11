@@ -210,7 +210,7 @@ header {
     color: var(--text-color);
     text-align: center;
     z-index: 10;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.301), 1px 1px var(--accent-color);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35), 1px 1px var(--accent-color), 2px 2px var(--accent-color), 3px 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 #front-splash {
@@ -241,9 +241,10 @@ header {
     text-align: center;
     font-weight: 500;
     margin: 0 auto;
+    padding-bottom: 2rem;
     font-size: 6em;
     font-family: signature;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.301), 1px 1px var(--accent-color);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35), 1px 1px var(--accent-color), 2px 2px var(--accent-color), 3px 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 @media(min-width: 1921px) {
@@ -266,6 +267,7 @@ header {
 #my-skills img:hover {
     transform: translateY(-5px);
     transition: var(--transition);
+    filter: drop-shadow(0 5px 3px rgba(0,0,0,0.5));
 }
 
 .skills-coding {
@@ -455,6 +457,7 @@ header {
 .portfolio-title {
     font-family: Roboto-Bold!important;
     font-size: var(--font-large);
+    text-shadow: 1px 1px var(--accent-color), 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-read-text {
@@ -522,10 +525,12 @@ header {
     background-color: var(--highlight-color);
     transform: translateY(-3px);
     transition: var(--transition);
+    box-shadow: 0 5px 3px rgba(0,0,0,0.3);
 }
 
 .read-text {
     width: 70%;
+    max-width: 800px;
     margin: 0 auto;
     font-size: var(--font-small);
     color: var(--text-color);
