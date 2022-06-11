@@ -786,7 +786,8 @@ label {
     font-size: var(--font-med);
     transition: var(--return);
     color: var(--sub-color);
-    font-weight: 300;
+    font-weight: 500;
+    font-family: Roboto-Regular;
 }
 
 #themeWrapper #theme #themeBottom .entry-invisible {
@@ -1048,7 +1049,7 @@ footer {
 #footer-left .clickButton {
     padding: 0.2em 0.5em;
     color: var(--sub-color);
-    font-weight: 700;
+    font-weight: 500;
     transition: var(--return);
     display: inline-block;
     cursor: pointer;
