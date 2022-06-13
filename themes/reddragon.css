@@ -1,21 +1,29 @@
 :root {
-    --bg-color: #1a0b0c;
+    --bg-color: #271213;
     --main-color: #ff3a32;
     --accent-color: #ff3a32;
     --highlight-color: #fac04d;
-    --sub-color: #4a4d4e;
-    --text-color: #ffffff;
+    --sub-color: #7c494b;
+    --text-color: #f8e6e6;
     --searchInput-color: #ffffff;
     --search-color:#4a4d4e;
     --contactText-color: #ffffff;
-    --contactBg-color: rgba(131, 131, 131, 0.15);
+    --contactBg-color: rgba(0, 0, 0, 0.15);
     --contactSubmit-color: #e2a528;
     --button-color: #e2a528;
     --button-weight: 700;
 }
 
 #footer-left .clickButton:hover {
-    color: var(--text-color);
+    color: var(--button-color);
+}
+
+.portfolio-bottom a:hover {
+  background-color: var(--button-color)!important;
+}
+
+#front-splash span {
+  color: var(--button-color);
 }
 
 ::-webkit-scrollbar-thumb {

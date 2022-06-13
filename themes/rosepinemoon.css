@@ -3,7 +3,7 @@
     --main-color: #9ccfd8;
     --accent-color: #9ccfd8;
     --highlight-color: #7ab7c2;
-    --sub-color: #c4a7e7;
+    --sub-color: #635377;
     --text-color: #e0def4;
     --searchInput-color: #e0def4;
     --search-color: #98c379;
@@ -16,6 +16,14 @@
 
 #footer-left .clickButton {
     color: var(--text-color);
+}
+
+.clickButton {
+    color: var(--sub-color)!important;
+}
+
+.clickButton:hover {
+    color: var(--accent-color)!important;
 }
 
 .settings-entry {

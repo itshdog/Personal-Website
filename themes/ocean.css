@@ -1,16 +1,16 @@
 :root {
-    --bg-color: #191826;
-    --main-color: #5684da;
-    --accent-color: #5684da;
-    --highlight-color: #7fabfc;
-    --sub-color: #455977;
-    --text-color: #e1e1eb;
+    --bg-color: #171833;
+    --main-color: #407ff3;
+    --accent-color: #407ff3;
+    --highlight-color: #5c95ff;
+    --sub-color: #444d81;
+    --text-color: #e7ecff;
     --searchInput-color: #e1e1eb;
     --search-color: #6f87ac;
     --contactText-color: #bebece;
     --contactBg-color: rgba(0,0,0,0.15);
-    --contactSubmit-color: #4a6fb5;
-    --button-color: #4273ce;
+    --contactSubmit-color: #407ff3;
+    --button-color: #407ff3;
     --button-weight: 700;
 }
 

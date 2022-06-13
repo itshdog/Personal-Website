@@ -1,6 +1,6 @@
 :root {
     --bg-color: #181c18;
-    --main-color: #181c18;
+    --main-color: #9578d3;
     --accent-color: #9578d3;
     --highlight-color: #34a773;
     --sub-color: #4a524a;
@@ -14,16 +14,28 @@
     --button-weight: 700;
 }
 
+.portfolio-bottom a:hover {
+  background-color: var(--highlight-color)!important;
+}
+
+#front-splash span {
+  color: var(--highlight-color);
+}
+
+.clickButton:hover {
+  color: var(--main-color)!important;
+}
+
+.close {
+  color: var(--button-color);
+}
+
 .versionNotes {
   color: #ffffff;
 }
 
 #versionBottom .versionTitle .releaseDate {
-  color: var(--text-color);
-}
-
-#themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(55%) sepia(25%) saturate(879%) hue-rotate(218deg) brightness(91%) contrast(93%);
+  color: var(--sub-color);
 }
 
 #title {
@@ -31,19 +43,7 @@
 }
 
 #contactWrapper {
-  color: #9578d3;
-}
-
-#header-right img {
-    filter: invert(93%) sepia(9%) saturate(848%) hue-rotate(88deg) brightness(104%) contrast(97%);
-}
-
-#themeTop .close {
-    filter: invert(55%) sepia(25%) saturate(879%) hue-rotate(218deg) brightness(91%) contrast(93%);
-}
-
-#contactTop .close {
-    filter: invert(55%) sepia(25%) saturate(879%) hue-rotate(218deg) brightness(91%) contrast(93%);
+  color: #4a524a;
 }
 
 #contactWrapper input[type=submit] {

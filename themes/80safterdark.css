@@ -22,6 +22,10 @@
   color: white;
 }
 
+.portfolio-bottom a:hover {
+  background-color: var(--highlight-color)!important;
+}
+
 #themeWrapper #theme #themeTop .themeSearch img {
     filter: invert(82%) sepia(24%) saturate(453%) hue-rotate(151deg) brightness(95%) contrast(93%);
 }

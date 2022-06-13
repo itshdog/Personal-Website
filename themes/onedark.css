@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #2f343f;
+    --bg-color: #232731;
     --main-color: #61afef;
     --accent-color: #61afef;
     --highlight-color: #3d8fd2;
-    --sub-color: #98c379;
+    --sub-color: #717d97;
     --text-color: #eceff4;
     --searchInput-color: #eceff4;
     --search-color: #98c379;
@@ -15,7 +15,23 @@
 }
 
 #footer-left .clickButton {
-    color: var(--text-color);
+    color: var(--sub-color);
+}
+
+#selected {
+    color: var(--button-color)!important;
+}
+
+#about-me .myContainer, #my-portfolio .myContainer {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35), 1px 1px var(--button-color), 2px 2px var(--button-color), 3px 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+#front-splash span {
+    color: var(--button-color);
+}
+
+.frontButton:hover {
+    background-color: var(--button-color);
 }
 
 .settings-entry {

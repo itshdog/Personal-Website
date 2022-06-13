@@ -17,8 +17,12 @@
   color: white;
 }
 
-.frontButton {
+.frontButton:hover {
   background: var(--main-color);
+}
+
+.portfolio-title {
+  text-shadow: 1px 1px var(--sub-color), 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 #footer-left .clickButton img {
@@ -27,7 +31,7 @@
 }
 
 #footer-left .clickButton:hover {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 #footer-left .clickButton:hover img {

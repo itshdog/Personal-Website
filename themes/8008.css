@@ -1,15 +1,15 @@
 :root {
     --bg-color: #333a45;
-    --main-color: #f44c7f;
-    --accent-color: #e23d6e;
-    --highlight-color: #f44c7f;
+    --main-color: #f78cac;
+    --accent-color: #f78cac;
+    --highlight-color: #f78cac;
     --sub-color: #939eae;
     --text-color: #e9ecf0;
     --searchInput-color: #e9ecf0;
     --search-color: #939eae;
     --contactText-color: #e9ecf0;
     --contactBg-color: rgba(0,0,0,0.15);
-    --contactSubmit-color: #e23d6e;
+    --contactSubmit-color: #f78cac;
     --button-color: #f78cac;
     --button-weight: 700;
 }

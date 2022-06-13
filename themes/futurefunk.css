@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #2e1a47;
+    --bg-color: #20152e;
     --main-color: #c18fff;
     --accent-color: #c18fff;
     --highlight-color: #9660d8;
-    --sub-color: #9260ce;
+    --sub-color: #5e4979;
     --text-color: #f7f2ea;
     --searchInput-color: #f7f2ea;
     --search-color: #c18fff;
@@ -14,20 +14,8 @@
     --button-weight: 700;
 }
 
-#footer-left .clickButton img {
-  filter: invert(61%) sepia(62%) saturate(827%) hue-rotate(211deg) brightness(95%) contrast(113%);
-}
-
 #footer-left .clickButton:hover {
-    color: var(--text-color);
-}
-
-#footer-left .clickButton:hover img {
-  filter: invert(92%) sepia(2%) saturate(1843%) hue-rotate(323deg) brightness(108%) contrast(94%);
-}
-
-#themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(61%) sepia(62%) saturate(827%) hue-rotate(211deg) brightness(95%) contrast(113%);
+    color: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {

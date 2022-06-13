@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #323437;
+    --bg-color: #1f1b1b;
     --main-color: #f05757;
     --accent-color: #f05757;
-    --highlight-color: #ff8585;
-    --sub-color: #5e5e5e;
+    --highlight-color: #f05757;
+    --sub-color: #776c6c;
     --text-color: #e8e8e8;
     --searchInput-color: #e8e8e8;
     --search-color: #5e5e5e;

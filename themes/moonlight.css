@@ -1,13 +1,13 @@
 :root {
 --bg-color: #1f2730;
---main-color: #ccccb5;
---accent-color: #c69f68;
---highlight-color: #8f744b;
---sub-color: #ccccb5;
---text-color: #7f91b6;
+--main-color: #686ec6;
+--accent-color: #686ec6;
+--highlight-color: #776bb6;
+--sub-color: #5c6472;
+--text-color: #d7e2ff;
 --searchInput-color: #4b5975;
---search-color: #c69f68;
---contactText-color: #4b5975;
+--search-color: #7168c6;
+--contactText-color: #d7e2ff;
 --contactBg-color: rgba(0, 0, 0, 0.15);
 --contactSubmit-color: #4b5975;
 --button-color: #4b5975;
@@ -15,7 +15,11 @@
 }
 
 #footer-left .clickButton {
-color: var(--text-color);
+color: var(--sub-color);
+}
+
+.clickButton:hover {
+    color: var(--main-color)!important;
 }
 
 .settings-entry {
