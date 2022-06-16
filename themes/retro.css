@@ -22,8 +22,12 @@
   color: var(--highlight-color);
 }
 
-#themeWrapper #theme #themeTop .themeSearch img {
-    filter: invert(39%) sepia(9%) saturate(1982%) hue-rotate(177deg) brightness(97%) contrast(87%);
+.portfolio-bottom a:hover {
+  background-color: var(--button-color)!important;
+}
+
+.myContainer, #body-text {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35), 1px 1px var(--button-color), 2px 2px var(--button-color), 3px 3px 10px rgba(0, 0, 0, 0.35);
 }
 
 ::-webkit-scrollbar-thumb {
