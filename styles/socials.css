@@ -11,7 +11,8 @@
 .icon:hover, .icon:focus {
     filter: opacity(80%);
     transition: var(--transition);
-    text-decoration: none;
+    text-decoration: none!important;
+    color: var(--bg-color);
 }
 
 /* Header */
@@ -23,37 +24,27 @@ header {
 
 .icon {
     height: 2em;
-    margin: 1em;
+    margin-left: 1em;
     transform: scaleX(-1);
-}
-
-@media(max-width: 1025px) {
-    .icon {
-        height: 4em;
-    }
 }
 
 /* Title */
 
 #container {
-    margin-top: 7em;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -80%);
+    margin-top: 25vh;
 }
 
 #title h1 {
     font-weight: bold;
     color: var(--accent-color);
-    text-shadow: 5px 5px white, 4px 4px white, 3px 3px white, 2px 2px white, 1px 1px white;
-    font-size: 22em;
+    text-shadow: 3px 3px white, 2px 2px white, 1px 1px white;
+    font-size: 10em;
     text-align: center;
 }
 
 /* Particles.JS */
 
-#particles-js {
+#tsparticles {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -63,7 +54,7 @@ header {
     pointer-events: none;
 }
 
-#particles-js canvas {
+#tsparticles canvas {
     display: block;
     opacity: 0.35;
 }
@@ -71,37 +62,130 @@ header {
 /* Icon container */
 
 #icon-list {
-    text-align: center;
-    background-color: var(--accent-color);
-    border-radius: var(--roundness);
-    margin: 0 auto;
-    max-width: 850px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0.5rem auto;
 }
 
-#icon-list img {
-    opacity: 1;
-    height: 8em;
-    margin: 0 1em;
-    filter: brightness(10%) invert(1);
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
 
+.icon-image {
+    color: var(--text-color)!important;
+    border-radius: 99999em!important;
+    font-size: 2em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    margin: auto 0.5rem;
     transition: var(--return);
 }
 
-@media(min-width: 1025px) {
-    #icon-list img{
-        height: 4em;
-    }
+.icon-image a i {
+    font-weight: 500!important;
 }
 
-#icon-list a {
+.icon-image:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+    transition: var(--transition);
+    color: var(--bg-color)!important;
+}
+
+.icon-image a {
+    color: inherit;
     text-decoration: none;
 }
 
-#icon-list img:hover {
-    transform: translateY(-5px);
+.icon-image a:hover {
+    color: var(--bg-color)!important;
+}
+
+.tooltip {
+    visibility: hidden;
+    font-size: 0.85rem;
+    font-weight: 700!important;
+    color: var(--text-color);
+    font-family: Roboto-Bold;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: var(--roundness);
+    margin-top: 25px;
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+    text-align: center!important;
+    width: 100px;
+    top: 150%;
+    left: -15px;
+    margin-left: -50px;
+    transition: var(--return);
+}
+
+.icon-container .tooltip {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible!important;
+    opacity: 1;
     transition: var(--transition);
+    transform: translateY(-20px);
+}
+
+.icon-container .tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+}
+
+#link-list {
+    width: 90%;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#link-list a {
+    text-decoration: none;
+    display: flex;
+    color: inherit;
+}
+
+.link-container {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 9999em;
+    width: 250px;
+    max-width: 90%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.link-container:hover .link-image {
+    color: var(--accent-color)!important;
+    transition: 0.25s;
+}
+
+.link-image {
+    font-size: 3em;
+    transition: 0.25s;
+}
+
+.link-text {
+    margin-left: 20px;
 }
 
 /* Root Colors */
@@ -137,4 +221,9 @@ header {
 @font-face {
     font-family: AmericanCaptain;
     src: url(american_captain.ttf)
+}
+
+@font-face {
+    font-family: Signature;
+    src: url(signature.ttf)
 }
