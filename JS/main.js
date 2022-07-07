@@ -58,7 +58,7 @@ function contactBlur() {
 // Enable/Disable Particles.JS. Utilized by Settings
   function portfolioParticleJS() {
     // Variables
-    var x = document.getElementById("particles-js");
+    var x = document.getElementById("tsparticles");
     var on = document.getElementById("particles-enable");
     var off = document.getElementById("particles-disable");
     // If Particles.JS is enabled, disable
@@ -117,18 +117,25 @@ function changeTheme(src, name, obj) {
   setTimeout(themeBlur(), 1000);
 }
 
-// Theme Load
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+};
+
+function randomTheme() {
+  let entries = document.getElementsByClassName("theme-entry");
+  const theme = entries[getRandomInt(entries.length)].innerHTML;
+  let title = theme[0].toUpperCase() + theme.substring(1);
+  localStorage.setItem("name", title);
+  return String("themes/" + theme.replace(/\s+/g, '').toLowerCase() + ".css");
+};
+
 window.onload = function() {
-  // Variables
-  var obj = document.getElementById("cssTheme");
-  var x = localStorage.getItem("theme");
+  var x = randomTheme();
   var name = localStorage.getItem("name");
-  // If no theme, set as Classic
-  if (localStorage.getItem("theme") == null) {
-    var x = randomTheme();
-  }
-  // Set theme
-  obj.setAttribute("href", randomTheme());
+  var themeTab = document.getElementById("clickButtonTheme");
+  var themeLink = document.getElementById("cssTheme")
+  themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
+  themeLink.href = x;
 }
 
 // Selected Theme Highlight Load
@@ -218,5 +225,32 @@ function hideButton() {
   } else {
       setTimeout(function() { document.getElementById("resumeVisible").id = "resumeHidden"; }, 10);
   }
+}
+
+// OnLoad
+window.onload = function() {
+  var obj = document.getElementById("cssTheme");
+  var objTab = document.getElementById("clickButtonTheme");
+  // Set Theme
+  var theme = randomTheme();
+  obj.href = theme;
+  // Set name
+  var name = localStorage.getItem("name");
+  if (localStorage.getItem("name") == null) {
+    var name = "Theme"
+  }
+  objTab.innerHTML = '<i class="fas fa-palette"></i>' + name
+  // Close loading screen
+  document.getElementById("html").style.overflow = 'auto';
+  document.getElementById("html").style.height = 'auto';
+  document.getElementById("loading-screen").style.display = "none";
+
+  var bodytext = document.getElementById("body-text");
+  var subtext = document.getElementById("front-splash");
+  var buttons = document.getElementById("frontButtonList");
+
+  bodytext.setAttribute('class', 'loaded-top');
+  subtext.setAttribute('class', 'loaded');
+  buttons.setAttribute('class', 'loaded');
 }
   

@@ -5,8 +5,8 @@
             document.addEventListener("keydown", function(e){
                 if (e.key == "Escape") openSettings();
             });
-            document.getElementById("html").style.overflow = 'hidden';
-            document.getElementById("html").style.height = '100%';
+            document.getElementById("html").style.overflow = 'hidden!important';
+            document.getElementById("html").style.height = '100%!important';
         </script>
         <meta charset="UTF-8">
         <!-- ****** faviconit.com favicons ****** -->
@@ -39,9 +39,9 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <!-- Scripts -->
-        <script defer src="JS/main.js"></script>
         <script defer src="JS/typewriter.js"></script>
-        <script src="https://kit.fontawesome.com/f4732725b7.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/f4732725b7.js" crossorigin="anonymous"></script>\
+        <script defer src="JS/main.js"></script>
     </head>
 
     <!-- Body -->
@@ -84,12 +84,11 @@
         </div>
         <!-- Front-Page -->
         <div id="front-page">
-            <div id="particles-js" class=""></div>
-            <div id="body-text" style="font-family: signature">
+            <div id="tsparticles"></div>
+            <div id="body-text" style="font-family: signature" class="unloaded-top">
                 Hayden Westphal
-                <!-- Self-Typing Text // Utilizes typewriter.js -->
             </div>
-            <div id="front-splash">
+            <div id="front-splash" class="unloaded">
                 Developer
                 <span>|</span>
                 Designer
@@ -100,7 +99,7 @@
                 I am a 
                 <span class="txt-rotate" data-period="2000" data-rotate='[ "Front-End Developer", "UI/UX Designer", "Student" ]'></span>
             </div>-->
-            <div id="frontButtonList">
+            <div id="frontButtonList" class="unloaded">
 
                 <div class="front-tooltip">
                     <div class="frontButton">
@@ -133,8 +132,6 @@
                     </a>
                  </div>-->
             </div>
-            <script type="text/javascript" src="JS/particles.js"></script>
-            <script type="text/javascript" src="JS/app.js"></script>
         </div>
 
         <!-- Contact Page // Hidden -->
@@ -931,6 +928,7 @@
         </div>
     </div>
     </footer>
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.1.3/tsparticles.bundle.min.js"></script>
+        <script type="text/javascript" src="JS/app.js"></script>
     </body>
-
 </html>
