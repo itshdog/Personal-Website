@@ -1,17 +1,19 @@
+// (async () => {
+//     await tsParticles.load("tsparticles", {
+//         preset: "fountain",
+//     });
+//   })();
+
+
 tsParticles.load("tsparticles", {
-    interactivity: {
-        events: {
-            onHover: {
-                enable: true,
-                mode: "repulse"
-            }
-        }
-    },
     particles: {
+        number: {
+            value: 100
+        },
         links: {
             enable: true,
-            opacity: 0.2,
-            distance: 150
+            opacity: 0.5,
+            distance: 100
         },
         move: {
             enable: true
@@ -20,7 +22,8 @@ tsParticles.load("tsparticles", {
             value: {min:0.2, max:0.3}
         },
         size: {
-            value: {min:2, max:5}
-        }
-    }
-})
+            value: {min:2, max:4}
+        },
+    },
+    preset: "fountain",
+});

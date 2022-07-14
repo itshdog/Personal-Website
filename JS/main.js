@@ -1,28 +1,14 @@
-// Contact Wrapper open/close
-function contactBlur() {
-    var x = document.getElementById("contactWrapper");
-    x.className = "hidden";
-    x.style.opacity = "0";
-  }
-  
-  function contactOpen() {
-    var x = document.getElementById("contactWrapper");
-    x.className = "";
-    x.style.opacity = "1";
-  }
+function closeTab(name) {
+  var x = document.getElementById(name);
+  x.className = "hidden";
+  x.style.opacity = "0";
+}
 
-// Theme Wrapper open/close
-  function themeBlur() {
-    var x = document.getElementById("themeWrapper");
-    x.className = "hidden";
-    x.style.opacity = "0";
-  }
-  
-  function themeOpen() {
-    var x = document.getElementById("themeWrapper");
-    x.className = "";
-    x.style.opacity = "1";
-  }
+function openTab(name) {
+  var x = document.getElementById(name);
+  x.className = "";
+  x.style.opacity = "1";
+}
   
 // Version Wrapper open/close
   function versionBlur() {
@@ -87,18 +73,6 @@ function contactBlur() {
     document.body.scrollTop = 0;
   }
 
-// Random Integer Generator
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function randomTheme() {
-  let entries = document.getElementsByClassName("theme-entry");
-  let theme = entries[getRandomInt(entries.length)];
-  theme = theme.replace(/ /g, '').toLowerCase();
-  return "themes/" + theme + ".css"
-}
-
 // Change theme function. Utilized by theme entries in Theme Wrapper
 function changeTheme(src, name, obj) {
   // Variables
@@ -128,15 +102,6 @@ function randomTheme() {
   localStorage.setItem("name", title);
   return String("themes/" + theme.replace(/\s+/g, '').toLowerCase() + ".css");
 };
-
-window.onload = function() {
-  var x = randomTheme();
-  var name = localStorage.getItem("name");
-  var themeTab = document.getElementById("clickButtonTheme");
-  var themeLink = document.getElementById("cssTheme")
-  themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
-  themeLink.href = x;
-}
 
 // Selected Theme Highlight Load
 window.addEventListener('load', function() {
@@ -240,6 +205,13 @@ window.onload = function() {
     var name = "Theme"
   }
   objTab.innerHTML = '<i class="fas fa-palette"></i>' + name
+  // Load random theme
+  var x = randomTheme();
+  var name = localStorage.getItem("name");
+  var themeTab = document.getElementById("clickButtonTheme");
+  var themeLink = document.getElementById("cssTheme")
+  themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
+  themeLink.href = x;
   // Close loading screen
   document.getElementById("html").style.overflow = 'auto';
   document.getElementById("html").style.height = 'auto';

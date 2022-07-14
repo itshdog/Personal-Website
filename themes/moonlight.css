@@ -26,10 +26,6 @@ color: var(--sub-color);
 color: var(--text-color) !important;
 }
 
-#themeWrapper #theme #themeTop .themeSearch img {
-filter: invert(39%) sepia(9%) saturate(1982%) hue-rotate(177deg) brightness(97%) contrast(87%);
-}
-
 ::-webkit-scrollbar-thumb {
 background: var(--accent-color);
 border-radius: var(--roundness);

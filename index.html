@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="front-tooltip">
-                    <div onclick="contactOpen()" class="frontButton">
+                    <div onclick="openTab('contactWrapper')" class="frontButton">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <span class="button-tooltip">Contact Me</span>
@@ -139,7 +139,7 @@
             <div id="contact">
                 <div id="contactTop">
                     <!-- Close button // Utilizes blur.js -->
-                    <i class="fas fa-times close" onclick="contactBlur()"></i>
+                    <i class="fas fa-times close" onclick="closeTab('contactWrapper')"></i>
                 </div>
                 <!-- Contact me form -->
                 <div id="contactBottom">
@@ -169,7 +169,7 @@
                         <input id="theme-searchbar" onkeyup="search_theme()" type="text" placeholder="Type to search">
                     </div>
                     <!-- Close button // Utilizes blur.js -->
-                    <i class="fas fa-times close" onclick="themeBlur()"></i>
+                    <i class="fas fa-times close" onclick="closeTab('themeWrapper')"></i>
                 </div>
                 <!-- Theme list -->
                 <div id="themeBottom">
@@ -199,7 +199,6 @@
                     <div class="theme-entry" id="" onclick="changeTheme('themes/royalty.css', 'Royalty', this)">royalty</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/samurai.css', 'Samurai', this)">samurai</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/sonokai.css', 'Sonokai', this)">sonokai</div>
-                    <div class="theme-entry" id="" onclick="changeTheme('themes/striker.css', 'Striker', this)">striker</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/terminal.css', 'Terminal', this)">terminal</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/terrorbelow.css', 'Terror Below', this)">terror below</div>
                     <div class="theme-entry" id="" onclick="changeTheme('themes/vscode.css', 'VS Code', this)">vscode</div>
@@ -217,6 +216,29 @@
                     <i class="fas fa-times close" onclick="versionBlur()"></i>
                 </div>
                 <div id="versionBottom">
+
+                    <div class="v1.3.2">
+                        <div class="versionTitle">
+                            v1.3.2
+                            <div class="releaseDate">Released 7/14/2022</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>Aesthetic update</b><br>
+                            Slight edit/hotfix for aesthetics!<br><br>
+                            Themes<br>
+                            * Removed Striker<br>
+                            * Edited Moonlight<br>
+                            * Edited Samurai<br>
+                            * Edited Watermelon<br><br>
+                            JavaScript<br>
+                            * Simplified code for opening and closing containers into 1 function<br>
+                            * Updated and became more accustomed to tsParticles (Might add settings functions for multiple presets)<br><br>
+                            Index page<br>
+                            * Edited onClick commands<br>
+                            * Added tsParticles preset for my own use (for now...)<br>
+                            * Added outer-glow for windows (contact me, settings, version, theme)
+                        </div>
+                    </div>
 
                     <div class="v1.3.1">
                         <div class="versionTitle">
@@ -940,13 +962,13 @@
             </div>
             <div class="clickButton" onclick="versionOpen()">
                 <i class="fas fa-code-branch"></i>
-                v1.3.1
+                v1.3.2
             </div>
-            <div class="clickButton" id="clickButtonTheme" onclick="themeOpen()">
+            <div class="clickButton" id="clickButtonTheme" onclick="openTab('themeWrapper')">
                 <i class="fas fa-palette"></i>
                 Theme
             </div>
-            <div class="clickButton" onclick="contactOpen()">
+            <div class="clickButton" onclick="openTab('contactWrapper')">
                 <i class="fas fa-envelope"></i>
                 Contact Me
             </div>

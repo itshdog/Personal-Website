@@ -14,6 +14,14 @@
     --button-weight: 700;
 }
 
+.close {
+  color: var(--highlight-color);
+}
+
+.themeSearch i {
+  color: var(--highlight-color)!important;
+}
+
 #my-portfolio #portfolio-items .portfolio-obj .portfolio-bottom a:hover {
     background-color: var(--highlight-color);
 }
