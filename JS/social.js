@@ -3,7 +3,7 @@ function getRandomInt(max) {
 };
 
 function randomTheme() {
-    let entries = ["80safterdark","8008","aether","arch","bento","blueberry","carbon","classic","copper","cyberspace","deku","dracula","futurefunk","goldfish","grandprix","gruvbox","horizon","moonlight","ocean","onedark","reddragon","retro","rosepinemoon","royalty","samurai","sonokai","striker","terminal","terrorbelow","vscode","watermelon"]
+    let entries = ["80safterdark","8008","aether","arch","bento","blueberry","carbon","classic","copper","cyberspace","dracula","futurefunk","goldfish","grandprix","gruvbox","horizon","moonlight","ocean","onedark","reddragon","retro","rosepinemoon","royalty","samurai","sonokai","terminal","terrorbelow","vscode","watermelon"]
     const theme = entries[getRandomInt(entries.length)];
     return String("themes/" + theme + ".css");
 };
