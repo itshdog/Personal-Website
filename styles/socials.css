@@ -63,6 +63,19 @@ header {
 
 /* Icon container */
 
+#back {
+    font-size: 2em;
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+    transition: var(--return);
+}
+
+#back:hover {
+    color:rgba(255, 255, 255, 0.25);
+    transition: var(--transition);
+}
+
 #icon-list {
     display: flex;
     justify-content: center;
