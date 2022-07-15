@@ -103,22 +103,6 @@ function randomTheme() {
   return String("themes/" + theme.replace(/\s+/g, '').toLowerCase() + ".css");
 };
 
-// Selected Theme Highlight Load
-window.addEventListener('load', function() {
-  var all = document.getElementsByClassName("theme-entry");
-  var name = localStorage.getItem("name")
-  // If no name (new browser) set as Classic
-  if (name == null) {
-    name = "Classic";
-  }
-  // Set matching theme as selected
-  for (i = 0; i < all.length; i++) {
-    if (all[i].innerHTML.toLowerCase() == name.toLowerCase()) {
-      all[i].setAttribute('id', "selected");
-    }
-  }
-})
-
 // Search bar for Theme wrapper
 function search_theme() {
   let input = document.getElementById('theme-searchbar').value
@@ -196,6 +180,7 @@ function hideButton() {
 window.onload = function() {
   var obj = document.getElementById("cssTheme");
   var objTab = document.getElementById("clickButtonTheme");
+  var all = document.getElementsByClassName("theme-entry");
   // Set Theme
   var theme = randomTheme();
   obj.href = theme;
@@ -205,13 +190,12 @@ window.onload = function() {
     var name = "Theme"
   }
   objTab.innerHTML = '<i class="fas fa-palette"></i>' + name
-  // Load random theme
-  var x = randomTheme();
-  var name = localStorage.getItem("name");
-  var themeTab = document.getElementById("clickButtonTheme");
-  var themeLink = document.getElementById("cssTheme")
-  themeTab.innerHTML = '<i class="fas fa-palette"></i>' + name
-  themeLink.href = x;
+  // Set matching theme as selected
+  for (i = 0; i < all.length; i++) {
+    if (all[i].innerHTML.toLowerCase() == name.toLowerCase()) {
+      all[i].setAttribute('id', "selected");
+    }
+  }
   // Close loading screen
   document.getElementById("html").style.overflow = 'auto';
   document.getElementById("html").style.height = 'auto';
