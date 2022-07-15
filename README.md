@@ -1,7 +1,5 @@
-<img src="https://itshdog.com/favicon/favicon.ico" width="36" height="36">itshdog.com
+<img src="https://itshdog.com/svgs/itshdog-header.png" width="500">
 
-Hey 👋 This is the ReadMe for my personal portfolio!
-==================================================
 * 🖥️  See my portfolio at [itshdog.com](http://itshdog.com)
 * ✉️  You can contact me at [haydenwestphal@gmail.com](mailto:haydenwestphal@gmail.com)
 * 🧠  I enjoy a mix between design & development, and I practice these skills with this website
