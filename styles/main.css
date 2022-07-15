@@ -1043,6 +1043,8 @@ label {
 
 .settings-entry-icon i {
     font-size: 0.5em;
+    opacity: 0.25;
+    transition: var(--return);
 }
 
 #settingsWrapper #settings #settings-bottom .entry-invisible {
@@ -1056,14 +1058,16 @@ label {
 }
 
 #settingsWrapper #settings #settings-bottom .selected {
-    color: var(--highlight-color)!important;
+    color: var(--accent-color)!important;
+    opacity: 1;
+    transition: var(--transition);
 }
 
 .settings-note {
     padding-left: calc(2em + 15px);
     font-size: 0.6em;
-    font-weight: 700;
-    font-family: roboto-black;
+    font-weight: 500;
+    font-family: roboto-regular;
     display: block;
 }
 

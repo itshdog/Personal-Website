@@ -3,7 +3,10 @@
     <head>
         <script>
             document.addEventListener("keydown", function(e){
-                if (e.key == "Escape") openSettings();
+                if (e.key == "Escape") openTab("settingsWrapper");
+                if (e.key == "t") openTab("themeWrapper");
+                if (e.key == "r") openTab("versionWrapper");
+                if (e.key == "y") openTab("contactWrapper");
             });
             document.getElementById("html").style.overflow = 'hidden!important';
             document.getElementById("html").style.height = '100%!important';
@@ -39,15 +42,13 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <!-- Scripts -->
-        <script defer src="JS/typewriter.js"></script>
         <script src="https://kit.fontawesome.com/f4732725b7.js" crossorigin="anonymous"></script>\
         <script defer src="JS/main.js"></script>
     </head>
 
     <!-- Body -->
     <body style="background: var(--bg-color); transition: all">
-    <header id="header">
-        <!-- Header --
+    <!-- <header id="header">
         <div id="header-container">
             <div id="header-left" style="font-family: BigNoodleTitlingOblique">
                 <div id="title">
@@ -55,12 +56,9 @@
                         <span id="title-hover">itshdog.com</span>
                     </div>
                 </div>
-                <!-- Scroll to Top // Utilizes scroll.js --
             </div>
             <div id="header-right">
-                <!-- Icons on top right --
                 <a id="hideButtonDiv">
-                    <!-- Header hide button // Utilizes hide.js --
                     <img onclick="hideButton();"src="svgs/iconmonstr-arrow-24.svg" id="closeIcon">
                 </a>
                 <a id="githubVisible" href="https://www.github.com/itshdog" target="_blank">
@@ -73,9 +71,8 @@
                     <img id="resumeIcon" src="svgs/iconmonstr-cv-1.svg" class="icon">
                 </a>
             </div>
-        </div>-->
-
-    </header>
+        </div>
+    </header> -->
     
     <div>
         <!-- Loading Screen -->
@@ -213,7 +210,7 @@
         <div id="versionWrapper" class="hidden" style="opacity: 0;">
             <div id="versionContainer">
                 <div id="versionTop">
-                    <i class="fas fa-times close" onclick="versionBlur()"></i>
+                    <i class="fas fa-times close" onclick="closeTab('versionWrapper')"></i>
                 </div>
                 <div id="versionBottom">
 
@@ -935,15 +932,14 @@
                         <input id="settings-searchbar" onkeyup="search_settings()" type="text" placeholder="Type to search">
                     </div>
                     <!-- Close button // Utilizes blur.js -->
-                    <i class="fas fa-times close" onclick="closeSettings()"></i>
+                    <i class="fas fa-times close" onclick="closeTab('settingsWrapper')"></i>
                 </div>
                 <!-- Settings list -->
                 <div id="settings-bottom">
                     <!-- The background // Utilizes blur.js -->
-                    <div class="settings-entry" onclick="portfolioParticleJS()">
+                    <div class="settings-entry" onclick="openParticles()">
                         <div class="settings-entry-icon">
-                            <i class="fas fa-circle selected" id="particles-enable"></i>
-                            <i class="far fa-circle hidden" id="particles-disable"></i>
+                            <i class="fas fa-circle" id="particles-enable"></i>
                         </div>
                         Particles.JS Background
                         <span class="settings-note">(Disable if causing performance issues)</span>
@@ -956,11 +952,11 @@
     <footer>
         <div id="footer-left">
             <!-- Open Contact Page // Utilizes blur.js -->
-            <div class="clickButton" onclick="openSettings()">
+            <div class="clickButton" onclick="openTab('settingsWrapper')">
                 <i class="fas fa-sliders-h"></i>
                 Settings
             </div>
-            <div class="clickButton" onclick="versionOpen()">
+            <div class="clickButton" onclick="openTab('versionWrapper')">
                 <i class="fas fa-code-branch"></i>
                 v1.3.2
             </div>

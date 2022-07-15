@@ -6,65 +6,41 @@ function closeTab(name) {
 
 function openTab(name) {
   var x = document.getElementById(name);
-  x.className = "";
-  x.style.opacity = "1";
-}
-  
-// Version Wrapper open/close
-  function versionBlur() {
-    var x = document.getElementById("versionWrapper");
-    x.className = "hidden";
-    x.style.opacity = "0";
-  }
-  
-  function versionOpen() {
-    var x = document.getElementById("versionWrapper");
+  if (x.className == "hidden") {
     x.className = "";
     x.style.opacity = "1";
-  }
-
-// Settings Wrapper open/close  
-  function openSettings() {
-    var x = document.getElementById("settingsWrapper");
-    if (x.className == "") {
-      closeSettings();
-    } else {
-      x.className = "";
-      x.style.opacity = "1";
-    }
-  }
-
-  function closeSettings() {
-    var x = document.getElementById("settingsWrapper");
+  } else if (x.className == "null") {
+    x.className = "hidden";
+    x.style.opacity = "0";
+  } else if (x.className == '') {
     x.className = "hidden";
     x.style.opacity = "0";
   }
-  
-  
-// Enable/Disable Particles.JS. Utilized by Settings
-  function portfolioParticleJS() {
-    // Variables
-    var x = document.getElementById("tsparticles");
-    var on = document.getElementById("particles-enable");
-    var off = document.getElementById("particles-disable");
-    // If Particles.JS is enabled, disable
-    if (x.className == "null") {
-      x.className = "hidden";
-      localStorage.setItem("particleState", "hidden")
-      localStorage.setItem("particleOff", "far fa-circle")
-      localStorage.setItem("particleOn", "fas fa-circle hidden")
-      off.className = "far fa-circle";
-      on.className = "fas fa-circle hidden";
-    // If Particles.JS is disabled, enable
-    } else if (x.className == "hidden") {
-      x.className = "null";
-      localStorage.setItem("particleState", "null")
-      localStorage.setItem("particleOff", "far fa-circle hidden")
-      localStorage.setItem("particleOn", "fas fa-circle selected")
-      off.className = "far fa-circle hidden";
-      on.className = "fas fa-circle selected";
-    }
+}
+
+function openParticles() {
+  var x = document.getElementById("tsparticles");
+  var button = document.getElementById("particles-enable");
+  if (x.className == "hidden") {
+    x.className = "";
+    x.style.opacity = "1";
+    localStorage.setItem("tsparticles", "null");
+    localStorage.setItem("particlesState", "fas fa-circle selected");
+    button.className = "fas fa-circle selected";
+  } else if (x.className == "null") {
+    x.className = "hidden";
+    x.style.opacity = "0";
+    localStorage.setItem("tsparticles", "hidden");
+    localStorage.setItem("particlesState", "fas fa-circle");
+    button.className = "fas fa-circle";
+  } else if (x.className == '') {
+    x.className = "hidden";
+    x.style.opacity = "0";
+    localStorage.setItem("tsparticles", "hidden");
+    localStorage.setItem("particlesState", "fas fa-circle");
+    button.className = "fas fa-circle";
   }
+}
 
 // Scroll to top. Utilized by "itshdog.com" in the header
   function scrollToTop() {
@@ -88,7 +64,7 @@ function changeTheme(src, name, obj) {
   localStorage.setItem("name", name);
   // Load name, and close theme tab
   themeTab.innerHTML = '<i class="fas fa-palette"></i>'+name;
-  setTimeout(themeBlur(), 1000);
+  closeTab('themeWrapper');
 }
 
 function getRandomInt(max) {
@@ -181,6 +157,8 @@ window.onload = function() {
   var obj = document.getElementById("cssTheme");
   var objTab = document.getElementById("clickButtonTheme");
   var all = document.getElementsByClassName("theme-entry");
+  var particlesWrapper = document.getElementById("tsparticles");
+  var particlesButton = document.getElementById("particles-enable");
   // Set Theme
   var theme = randomTheme();
   obj.href = theme;
@@ -196,6 +174,8 @@ window.onload = function() {
       all[i].setAttribute('id', "selected");
     }
   }
+  particlesWrapper.className = localStorage.getItem("tsparticles");
+  particlesButton.className = localStorage.getItem("particlesState");
   // Close loading screen
   document.getElementById("html").style.overflow = 'auto';
   document.getElementById("html").style.height = 'auto';
