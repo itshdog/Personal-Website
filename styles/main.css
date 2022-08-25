@@ -651,7 +651,7 @@ header {
     text-align: center;
 }
 
-#contactWrapper input[type=text], select {
+#contactWrapper input[type=text], #contactWrapper input[type=email], select {
     margin-top: 0.5em;
     width: 90%;
     height: 5vh;
@@ -665,11 +665,11 @@ header {
     padding: 0.5rem 1rem;
 }
 
-#contactWrapper input[type=text] ::placeholder {
+#contactWrapper input[type=text] ::placeholder, #contactWrapper input[type=email] ::placeholder {
     color: var(--sub-color);
 }
 
-#contactWrapper input[type=text]:focus {
+#contactWrapper input[type=text]:focus, #contactWrapper input[type=email]:focus {
     text-decoration: none;
     font-size: var(--font-small);
     border: solid var(--accent-color);
