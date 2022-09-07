@@ -4,9 +4,9 @@
         <script>
             document.addEventListener("keydown", function(e){
                 if (e.key == "Escape") openTab("settingsWrapper");
-                if (e.key == "t") openTab("themeWrapper");
-                if (e.key == "r") openTab("versionWrapper");
-                if (e.key == "y") openTab("contactWrapper");
+                // if (e.key == "t") openTab("themeWrapper");
+                // if (e.key == "r") openTab("versionWrapper");
+                // if (e.key == "y") openTab("contactWrapper");
             });
             document.getElementById("html").style.overflow = 'hidden!important';
             document.getElementById("html").style.height = '100%!important';
@@ -77,7 +77,7 @@
     <div>
         <!-- Loading Screen -->
         <div id="loading-screen">
-            <i class="fa-solid fa-spinner rotating"></i>
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
         </div>
         <!-- Front-Page -->
         <div id="front-page">
@@ -142,12 +142,12 @@
                 <div id="contactBottom">
                     <form name="contactMe" method="POST" data-netlify="true">
                         <label for="name">Name</label><br>
-                        <input type="text" id="name" name="name" placeholder=""/><br>
+                        <input type="text" id="name" name="name" placeholder="John Smith"/><br>
                         <label for="email">Email</label><br>
-                        <input type="text" id="email" name="email" placeholder=""/>
+                        <input type="email" id="email" name="email" placeholder="johnsmith@gmai.com"/>
                         <div id="messageBox">
                             <label for="message">Message</label><br>
-                            <textarea id="message" name="message" placeholder=""></textarea>
+                            <textarea id="message" name="message" placeholder="I am John Smith"></textarea>
                         </div>
                         <input type="submit" value="Submit">
                     </form>
@@ -782,6 +782,56 @@
 
                 <div class="portfolio-obj">
                     <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/Spotify-Api.PNG">
+                    </div>
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">Better Spotify</div>
+                        <div class="portfolio-read-text">
+                            A Spotify clone. Utilizes the Spotify Web API + Fullstack development<br><br>         
+                            Frontend: Bootstrap, React.JS, CSS<br>
+                            Backend: Node.JS, Express, Axios
+                
+                        </div>
+                    </div>
+                
+                    <div class="portfolio-bottom">
+                        <div class="live-demo">
+                            <a href="https://itshdog-spotify.herokuapp.com/" target="_blank">Live Demo</a>
+                        </div>
+                        <div class="GitHub">
+                            <a href="https://github.com/itshdog/better-spotify" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
+                        <img class="portfolio-image" src="svgs/ror2.png">
+                    </div>
+                    <div class="portfolio-text-container">
+                        <div class="portfolio-title">Risk of Rain 2 Mod</div>
+                        <div class="portfolio-read-text">
+                            A Unity-based mod for the game Risk of Rain 2. It's a fun little project I do on the Risk of Rain 2 Modding
+                            Discord. Learned how to use ILSpy to decompile .dll files and read through source code<br> <br>
+                            Skills utilized: C#, Unity, ILSpy
+                        </div>
+                    </div>
+                
+                    <div class="portfolio-bottom">
+                        <div class="GitHub">
+                            <a href="https://github.com/itshdog/Tutorial-Mod" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-obj">
+                    <div class="portfolio-image-container">
                         <img class="portfolio-image" src="svgs/typings.png">
                     </div>
                     <div class="portfolio-text-container">
@@ -806,32 +856,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-obj">
-                    <div class="portfolio-image-container">
-                        <img class="portfolio-image" src="svgs/Spotify-Api.PNG">
-                    </div>
-                    <div class="portfolio-text-container">
-                        <div class="portfolio-title">Spotify API</div>
-                        <div class="portfolio-read-text">
-                            Accesses the Spotify API. Allows the user to use the searchbar, and gets matching results back of pictures & names<br><br>
-                            Skills utilized: React, Spotify REST API
-                        </div>
-                    </div>
-                
-                    <div class="portfolio-bottom">
-                        <div class="live-demo">
-                            <a href="https://itshdog.github.io/spotify-api" target="_blank">Live Demo</a>
-                        </div>
-                        <div class="GitHub">
-                            <a href="https://github.com/itshdog/spotify-api" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-obj">
+                <!-- <div class="portfolio-obj">
                     <div class="portfolio-image-container">
                         <img class="portfolio-image" src="svgs/riskofrain.png">
                     </div>    
@@ -855,29 +880,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <div class="portfolio-obj">
-                    <div class="portfolio-image-container">
-                        <img class="portfolio-image" src="svgs/ror2.png">
-                    </div>    
-                    <div class="portfolio-text-container">
-                        <div class="portfolio-title">Risk of Rain 2 Mod</div>
-                        <div class="portfolio-read-text">
-                            A Unity-based mod for the game Risk of Rain 2. It's a fun little project I do on the Risk of Rain 2 Modding Discord. Learned how to use ILSpy to decompile .dll files and read through source code<br> <br>
-                            Skills utilized: C#, Unity, ILSpy
-                        </div>
-                    </div>
-
-                    <div class="portfolio-bottom">
-                        <div class="GitHub">
-                            <a href="https://github.com/itshdog/Tutorial-Mod" target="_blank">
-                                <i class="fab fa-github"></i>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
 
                 <div class="portfolio-obj">
                     <div class="portfolio-image-container">
