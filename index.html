@@ -144,10 +144,10 @@
                         <label for="name">Name</label><br>
                         <input type="text" id="name" name="name" placeholder="John Smith"/><br>
                         <label for="email">Email</label><br>
-                        <input type="email" id="email" name="email" placeholder="johnsmith@gmai.com"/>
+                        <input type="email" id="email" name="email" placeholder="johnsmith@gmail.com"/>
                         <div id="messageBox">
                             <label for="message">Message</label><br>
-                            <textarea id="message" name="message" placeholder="I am John Smith"></textarea>
+                            <textarea id="message" name="message" placeholder=""></textarea>
                         </div>
                         <input type="submit" value="Submit">
                     </form>
@@ -213,6 +213,29 @@
                     <i class="fas fa-times close" onclick="closeTab('versionWrapper')"></i>
                 </div>
                 <div id="versionBottom">
+
+                    <div class="v1.3.3">
+                        <div class="versionTitle">
+                            v1.3.3
+                            <div class="releaseDate">Released 9/7/2022</div>
+                        </div>
+                        <div class="versionNotes">
+                            <b>Happy Hotfix</b><br>
+                            Not many updates lately, I've been at college with nothing but a laptop :( <br><br>
+                            Projects<br>
+                            * Edited and arranged my projects<br>
+                            * Removed unnecessary projects<br>
+                            * Added new project images<br>
+                            * Updated skills utilized to be more clear and concise<br><br>
+                            Letter-Spacing<br>
+                            * Removed letter spacing for projects and other select places to help readability<br><br>
+                            Settings<br>
+                            * Buttons load with current state when loading (Before, on initial load the button was blank even though the button state was on)<br><br>
+                            Contact Me<br>
+                            * Added placeholder text<br>
+                            * Used regular expression to match correct email format before submitting<br>
+                        </div>
+                    </div>
 
                     <div class="v1.3.2">
                         <div class="versionTitle">
@@ -910,8 +933,8 @@
                         <div class="portfolio-title">Stronghold Corp</div>
                         <div class="portfolio-read-text">
                             A freelance project where I was tasked with redesigning this gun store website.
-                            This website is in current commercial use, and I still currently maintain and develop the website.<br><br>
-                            February 2022 - Present
+                            No development was performed, only UI/UX for the design aesthetic. 
+                            This website is in current commercial use, and I still currently maintain the website.
                         </div>
                     </div>
                 
@@ -922,6 +945,18 @@
                     </div>
                 </div>
             </div>
+            <!-- <div id="project-container">
+                <div class="project">
+                    <div class="project-img" style="transform: scale(1); opacity: 1;">
+                        <img src="svgs/ror2.png">
+                    </div>
+                    <div class="project-text">
+                        RoR2<br>
+                        <span class="project-description">A Unity-based mod for the game Risk of Rain 2. It's a fun little project I do on the Risk of Rain 2 Modding Discord. Learned how to use ILSpy to decompile .dll files and read through source code<br>
+                        Skills utilized: C#, Unity, ILSpy</span>
+                    </div>
+                </div>
+            </div> -->
         </div>
 
         <!-- Settings Page // Hidden -->
@@ -942,7 +977,7 @@
                     <!-- The background // Utilizes blur.js -->
                     <div class="settings-entry" onclick="openParticles()">
                         <div class="settings-entry-icon">
-                            <i class="fas fa-circle" id="particles-enable"></i>
+                            <i class="fas fa-circle selected" id="particles-enable"></i>
                         </div>
                         Particles.JS Background
                         <span class="settings-note">(Disable if causing performance issues)</span>
@@ -961,7 +996,7 @@
             </div>
             <div class="clickButton" onclick="openTab('versionWrapper')">
                 <i class="fas fa-code-branch"></i>
-                v1.3.2
+                v1.3.3
             </div>
             <div class="clickButton" id="clickButtonTheme" onclick="openTab('themeWrapper')">
                 <i class="fas fa-palette"></i>
