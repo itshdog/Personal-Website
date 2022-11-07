@@ -174,7 +174,9 @@ window.onload = function() {
       all[i].setAttribute('id', "selected");
     }
   }
-  if (localStorage.getItem("particlesState") == "null") {
+  if (localStorage.getItem("tsparticles") == "hidden") {
+    localStorage.setItem("particlesState", "fas fa-circle");
+  } else {
     localStorage.setItem("particlesState", "fas fa-circle selected");
   }
   particlesWrapper.className = localStorage.getItem("tsparticles");
