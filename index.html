@@ -225,8 +225,9 @@
                             I also recently participated in the University of Iowa Hackathon 2022, so that was fun!<br><br>
                             Settings<br>
                             * Added Play/Pause particles<br>
-                            * Added Amount of particles<br>
-                            * On updating particles, particles resume<br><br>
+                            * Added Amount of particles<br>\
+                            * Added Triangles preset<br>
+                            * On updating particles, particles resume & updates triangles<br><br>
                             Projects<br>
                             * Removed an old project, don't remember<br>
                             * Added Capture Cam project<br>
@@ -995,23 +996,35 @@
                 <!-- Settings list -->
                 <div id="settings-bottom">
                     <!-- The background // Utilizes blur.js -->
+                    <div class="settings-title">
+                        tsParticles Settings
+                    </div>
                     <div class="settings-entry" onclick="openParticles()" style="cursor: pointer!important;">
                         <div class="settings-entry-icon">
                             <i class="fas fa-circle selected" id="particles-enable"></i>
                         </div>
-                        Enable/Disable Particles
+                        Enable/Disable
                     </div>
                     <div class="settings-entry play" id="pauseParticles" onclick="pauseParticles()" style="cursor: pointer!important;">
                         <div class="settings-entry-icon">
                             <i class="fas fa-circle selected" id="pauseParticlesButton"></i>
                         </div>
-                        Play/Pause Particles
+                        Play/Pause
                     </div>
                     <div class="settings-entry">
                         <div style="padding-left: 2em;">Amount of particles</div>
                         <div class="slidecontainer">
                             <input type="range" min="10" max="250" value="80" class="slider" id="particlesRange" onchange="updateParticles(this.value)">
                         </div>
+                    </div>
+                    <div class="settings-title">
+                        tsParticles Presets
+                    </div>
+                    <div class="settings-entry" id="triangles" onclick="loadPreset('triangles')" style="cursor: pointer!important;">
+                        <div class="settings-entry-icon">
+                            <i class="fas fa-circle preset" id="trianglesButton"></i>
+                        </div>
+                        Triangles
                     </div>
                 </div>
             </div>
@@ -1049,6 +1062,8 @@
     </div>
     </footer>
         <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.1.3/tsparticles.bundle.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/tsparticles-preset-triangles@2/tsparticles.preset.triangles.bundle.min.js"></script>
         <script type="text/javascript" src="JS/app.js"></script>
     </body>
 </html>
