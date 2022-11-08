@@ -1,8 +1,3 @@
-// (async () => {
-//     await tsParticles.load("tsparticles", {
-//         preset: "fountain",
-//     });
-
 tsParticles.load("tsparticles", {
     particles: {
         number: {
@@ -23,7 +18,6 @@ tsParticles.load("tsparticles", {
             value: {min:2, max:4}
         },
     },
-    preset: "fountain",
 });
 
 function updateParticles(value) {
@@ -49,6 +43,24 @@ function updateParticles(value) {
         },
     });
     document.getElementById("pauseParticlesButton").className = "fas fa-circle selected";
+    var presets = document.getElementsByClassName("preset");
+    for (i = 0; i < presets.length; i++) {
+        presets[i].className = "fas fa-circle preset";
+    }
+}
+
+function loadPreset(name) {
+    tsParticles.load("tsparticles", {
+        preset: name,
+        particles: {
+            links: {
+                enable: true,
+                opacity: 0.5,
+                distance: 100
+            },
+        }
+    });
+    document.getElementById(name + "Button").className = "fas fa-circle preset selected";
 }
 
 function pauseParticles() {

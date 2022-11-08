@@ -1136,12 +1136,22 @@ label {
 }
 
 #settingsWrapper #settings #settings-bottom .settings-entry {
-    width: 100%;
     padding-bottom: 0.25em;
     font-size: var(--font-med);
     transition: var(--transition);
     color: var(--sub-color);
     font-weight: 300;
+    margin: 0 0.25em;
+}
+
+.settings-title {
+    padding-left: 1.7em;
+    border-radius: 5px;
+    margin: 0.5em 0.25em;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--accent-color);
+    background:rgb(0, 0, 0, 0.25);
 }
 
 .settings-entry-icon {
