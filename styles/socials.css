@@ -81,7 +81,7 @@ header {
     display: flex;
     justify-content: center;
     width: 90%;
-    margin: 0.75rem auto;
+    margin: 1.75rem auto;
 }
 
 .icon-container {
@@ -172,11 +172,21 @@ header {
 }
 
 #link-list {
-    width: 90%;
-    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 75%;
+    max-width: 500px;
+    gap: 1em;
     margin: 0 auto;
     text-align: center;
     color: var(--text-color);
+}
+
+@media (max-width: 570px) {
+    #link-list {
+        grid-template-columns: 1fr;  
+    }
 }
 
 #link-list a {
@@ -186,20 +196,21 @@ header {
 }
 
 .subtext {
+    position: absolute;
+    font-size: 0.7em;
     color: white;
     opacity: 0.7;
 }
 
 .link-container {
-    background-color: rgba(0, 0, 0, 0.15);
-    border-radius: 9999em;
+    height: 20px;
     width: 250px;
-    max-width: 90%;
-    display: flex;
-    margin: 0 auto;
+    position: relative;
     text-align: left;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 2em auto 0 auto;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 99em;
 }
 
 .link-container:hover .link-image {
@@ -207,13 +218,32 @@ header {
     transition: 0.25s;
 }
 
+.link-container:hover .link-title {
+    color: var(--accent-color)!important;
+    transition: 0.25s;
+}
+
 .link-image {
+    top: -27;
+    position: absolute;
     font-size: 3em;
     transition: 0.25s;
 }
 
 .link-text {
-    margin-left: 20px;
+    margin-left: 4em;
+}
+
+.link-title {
+    top: -27;
+    position: absolute;
+    display: block;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#link-box {
+    background-color:rgba(0, 0, 0, 0.15);
 }
 
 /* New */
