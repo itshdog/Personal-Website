@@ -32,7 +32,7 @@ header {
 
 #container {
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 #title h1 {
@@ -54,6 +54,7 @@ header {
     top: 0;
     left: 0;
     pointer-events: none;
+    opacity: 0.25;
 }
 
 #tsparticles canvas {
@@ -140,6 +141,13 @@ header {
     transition: var(--return);
 }
 
+.back:hover .tooltip {
+    visibility: visible!important;
+    opacity: 1;
+    transition: var(--transition);
+    transform: translateY(-20px);
+}
+
 .icon-container .tooltip {
     opacity: 0;
     transition: opacity 1s;
@@ -177,6 +185,11 @@ header {
     color: inherit;
 }
 
+.subtext {
+    color: white;
+    opacity: 0.7;
+}
+
 .link-container {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 9999em;
@@ -184,7 +197,7 @@ header {
     max-width: 90%;
     display: flex;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
     margin-top: 20px;
 }
@@ -201,6 +214,90 @@ header {
 
 .link-text {
     margin-left: 20px;
+}
+
+/* New */
+
+#title {
+    padding-top: 3em;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+}
+
+#title-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 5em 50px 50px 5em;
+    padding: 0.3em 1em;
+}
+
+#title-info {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateX(-10px);
+    width: calc(100% - 9em);
+}
+
+#title-header {
+    text-align: center;
+    font-size: 4em;
+    text-shadow: 1px 1px 3px var(--accent-color);
+}
+
+#title-objects {
+    text-align: center;
+}
+
+#title-objects #title-item {
+    width: fit-content;
+    display: inline-block;
+
+    background-color: grey;
+    border-radius: 1em;
+    padding: 2px 5px;
+    font-size: 12px;
+    opacity: 0.7;
+    transition: 0.5s;
+    cursor: default;
+}
+
+#title-item:hover {
+    background-color: var(--accent-color)!important;
+    transform: translateY(-3px);
+    transition: 0.5s;
+}
+
+@media (max-width: 1080px) {
+    #title-image {
+        width: 6em!important;
+    }
+    #title-info {
+        width: calc(100% - 7em);
+    }
+    #title-header {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 460px) {
+    #title-header {
+        font-size: 1.8em;
+    }
+}
+
+#title-image {
+    width: 8em;
+    border-radius: 999em;
+    transform: translateX(-10px);
+    display: inline-block;
+}
+
+#title-subheader {
+    color: grey;
+    display: inline-block;
 }
 
 /* Root Colors */
