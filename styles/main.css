@@ -293,6 +293,12 @@ header {
     width: auto;
     display: inline-block;
     padding: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+#skill-section-bottom {
+    margin-top: 15px;
 }
 
 .skills-box {
