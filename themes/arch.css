@@ -26,3 +26,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--highlight-color);
 }
+
+.portfolio-bottom a:hover {
+  background-color: var(--accent-color)!important;
+}

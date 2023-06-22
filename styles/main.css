@@ -282,7 +282,7 @@ header {
 
 .skills-coding {
     text-align: center;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -441,7 +441,7 @@ header {
     border-radius: var(--roundness);
     overflow: hidden;
     float: left;
-    aspect-ratio: 16 / 9;
+    max-height: 220px;
 }
 
 .portfolio-image {
